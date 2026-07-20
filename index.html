@@ -3,80 +3,70 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- TODO: replace with your real verification codes before launch -->
-  <!-- <meta name="google-site-verification" content="YOUR_CODE_HERE" /> -->
-  <!-- <meta name="yandex-verification" content="YOUR_CODE_HERE" /> -->
-
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44 44'%3E%3Ccircle cx='22' cy='22' r='21' fill='%23120E1A'/%3E%3Cpath d='M13 15h18M13 22h18M20 29l7-7-7-7' stroke='%23FF9F45' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-
-  <title>Bharat Exchange — India's Crypto Exchange | Buy, Sell & Swap Crypto with INR</title>
-  <meta name="description" content="Bharat Exchange is India's crypto exchange for buying, selling, and swapping Bitcoin, Ethereum, USDT and more with INR. Live market rates, UPI deposits, P2P trading, and secure self-custody swaps." />
-  <meta name="keywords" content="Bharat Exchange, buy bitcoin India, crypto exchange India, sell crypto for INR, USDT INR, buy ethereum India, P2P crypto trading India, UPI crypto, INR to crypto, crypto swap India, best crypto exchange India, TRC-20 swap, crypto trading platform India" />
-  <meta name="robots" content="index, follow" />
+  
+  <!-- SEO: Правильные мета-теги для каждой страницы -->
+  <title>Bharat Exchange — Buy, Sell & Swap Bitcoin, Ethereum, USDT in India with INR</title>
+  <meta name="description" content="India's leading crypto exchange. Buy Bitcoin, Ethereum, USDT with INR via UPI, IMPS, Bank Transfer. Live rates, P2P trading, and secure swaps. Start trading today!" />
+  <meta name="keywords" content="Bharat Exchange, buy bitcoin India, crypto exchange India, USDT INR, P2P trading, UPI crypto, buy ethereum India, crypto swap India, best crypto exchange" />
   <link rel="canonical" href="https://bharatexchange.vercel.app/" />
-
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bharat Exchange — India's #1 Crypto Trading Platform" />
+  <meta property="og:description" content="Buy, sell, and swap crypto with INR. Live market rates, UPI deposits, and secure P2P trading. Built for India." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Bharat Exchange — India's Crypto Exchange | Buy, Sell & Swap Crypto with INR" />
-  <meta property="og:description" content="Buy, sell, and swap crypto with INR on Bharat Exchange. Live market rates, UPI deposits, P2P trading, and secure self-custody swaps built for India." />
-  <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:url" content="https://bharatexchange.vercel.app/" />
-  <meta property="og:site_name" content="Bharat Exchange" />
-  <meta property="og:image" content="https://bharatexchange.vercel.app/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/png" />
-  <meta name="twitter:title" content="Bharat Exchange — India's Crypto Exchange" />
-  <meta name="twitter:description" content="Buy, sell, and swap crypto with INR. Live rates, UPI deposits, P2P trading." />
-  <meta name="twitter:image" content="https://bharatexchange.vercel.app/og-image.png" />
-
+  <meta name="twitter:card" content="summary_large_image" />
+  
+  <!-- Favicon с правильными размерами -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
+  
+  <!-- Schema.org разметка -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
+    "@type": "FinancialService",
     "name": "Bharat Exchange",
     "url": "https://bharatexchange.vercel.app/",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "All",
-    "inLanguage": "en",
-    "description": "Bharat Exchange is a crypto trading platform for India, supporting INR deposits via UPI/bank transfer, crypto-to-crypto swaps, and peer-to-peer trading.",
-    "featureList": [
-      "Buy crypto with INR via UPI, IMPS and bank transfer",
-      "Sell crypto for INR",
-      "Crypto-to-crypto swaps",
-      "Peer-to-peer (P2P) trading",
-      "Live INR market rates"
-    ],
-    "author": { "@type": "Organization", "name": "Bharat Exchange" }
+    "description": "India's crypto trading platform for buying, selling, and swapping Bitcoin, Ethereum, USDT with INR.",
+    "areaServed": "IN",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://bharatexchange.vercel.app/"
+    }
   }
   </script>
-
+  
+  <!-- Preconnect для быстрой загрузки -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
-
+  
   <style>
+    /* ===== RESET & VARIABLES ===== */
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bg-primary:#120E1A;
-      --bg-secondary:#1B1425;
-      --bg-card:rgba(32,24,44,0.72);
-      --bg-elev:rgba(44,34,58,0.55);
-      --border-glow:rgba(255,159,69,0.18);
-      --border-hover:rgba(255,159,69,0.55);
+      --bg-primary:#0A0711;
+      --bg-secondary:#120E1A;
+      --bg-card:rgba(32,24,44,0.85);
+      --bg-elev:rgba(44,34,58,0.45);
+      --border-glow:rgba(255,159,69,0.15);
+      --border-hover:rgba(255,159,69,0.4);
       --accent-1:#FF9F45;
       --accent-2:#1FAE6D;
       --accent-grad:linear-gradient(135deg, #FF9F45 0%, #1FAE6D 100%);
       --text-primary:#F7F2EA;
       --text-secondary:#B7ACC4;
       --text-dim:#68607A;
-      --shadow-glow:0 0 40px rgba(255,159,69,0.14);
+      --shadow-glow:0 8px 60px rgba(255,159,69,0.12);
       --radius-sm:8px;
       --radius-md:14px;
-      --radius-lg:24px;
-      --radius-xl:32px;
+      --radius-lg:20px;
+      --radius-xl:28px;
       --font-display:'Fraunces',serif;
       --font-sans:'Inter',sans-serif;
       --font-mono:'JetBrains Mono',monospace;
+      --transition-smooth:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     html{scroll-behavior:smooth}
     body{
@@ -89,76 +79,123 @@
       position:relative;
     }
     @media (prefers-reduced-motion: reduce){
-      *{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;scroll-behavior:auto !important}
+      *{animation-duration:0.01ms !important;transition-duration:0.01ms !important}
     }
     ::-webkit-scrollbar{width:6px}
     ::-webkit-scrollbar-track{background:var(--bg-secondary)}
     ::-webkit-scrollbar-thumb{background:var(--accent-1);border-radius:10px}
-    a{color:inherit}
-    button:focus-visible, a:focus-visible, input:focus-visible, div[tabindex]:focus-visible{
-      outline:2px solid var(--accent-1);outline-offset:2px;
-    }
-
-    #bg-scene{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-    .rangoli{
+    
+    /* ===== BACKGROUND SCENE ===== */
+    .bg-scene{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+    .orb{
       position:absolute;border-radius:50%;
-      border:1px solid rgba(255,159,69,0.07);
-      animation:float 24s infinite alternate ease-in-out;
+      filter:blur(80px);animation:orbFloat 20s infinite alternate ease-in-out;
     }
-    .rangoli:nth-child(1){width:620px;height:620px;top:-12%;right:-8%;animation-duration:26s}
-    .rangoli:nth-child(2){width:420px;height:420px;bottom:8%;left:-8%;animation-duration:32s;border-color:rgba(31,174,109,0.08)}
-    .rangoli:nth-child(3){width:280px;height:280px;top:42%;left:48%;animation-duration:20s;border-color:rgba(255,159,69,0.05)}
-    @keyframes float{
-      0%{transform:translate(0,0) rotate(0deg) scale(1)}
-      33%{transform:translate(26px,-36px) rotate(120deg) scale(1.04)}
-      66%{transform:translate(-18px,18px) rotate(240deg) scale(0.96)}
-      100%{transform:translate(10px,-10px) rotate(360deg) scale(1)}
+    .orb:nth-child(1){
+      width:600px;height:600px;top:-10%;right:-10%;
+      background:radial-gradient(circle, rgba(255,159,69,0.06) 0%, transparent 70%);
+      animation-duration:25s;
     }
-    .glow-orb{
-      position:absolute;width:500px;height:500px;border-radius:50%;
-      background:radial-gradient(circle, rgba(255,159,69,0.08) 0%, transparent 70%);
-      filter:blur(60px);animation:pulseGlow 9s infinite alternate;
+    .orb:nth-child(2){
+      width:400px;height:400px;bottom:5%;left:-5%;
+      background:radial-gradient(circle, rgba(31,174,109,0.05) 0%, transparent 70%);
+      animation-duration:30s;animation-delay:-5s;
     }
-    .glow-orb:nth-child(4){top:18%;left:18%;animation-delay:-2s}
-    .glow-orb:nth-child(5){bottom:8%;right:10%;background:radial-gradient(circle, rgba(31,174,109,0.07) 0%, transparent 70%);animation-delay:-5s}
-    @keyframes pulseGlow{0%{opacity:0.4;transform:scale(0.9)}100%{opacity:1;transform:scale(1.2)}}
-    #particleCanvas{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:0.5}
-
+    .orb:nth-child(3){
+      width:300px;height:300px;top:40%;left:40%;
+      background:radial-gradient(circle, rgba(255,159,69,0.04) 0%, transparent 70%);
+      animation-duration:22s;animation-delay:-10s;
+    }
+    @keyframes orbFloat{
+      0%{transform:translate(0,0) scale(1)}
+      50%{transform:translate(30px,-40px) scale(1.1)}
+      100%{transform:translate(-20px,20px) scale(0.9)}
+    }
+    .grid-pattern{
+      position:fixed;inset:0;z-index:0;pointer-events:none;
+      background-image: 
+        linear-gradient(rgba(255,159,69,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,159,69,0.02) 1px, transparent 1px);
+      background-size:60px 60px;
+    }
+    
+    /* ===== CONTAINER ===== */
     .container{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:5}
     .section{padding:80px 0}
-
+    
+    /* ===== NAVIGATION ===== */
     nav{
       position:sticky;top:0;z-index:100;
-      background:rgba(18,14,26,0.85);backdrop-filter:blur(20px);
+      background:rgba(10,7,17,0.92);backdrop-filter:blur(24px);
       border-bottom:1px solid var(--border-glow);
     }
-    .nav-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;justify-content:space-between}
+    .nav-inner{
+      max-width:1280px;margin:0 auto;padding:0 24px;
+      height:76px;display:flex;align-items:center;justify-content:space-between
+    }
     .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo-icon{width:42px;height:42px;flex-shrink:0}
-    .logo-text{font-family:var(--font-display);font-weight:600;font-size:1.35rem;letter-spacing:-0.3px}
+    .logo-icon{width:40px;height:40px;flex-shrink:0}
+    .logo-text{
+      font-family:var(--font-display);
+      font-weight:600;font-size:1.3rem;
+      letter-spacing:-0.3px;
+    }
     .logo-text .bharat{color:var(--text-primary)}
-    .logo-text .exchange-grad{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .logo-text .exchange{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
     .nav-links{display:flex;gap:32px}
-    .nav-links a{text-decoration:none;color:var(--text-secondary);font-weight:500;font-size:0.85rem;transition:color 0.2s;position:relative}
+    .nav-links a{
+      text-decoration:none;color:var(--text-secondary);
+      font-weight:500;font-size:0.85rem;
+      transition:color 0.2s;position:relative
+    }
     .nav-links a:hover,.nav-links a.active{color:var(--accent-1)}
-    .nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--accent-grad);border-radius:2px}
+    .nav-links a.active::after{
+      content:'';position:absolute;bottom:-4px;left:0;right:0;
+      height:2px;background:var(--accent-grad);border-radius:2px
+    }
     .wallet-area{display:flex;align-items:center;gap:16px}
     .inr-price{
-      background:var(--bg-card);backdrop-filter:blur(8px);padding:6px 16px;border-radius:40px;
-      font-family:var(--font-mono);font-size:0.7rem;border:1px solid var(--border-glow);
-      display:flex;align-items:center;gap:8px;white-space:nowrap;
+      background:var(--bg-card);backdrop-filter:blur(8px);
+      padding:6px 16px;border-radius:40px;
+      font-family:var(--font-mono);font-size:0.7rem;
+      border:1px solid var(--border-glow);
+      display:flex;align-items:center;gap:8px;white-space:nowrap
     }
     .inr-price .change{color:var(--accent-2)}
-    .btn{font-weight:600;padding:10px 24px;border-radius:40px;cursor:pointer;transition:all 0.25s;font-size:0.8rem;border:none;font-family:inherit}
-    .btn-primary{background:var(--accent-grad);color:#120E1A;box-shadow:0 4px 20px rgba(255,159,69,0.22)}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,159,69,0.4)}
-    .btn-outline{background:transparent;border:1px solid var(--border-glow);color:var(--text-primary)}
-    .btn-outline:hover{border-color:var(--accent-1);color:var(--accent-1);box-shadow:0 0 20px rgba(255,159,69,0.1)}
-
-    /* ticker */
+    
+    /* ===== BUTTONS ===== */
+    .btn{
+      font-weight:600;padding:10px 24px;border-radius:40px;
+      cursor:pointer;transition:var(--transition-smooth);
+      font-size:0.85rem;border:none;font-family:inherit;
+      position:relative;overflow:hidden;
+    }
+    .btn-primary{
+      background:var(--accent-grad);color:#120E1A;
+      box-shadow:0 4px 20px rgba(255,159,69,0.2);
+    }
+    .btn-primary:hover{
+      transform:translateY(-2px);box-shadow:0 8px 40px rgba(255,159,69,0.35);
+    }
+    .btn-outline{
+      background:transparent;border:1px solid var(--border-glow);
+      color:var(--text-primary);
+    }
+    .btn-outline:hover{
+      border-color:var(--accent-1);color:var(--accent-1);
+      box-shadow:0 0 30px rgba(255,159,69,0.08);
+    }
+    .btn-glow{
+      position:absolute;top:-50%;left:-50%;width:200%;height:200%;
+      background:radial-gradient(circle, rgba(255,159,69,0.1) 0%, transparent 70%);
+      opacity:0;transition:opacity 0.3s;
+    }
+    .btn:hover .btn-glow{opacity:1}
+    
+    /* ===== TICKER ===== */
     .ticker-wrap{
       background:var(--bg-secondary);border-bottom:1px solid var(--border-glow);
-      overflow:hidden;white-space:nowrap;position:relative;z-index:5;
+      overflow:hidden;white-space:nowrap;position:relative;z-index:5
     }
     .ticker-track{display:inline-flex;gap:40px;padding:10px 0;animation:tickerScroll 38s linear infinite}
     .ticker-wrap:hover .ticker-track{animation-play-state:paused}
@@ -167,707 +204,960 @@
     .ticker-item b{color:var(--text-primary);font-weight:600}
     .ticker-item .chg-up{color:var(--accent-2)}
     .ticker-item .chg-down{color:#FF6B6B}
-
-    .hero{display:grid;grid-template-columns:1fr 480px;gap:60px;align-items:center;padding:60px 0 40px}
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;background:rgba(255,159,69,0.12);
-      border:1px solid var(--border-glow);padding:6px 16px;border-radius:40px;
-      font-family:var(--font-mono);font-size:0.7rem;color:var(--accent-1);margin-bottom:28px;
+    
+    /* ===== HERO ===== */
+    .hero{
+      display:grid;grid-template-columns:1fr 520px;
+      gap:60px;align-items:start;padding:50px 0 40px
     }
-    h1{font-family:var(--font-display);font-size:clamp(2.6rem,5vw,4.4rem);font-weight:600;line-height:1.08;letter-spacing:-1px;margin-bottom:20px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,159,69,0.08);
+      border:1px solid var(--border-glow);
+      padding:6px 16px;border-radius:40px;
+      font-family:var(--font-mono);font-size:0.7rem;
+      color:var(--accent-1);margin-bottom:24px
+    }
+    h1{
+      font-family:var(--font-display);
+      font-size:clamp(2.8rem,5vw,4.6rem);
+      font-weight:600;line-height:1.08;
+      letter-spacing:-1px;margin-bottom:20px
+    }
     h2{font-family:var(--font-display);font-weight:600}
     .gradient-text{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero-desc{color:var(--text-secondary);line-height:1.8;margin-bottom:32px;font-size:1.05rem;max-width:540px}
+    .hero-desc{
+      color:var(--text-secondary);line-height:1.8;
+      margin-bottom:32px;font-size:1.05rem;max-width:540px
+    }
     .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
-    .stats-row{display:flex;gap:40px;padding-top:28px;border-top:1px solid var(--border-glow);flex-wrap:wrap}
-    .stat .stat-val{font-family:var(--font-mono);font-size:1.6rem;font-weight:700;color:var(--accent-1)}
+    .stats-row{
+      display:flex;gap:40px;padding-top:28px;
+      border-top:1px solid var(--border-glow);flex-wrap:wrap
+    }
+    .stat .stat-val{
+      font-family:var(--font-mono);font-size:1.6rem;
+      font-weight:700;color:var(--accent-1)
+    }
     .stat .stat-label{font-size:0.7rem;color:var(--text-dim);letter-spacing:1px}
-
+    
+    /* ===== WIDGET CARD ===== */
     .widget-card{
-      background:var(--bg-card);backdrop-filter:blur(20px);border:1px solid var(--border-glow);
-      border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-glow);transition:border-color 0.3s;
+      background:var(--bg-card);backdrop-filter:blur(20px);
+      border:1px solid var(--border-glow);
+      border-radius:var(--radius-xl);overflow:hidden;
+      box-shadow:var(--shadow-glow);
+      transition:border-color 0.3s;
+      position:sticky;top:90px;
     }
     .widget-card:hover{border-color:var(--border-hover)}
-    .card-header{padding:18px 24px;border-bottom:1px solid var(--border-glow);display:flex;justify-content:space-between;align-items:center}
-    .tabs{display:flex;border-bottom:1px solid var(--border-glow)}
-    .tab{flex:1;padding:14px 6px;text-align:center;font-weight:600;font-size:0.78rem;color:var(--text-secondary);cursor:pointer;transition:0.2s;position:relative}
-    .tab.active{color:var(--text-primary)}
-    .tab.active::after{content:'';position:absolute;bottom:-1px;left:20%;right:20%;height:2px;background:var(--accent-grad);border-radius:2px}
-    .panel{display:none;padding:24px}
-    .panel.active{display:block;animation:fadeIn 0.3s ease}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-    .field{background:var(--bg-elev);backdrop-filter:blur(4px);border:1px solid var(--border-glow);border-radius:var(--radius-md);padding:16px;margin-bottom:14px}
-    .field-top{display:flex;justify-content:space-between;font-size:0.7rem;color:var(--text-dim);margin-bottom:6px}
-    .field-row{display:flex;align-items:center;gap:12px}
-    .field-row input[type="number"]{background:transparent;border:none;outline:none;color:var(--text-primary);font-family:var(--font-mono);font-size:1.25rem;font-weight:600;width:100%}
-    .field-row input::placeholder{color:var(--text-dim)}
-    .token-pick{display:flex;align-items:center;gap:8px;background:var(--bg-card);border:1px solid var(--border-glow);border-radius:40px;padding:6px 14px;font-size:0.8rem;font-weight:600;cursor:pointer;transition:0.2s;white-space:nowrap}
-    .token-pick:hover{border-color:var(--accent-1)}
-    .token-dot{width:22px;height:22px;border-radius:50%;background:var(--accent-grad);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:0.6rem;font-weight:700;color:#120E1A}
-    .flip-wrap{display:flex;justify-content:center;margin:2px 0 8px}
-    .flip-btn{width:40px;height:40px;border-radius:40px;background:var(--bg-elev);border:1px solid var(--border-glow);color:var(--accent-1);cursor:pointer;font-size:1.2rem;transition:0.3s}
-    .flip-btn:hover{transform:rotate(180deg);border-color:var(--accent-1)}
-    .rate-line{display:flex;justify-content:space-between;font-size:0.72rem;color:var(--text-secondary);padding:4px 0}
-    .rate-line b{color:var(--text-primary);font-family:var(--font-mono);font-weight:500}
-    .pay-opt{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
-    .pay-chip{flex:1;min-width:80px;text-align:center;padding:8px 10px;border-radius:40px;background:var(--bg-elev);border:1px solid var(--border-glow);font-size:0.68rem;font-weight:600;cursor:pointer;transition:0.2s}
-    .pay-chip.active{background:var(--accent-grad);color:#120E1A;border-color:transparent}
-    .main-action{width:100%;padding:16px;background:var(--accent-grad);border:none;border-radius:var(--radius-lg);font-weight:700;font-size:0.9rem;cursor:pointer;transition:0.25s;color:#120E1A;margin-top:8px}
-    .main-action:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(255,159,69,0.4)}
-    .widget-note{text-align:center;margin-top:14px;font-size:0.65rem;color:var(--text-dim)}
-
-    .rates-table{margin-top:48px;background:var(--bg-card);border:1px solid var(--border-glow);border-radius:var(--radius-lg);overflow:hidden}
-    .rates-row{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;align-items:center;padding:16px 24px;border-bottom:1px solid var(--border-glow);font-size:0.85rem}
+    .card-header{
+      padding:18px 24px;border-bottom:1px solid var(--border-glow);
+      display:flex;justify-content:space-between;align-items:center
+    }
+    .card-header .title{font-weight:700;font-size:1.1rem}
+    .card-header .sub{color:var(--text-dim);font-size:0.7rem}
+    
+    /* ===== EXCHANGE WIDGET ===== */
+    .exchange-widget{padding:24px}
+    
+    .pair-selector{
+      display:flex;gap:12px;align-items:center;
+      margin-bottom:24px;background:var(--bg-elev);
+      border-radius:var(--radius-lg);padding:8px;
+    }
+    .pair-selector .from,.pair-selector .to{
+      flex:1;padding:12px 16px;border-radius:var(--radius-md);
+      cursor:pointer;transition:var(--transition-smooth);
+      display:flex;align-items:center;gap:10px;
+      background:transparent;border:2px solid transparent;
+    }
+    .pair-selector .from.active,.pair-selector .to.active{
+      background:var(--bg-card);border-color:var(--accent-1);
+    }
+    .pair-selector .arrow{
+      color:var(--text-dim);font-size:1.2rem;
+      flex-shrink:0;padding:0 4px;
+    }
+    .pair-selector .coin-icon{
+      width:32px;height:32px;border-radius:50%;
+      background:var(--accent-grad);display:flex;
+      align-items:center;justify-content:center;
+      font-weight:700;font-size:0.7rem;color:#120E1A;
+      flex-shrink:0;
+    }
+    .pair-selector .coin-info{display:flex;flex-direction:column;gap:2px}
+    .pair-selector .coin-symbol{font-weight:700;font-size:0.9rem}
+    .pair-selector .coin-name{font-size:0.7rem;color:var(--text-dim)}
+    
+    .presets{
+      display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;
+    }
+    .preset{
+      padding:6px 14px;border-radius:40px;
+      background:var(--bg-elev);border:1px solid var(--border-glow);
+      color:var(--text-secondary);font-size:0.7rem;
+      cursor:pointer;transition:var(--transition-smooth);
+      font-weight:500;font-family:var(--font-mono);
+    }
+    .preset:hover,.preset.active{
+      background:var(--accent-grad);color:#120E1A;
+      border-color:transparent;transform:scale(1.05);
+    }
+    
+    .amount-field{
+      background:var(--bg-elev);border:1px solid var(--border-glow);
+      border-radius:var(--radius-md);padding:16px;
+      margin-bottom:12px;transition:border-color 0.3s;
+    }
+    .amount-field:focus-within{border-color:var(--accent-1)}
+    .amount-field .label{
+      display:flex;justify-content:space-between;
+      font-size:0.7rem;color:var(--text-dim);margin-bottom:6px
+    }
+    .amount-field .input-row{
+      display:flex;align-items:center;gap:12px
+    }
+    .amount-field input{
+      background:transparent;border:none;outline:none;
+      color:var(--text-primary);font-family:var(--font-mono);
+      font-size:1.4rem;font-weight:600;width:100%
+    }
+    .amount-field input::placeholder{color:var(--text-dim)}
+    .amount-field .token-badge{
+      display:flex;align-items:center;gap:6px;
+      background:var(--bg-card);border:1px solid var(--border-glow);
+      border-radius:40px;padding:4px 12px 4px 6px;
+      font-size:0.8rem;font-weight:600;cursor:pointer;
+      transition:var(--transition-smooth);white-space:nowrap;
+    }
+    .amount-field .token-badge:hover{border-color:var(--accent-1)}
+    .amount-field .token-badge .dot{
+      width:24px;height:24px;border-radius:50%;
+      background:var(--accent-grad);display:flex;
+      align-items:center;justify-content:center;
+      font-size:0.6rem;font-weight:700;color:#120E1A;
+    }
+    
+    .swap-direction{
+      display:flex;justify-content:center;margin:6px 0 12px;
+    }
+    .swap-btn{
+      width:44px;height:44px;border-radius:50%;
+      background:var(--bg-elev);border:1px solid var(--border-glow);
+      color:var(--accent-1);cursor:pointer;font-size:1.2rem;
+      transition:var(--transition-smooth);display:flex;
+      align-items:center;justify-content:center;
+    }
+    .swap-btn:hover{
+      transform:rotate(180deg);
+      border-color:var(--accent-1);
+      box-shadow:0 0 30px rgba(255,159,69,0.15);
+    }
+    
+    .rate-info{
+      display:flex;justify-content:space-between;
+      padding:6px 0;font-size:0.72rem;color:var(--text-secondary)
+    }
+    .rate-info b{color:var(--text-primary);font-family:var(--font-mono);font-weight:500}
+    
+    .main-action{
+      width:100%;padding:16px;background:var(--accent-grad);
+      border:none;border-radius:var(--radius-lg);
+      font-weight:700;font-size:0.9rem;cursor:pointer;
+      transition:var(--transition-smooth);color:#120E1A;
+      margin-top:8px;position:relative;overflow:hidden;
+    }
+    .main-action:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 40px rgba(255,159,69,0.35);
+    }
+    
+    .widget-note{
+      text-align:center;margin-top:14px;
+      font-size:0.65rem;color:var(--text-dim)
+    }
+    
+    /* ===== COIN SEARCH MODAL ===== */
+    .modal-overlay{
+      position:fixed;inset:0;z-index:200;
+      background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);
+      display:none;align-items:center;justify-content:center;
+      animation:fadeIn 0.25s ease;
+    }
+    .modal-overlay.active{display:flex}
+    .modal{
+      background:var(--bg-secondary);border:1px solid var(--border-glow);
+      border-radius:var(--radius-xl);max-width:440px;width:90%;
+      max-height:80vh;overflow:hidden;padding:24px;
+      animation:slideUp 0.3s ease;
+    }
+    @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .modal-search{
+      width:100%;padding:12px 16px;border-radius:var(--radius-md);
+      background:var(--bg-elev);border:1px solid var(--border-glow);
+      color:var(--text-primary);font-size:0.9rem;margin-bottom:16px;
+      font-family:var(--font-sans);
+    }
+    .modal-search:focus{outline:none;border-color:var(--accent-1)}
+    .modal-list{max-height:400px;overflow-y:auto}
+    .modal-item{
+      display:flex;align-items:center;gap:12px;
+      padding:10px 12px;border-radius:var(--radius-sm);
+      cursor:pointer;transition:var(--transition-smooth);
+    }
+    .modal-item:hover{background:var(--bg-elev)}
+    .modal-item .icon{
+      width:32px;height:32px;border-radius:50%;
+      background:var(--accent-grad);display:flex;
+      align-items:center;justify-content:center;
+      font-weight:700;font-size:0.6rem;color:#120E1A;
+    }
+    .modal-item .info{display:flex;flex-direction:column}
+    .modal-item .symbol{font-weight:600;font-size:0.85rem}
+    .modal-item .name{font-size:0.7rem;color:var(--text-dim)}
+    
+    /* ===== MARKETS TABLE ===== */
+    .rates-table{
+      margin-top:48px;background:var(--bg-card);
+      border:1px solid var(--border-glow);border-radius:var(--radius-lg);
+      overflow:hidden
+    }
+    .rates-row{
+      display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr;
+      align-items:center;padding:16px 24px;
+      border-bottom:1px solid var(--border-glow);font-size:0.85rem
+    }
     .rates-row:last-child{border-bottom:none}
-    .rates-row.head{color:var(--text-dim);font-size:0.68rem;text-transform:uppercase;letter-spacing:1px;background:var(--bg-elev)}
+    .rates-row.head{
+      color:var(--text-dim);font-size:0.68rem;
+      text-transform:uppercase;letter-spacing:1px;
+      background:var(--bg-elev)
+    }
     .rates-row .coin-name{display:flex;align-items:center;gap:10px;font-weight:600}
     .rates-row .price{font-family:var(--font-mono);font-weight:600}
     .rates-row .chg-up{color:var(--accent-2)}
     .rates-row .chg-down{color:#FF6B6B}
-    .rates-row .trade-link{color:var(--accent-1);text-decoration:none;font-weight:600;font-size:0.75rem;cursor:pointer}
-
-    .features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-    .feature{background:var(--bg-card);backdrop-filter:blur(8px);border-radius:var(--radius-lg);padding:32px;border:1px solid transparent;transition:0.3s}
-    .feature:hover{border-color:var(--border-hover);transform:translateY(-4px)}
+    .rates-row .trade-link{
+      color:var(--accent-1);text-decoration:none;
+      font-weight:600;font-size:0.75rem;cursor:pointer;
+      transition:color 0.2s
+    }
+    .rates-row .trade-link:hover{color:#FFB866}
+    
+    /* ===== FEATURES ===== */
+    .features-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      gap:24px;margin-top:48px
+    }
+    .feature{
+      background:var(--bg-card);backdrop-filter:blur(8px);
+      border-radius:var(--radius-lg);padding:32px;
+      border:1px solid transparent;transition:var(--transition-smooth)
+    }
+    .feature:hover{
+      border-color:var(--border-hover);
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-glow)
+    }
     .feature-icon{font-size:2.1rem;margin-bottom:16px}
-    .feature h3{margin-bottom:8px;font-size:1.05rem;font-family:var(--font-sans);font-weight:700}
+    .feature h3{margin-bottom:8px;font-size:1.05rem;font-weight:700}
     .feature p{color:var(--text-secondary);font-size:0.85rem}
-
-    .security-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
-    .practice-list{background:var(--bg-card);backdrop-filter:blur(8px);border-radius:var(--radius-lg);padding:32px;border:1px solid var(--border-glow)}
-    .practice-item{display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--border-glow)}
-    .practice-item:last-child{border-bottom:none}
-
-    .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px;margin-top:48px}
-    .faq-item{border-bottom:1px solid var(--border-glow);padding:4px 0}
-    .faq-question{padding:18px 0;cursor:pointer;display:flex;justify-content:space-between;gap:16px;font-weight:600;font-size:0.95rem}
-    .faq-question span{color:var(--accent-1);font-size:1.2rem;transition:0.3s;flex-shrink:0}
-    .faq-answer{color:var(--text-secondary);font-size:0.85rem;line-height:1.7;max-height:0;overflow:hidden;transition:max-height 0.35s ease}
-    .faq-answer.open{max-height:320px}
-
-    footer{background:var(--bg-secondary);border-top:1px solid var(--border-glow);padding:52px 0 32px;margin-top:40px}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px}
-    .footer-grid a{display:block;text-decoration:none;color:var(--text-secondary);font-size:0.8rem;margin-bottom:8px;transition:color 0.2s}
+    
+    /* ===== FAQ ===== */
+    .faq-grid{
+      display:grid;grid-template-columns:repeat(2,1fr);
+      gap:24px;margin-top:48px
+    }
+    .faq-item{
+      background:var(--bg-card);border:1px solid var(--border-glow);
+      border-radius:var(--radius-lg);padding:20px 24px;
+      transition:var(--transition-smooth)
+    }
+    .faq-item:hover{border-color:var(--border-hover)}
+    .faq-question{
+      display:flex;justify-content:space-between;
+      gap:16px;font-weight:600;font-size:0.95rem;
+      cursor:pointer;padding:4px 0
+    }
+    .faq-question span{
+      color:var(--accent-1);font-size:1.2rem;
+      transition:transform 0.3s;flex-shrink:0
+    }
+    .faq-question.open span{transform:rotate(45deg)}
+    .faq-answer{
+      color:var(--text-secondary);font-size:0.85rem;
+      line-height:1.7;max-height:0;overflow:hidden;
+      transition:max-height 0.4s ease, padding 0.3s ease
+    }
+    .faq-answer.open{
+      max-height:320px;padding-top:12px;
+    }
+    
+    /* ===== FOOTER ===== */
+    footer{
+      background:var(--bg-secondary);border-top:1px solid var(--border-glow);
+      padding:52px 0 32px;margin-top:40px
+    }
+    .footer-grid{
+      display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:48px
+    }
+    .footer-grid a{
+      display:block;text-decoration:none;color:var(--text-secondary);
+      font-size:0.8rem;margin-bottom:8px;transition:color 0.2s
+    }
     .footer-grid a:hover{color:var(--accent-1)}
     .footer-grid h5{color:var(--accent-1);margin-bottom:14px;font-size:0.75rem;text-transform:uppercase;letter-spacing:1px}
-    .disclaimer{font-size:0.68rem;color:var(--text-dim);line-height:1.7;margin-top:28px;padding-top:20px;border-top:1px solid var(--border-glow)}
-
+    .disclaimer{
+      font-size:0.68rem;color:var(--text-dim);line-height:1.7;
+      margin-top:28px;padding-top:20px;border-top:1px solid var(--border-glow)
+    }
     .toast{
-      position:fixed;bottom:30px;left:50%;transform:translateX(-50%);background:var(--bg-card);backdrop-filter:blur(20px);
-      border:1px solid var(--accent-1);padding:14px 28px;border-radius:40px;font-size:0.8rem;z-index:200;
-      opacity:0;transition:0.3s;pointer-events:none;box-shadow:0 8px 40px rgba(0,0,0,0.5);
+      position:fixed;bottom:30px;left:50%;transform:translateX(-50%);
+      background:var(--bg-card);backdrop-filter:blur(20px);
+      border:1px solid var(--accent-1);padding:14px 28px;
+      border-radius:40px;font-size:0.8rem;z-index:300;
+      opacity:0;transition:0.3s;pointer-events:none;
+      box-shadow:0 8px 60px rgba(0,0,0,0.6);
+      white-space:nowrap;
     }
     .toast.show{opacity:1;transform:translateX(-50%) translateY(-10px)}
-
+    
+    /* ===== RESPONSIVE ===== */
     @media(max-width:1024px){
-      .hero{grid-template-columns:1fr}
-      .features-grid,.security-grid,.faq-grid{grid-template-columns:1fr}
-      .rates-row{grid-template-columns:2fr 1fr 1fr}
-      .rates-row .vol-col{display:none}
+      .hero{grid-template-columns:1fr;gap:40px}
+      .widget-card{position:static}
+      .features-grid,.faq-grid{grid-template-columns:1fr 1fr}
       .footer-grid{grid-template-columns:1fr 1fr}
       .nav-links{display:none}
+      .rates-row{grid-template-columns:2fr 1.5fr 1fr}
+      .rates-row .vol-col{display:none}
     }
-    @media(max-width:600px){
+    @media(max-width:640px){
+      .section{padding:50px 0}
+      .hero{padding:30px 0}
+      .features-grid,.faq-grid{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr}
       .stats-row{flex-wrap:wrap;gap:16px}
       .stat .stat-val{font-size:1.3rem}
-      .widget-card .tabs{flex-wrap:wrap}
-      .tab{flex:1 0 45%}
-      .pay-chip{flex:1 0 40%}
+      .pair-selector{flex-direction:column;padding:12px}
+      .pair-selector .arrow{transform:rotate(90deg)}
+      .exchange-widget{padding:16px}
+      .amount-field input{font-size:1.1rem}
+      .presets{justify-content:center}
+      .rates-row{grid-template-columns:1fr 1fr;padding:12px 16px;gap:4px}
+      .rates-row .coin-name{grid-column:1/3}
+    }
+    @media(max-width:480px){
+      .container{padding:0 16px}
+      .hero-actions .btn{flex:1;min-width:120px;text-align:center;font-size:0.75rem;padding:8px 16px}
+      .inr-price{font-size:0.6rem;padding:4px 12px}
     }
   </style>
 </head>
 <body>
 
-<div id="bg-scene">
-  <div class="rangoli"></div>
-  <div class="rangoli"></div>
-  <div class="rangoli"></div>
-  <div class="glow-orb"></div>
-  <div class="glow-orb"></div>
+<!-- ===== BACKGROUND ===== -->
+<div class="bg-scene">
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
 </div>
-<canvas id="particleCanvas"></canvas>
+<div class="grid-pattern"></div>
 
+<!-- ===== NAVIGATION ===== -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
-      <svg class="logo-icon" width="42" height="42" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGrad1)" stroke-width="1.5" />
-        <circle cx="22" cy="22" r="17" fill="none" stroke="url(#ringGrad2)" stroke-width="1" opacity="0.5" />
+      <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
+        <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGrad)" stroke-width="1.5" />
         <path d="M13 16h18M13 22h18" stroke="#FF9F45" stroke-width="2.2" stroke-linecap="round" />
         <path d="M20 29l7-7-7-7" stroke="#1FAE6D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        <defs>
-          <linearGradient id="ringGrad1" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" />
-          </linearGradient>
-          <linearGradient id="ringGrad2" x1="0" y1="1" x2="1" y2="0">
-            <stop offset="0%" stop-color="#1FAE6D" /><stop offset="100%" stop-color="#FF9F45" />
-          </linearGradient>
-        </defs>
+        <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
       </svg>
-      <span class="logo-text"><span class="bharat">Bharat</span> <span class="exchange-grad">Exchange</span></span>
+      <span class="logo-text"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
     </a>
     <div class="nav-links">
-      <a href="#trade" class="active">Buy / Sell</a>
+      <a href="#" class="active">Exchange</a>
       <a href="#markets">Markets</a>
-      <a href="#swap">Swap</a>
-      <a href="#p2p">P2P</a>
-      <a href="#security">Security</a>
+      <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
     </div>
     <div class="wallet-area">
       <div class="inr-price">
-        BTC/INR <span id="btcInrPrice">—</span>
-        <span class="change" id="btcInrChange">▲0.0%</span>
+        BTC/INR <span id="btcPrice">—</span>
+        <span class="change" id="btcChange">▲0.0%</span>
       </div>
-      <button class="btn btn-outline" onclick="getStarted()">Sign Up</button>
+      <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('Connect wallet modal opens here')">
+        <span class="btn-glow"></span> Connect
+      </button>
     </div>
   </div>
 </nav>
 
+<!-- ===== TICKER ===== -->
 <div class="ticker-wrap">
-  <div class="ticker-track" id="tickerTrack"><span style="font-size:0.75rem;color:var(--text-dim);padding:10px 0">Loading live INR rates…</span></div>
+  <div class="ticker-track" id="tickerTrack">
+    <span style="color:var(--text-dim);padding:10px 0">Loading live rates…</span>
+  </div>
 </div>
 
+<!-- ===== MAIN ===== -->
 <main>
   <div class="container">
-    <div class="hero" id="trade">
+    <div class="hero">
+      <!-- LEFT -->
       <div>
-        <div class="badge"><span>🇮🇳 MADE FOR INDIA</span> · <span>UPI · IMPS · BANK TRANSFER</span></div>
-        <h1>Buy, sell and swap crypto<br><span class="gradient-text">without leaving INR behind.</span></h1>
-        <p class="hero-desc">Bharat Exchange is a crypto trading platform built around how India actually pays — UPI, IMPS and bank transfer straight to your rupee balance. Buy Bitcoin, Ethereum and USDT, swap between tokens, or trade peer-to-peer with verified users, all with live market rates.</p>
+        <div class="badge">
+          <span>🇮🇳 INDIA'S CRYPTO EXCHANGE</span>
+          <span>·</span>
+          <span>UPI · IMPS · BANK</span>
+        </div>
+        <h1>Buy & sell crypto<br><span class="gradient-text">with your INR.</span></h1>
+        <p class="hero-desc">
+          Bharat Exchange is built for India — deposit with UPI, trade Bitcoin, Ethereum, USDT, 
+          and swap between tokens, all with live market rates and zero hidden fees.
+        </p>
         <div class="hero-actions">
-          <button class="btn btn-primary" onclick="switchTab('buy')">₹ Buy Crypto</button>
-          <button class="btn btn-outline" onclick="switchTab('sell')">Sell Crypto</button>
-          <button class="btn btn-outline" onclick="switchTab('swap')">🔄 Swap Tokens</button>
+          <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="openModal('from')">
+            <span class="btn-glow"></span> ₹ Buy Crypto
+          </button>
+          <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('Sell flow coming soon')">
+            <span class="btn-glow"></span> Sell Crypto
+          </button>
+          <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('Swap feature ready')">
+            <span class="btn-glow"></span> 🔄 Swap
+          </button>
         </div>
         <div class="stats-row">
           <div class="stat"><div class="stat-val">0.20%</div><div class="stat-label">TRADING FEE</div></div>
           <div class="stat"><div class="stat-val">24/7</div><div class="stat-label">INR ON/OFF-RAMP</div></div>
-          <div class="stat"><div class="stat-val">&lt;5 min</div><div class="stat-label">TYPICAL UPI SETTLEMENT</div></div>
-          <div class="stat"><div class="stat-val">Self-custody</div><div class="stat-label">SWAP OPTION</div></div>
+          <div class="stat"><div class="stat-val">&lt;5 min</div><div class="stat-label">UPI SETTLEMENT</div></div>
         </div>
       </div>
 
+      <!-- RIGHT: EXCHANGE WIDGET -->
       <div class="widget-card">
         <div class="card-header">
-          <span style="font-weight:700">Trade Crypto</span>
-          <span style="color:var(--text-dim);font-size:0.7rem">Live INR rates</span>
+          <span class="title">💱 Exchange</span>
+          <span class="sub">Live INR rates</span>
         </div>
-        <div class="tabs">
-          <div class="tab active" data-tab="buy" onclick="switchTab('buy')">Buy</div>
-          <div class="tab" data-tab="sell" onclick="switchTab('sell')">Sell</div>
-          <div class="tab" data-tab="swap" onclick="switchTab('swap')">Swap</div>
-          <div class="tab" data-tab="p2p" onclick="switchTab('p2p')">P2P</div>
-        </div>
+        <div class="exchange-widget">
+          <!-- Pair Selector -->
+          <div class="pair-selector">
+            <div class="from active" onclick="openModal('from')" id="fromSelector">
+              <div class="coin-icon" id="fromIcon">B</div>
+              <div class="coin-info">
+                <span class="coin-symbol" id="fromSymbol">BTC</span>
+                <span class="coin-name" id="fromName">Bitcoin</span>
+              </div>
+            </div>
+            <div class="arrow">⟶</div>
+            <div class="to" onclick="openModal('to')" id="toSelector">
+              <div class="coin-icon" id="toIcon">₹</div>
+              <div class="coin-info">
+                <span class="coin-symbol" id="toSymbol">INR</span>
+                <span class="coin-name" id="toName">Indian Rupee</span>
+              </div>
+            </div>
+          </div>
 
-        <!-- BUY -->
-        <div class="panel active" id="panel-buy">
-          <div class="pay-opt">
-            <div class="pay-chip active" onclick="selectPay(this)">UPI</div>
-            <div class="pay-chip" onclick="selectPay(this)">IMPS</div>
-            <div class="pay-chip" onclick="selectPay(this)">Bank Transfer</div>
+          <!-- Presets -->
+          <div class="presets" id="presets">
+            <button class="preset active xsudlmqvbag x2wl7trk" data-from="BTC" data-to="INR">BTC→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" data-from="ETH" data-to="INR">ETH→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" data-from="USDT" data-to="INR">USDT→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" data-from="BTC" data-to="USDT">BTC→USDT</button>
+            <button class="preset xsudlmqvbag x2wl7trk" data-from="ETH" data-to="BTC">ETH→BTC</button>
           </div>
-          <div class="field">
-            <div class="field-top"><span>You pay</span><span>Min ₹500</span></div>
-            <div class="field-row">
-              <input type="number" id="buyAmount" placeholder="0" oninput="calcBuy()" />
-              <div class="token-pick"><span class="token-dot" style="background:var(--bg-elev);border:1px solid var(--border-glow);color:var(--text-primary)">₹</span>INR</div>
-            </div>
-          </div>
-          <div class="flip-wrap"><span style="color:var(--text-dim);font-size:0.7rem">↓ converts to</span></div>
-          <div class="field">
-            <div class="field-top"><span>You receive (est.)</span><span></span></div>
-            <div class="field-row">
-              <input type="number" id="buyReceive" placeholder="0.0" disabled />
-              <div class="token-pick" onclick="cycleCoin('buy')"><span class="token-dot" id="buyCoinDot">B</span><span id="buyCoinLabel">BTC</span> ▾</div>
-            </div>
-          </div>
-          <div class="rate-line"><span>Rate</span><b id="buyRate">1 BTC ≈ — INR</b></div>
-          <div class="rate-line"><span>Platform fee</span><b>0.20%</b></div>
-          <div class="rate-line"><span>Settlement</span><b>Instant to a few minutes</b></div>
-          <button class="main-action" onclick="getStarted()">Sign Up to Buy</button>
-          <div class="widget-note">Live rates via CoinGecko · indicative quote, final price confirmed at checkout</div>
-        </div>
 
-        <!-- SELL -->
-        <div class="panel" id="panel-sell">
-          <div class="field">
-            <div class="field-top"><span>You sell</span><span></span></div>
-            <div class="field-row">
-              <input type="number" id="sellAmount" placeholder="0.0" oninput="calcSell()" />
-              <div class="token-pick" onclick="cycleCoin('sell')"><span class="token-dot" id="sellCoinDot">B</span><span id="sellCoinLabel">BTC</span> ▾</div>
+          <!-- Amount From -->
+          <div class="amount-field">
+            <div class="label">
+              <span>You pay</span>
+              <span id="fromBalance">Balance: —</span>
+            </div>
+            <div class="input-row">
+              <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" />
+              <div class="token-badge xsudlmqvbag x2wl7trk" onclick="openModal('from')">
+                <span class="dot" id="fromDot">B</span>
+                <span id="fromLabel">BTC</span>
+                <span style="font-size:0.6rem;color:var(--text-dim)">▾</span>
+              </div>
             </div>
           </div>
-          <div class="flip-wrap"><span style="color:var(--text-dim);font-size:0.7rem">↓ converts to</span></div>
-          <div class="field">
-            <div class="field-top"><span>You receive (est.)</span><span></span></div>
-            <div class="field-row">
-              <input type="number" id="sellReceive" placeholder="0" disabled />
-              <div class="token-pick"><span class="token-dot" style="background:var(--bg-elev);border:1px solid var(--border-glow);color:var(--text-primary)">₹</span>INR</div>
-            </div>
-          </div>
-          <div class="rate-line"><span>Rate</span><b id="sellRate">1 BTC ≈ — INR</b></div>
-          <div class="rate-line"><span>Platform fee</span><b>0.20%</b></div>
-          <div class="rate-line"><span>Payout to</span><b>Linked bank account</b></div>
-          <button class="main-action" onclick="getStarted()">Sign Up to Sell</button>
-          <div class="widget-note">1% TDS is withheld on applicable crypto trades per Indian tax rules</div>
-        </div>
 
-        <!-- SWAP -->
-        <div class="panel" id="panel-swap">
-          <div class="field">
-            <div class="field-top"><span>You pay</span><span>Balance —</span></div>
-            <div class="field-row">
-              <input type="number" id="swapAmount" placeholder="0.0" oninput="calcSwap()" />
-              <div class="token-pick" onclick="cycleCoin('swapFrom')"><span class="token-dot" id="swapFromDot">B</span><span id="swapFromLabel">BTC</span> ▾</div>
-            </div>
+          <!-- Swap Direction -->
+          <div class="swap-direction">
+            <button class="swap-btn xsudlmqvbag x2wl7trk" onclick="swapPair()">⇅</button>
           </div>
-          <div class="flip-wrap"><button class="flip-btn" onclick="flipSwap()">⇅</button></div>
-          <div class="field">
-            <div class="field-top"><span>You receive (est.)</span><span>Balance —</span></div>
-            <div class="field-row">
-              <input type="number" id="swapReceive" placeholder="0.0" disabled />
-              <div class="token-pick" onclick="cycleCoin('swapTo')"><span class="token-dot" id="swapToDot">U</span><span id="swapToLabel">USDT</span> ▾</div>
-            </div>
-          </div>
-          <div class="rate-line"><span>Rate</span><b id="swapRate">1 BTC ≈ — USDT</b></div>
-          <div class="rate-line"><span>Swap fee</span><b>0.30%</b></div>
-          <div class="rate-line"><span>Max slippage</span><b>0.50%</b></div>
-          <button class="main-action" onclick="getStarted()">Connect Wallet to Swap</button>
-          <div class="widget-note">On-chain swap · self-custody, funds never leave your wallet</div>
-        </div>
 
-        <!-- P2P -->
-        <div class="panel" id="panel-p2p">
-          <div class="field">
-            <div class="field-top"><span>Trade</span><span></span></div>
-            <div class="field-row">
-              <input type="number" id="p2pAmount" placeholder="0.0" oninput="calcP2p()" />
-              <div class="token-pick" onclick="cycleCoin('p2p')"><span class="token-dot" id="p2pCoinDot">U</span><span id="p2pCoinLabel">USDT</span> ▾</div>
+          <!-- Amount To -->
+          <div class="amount-field">
+            <div class="label">
+              <span>You receive (est.)</span>
+              <span id="toBalance">Balance: —</span>
+            </div>
+            <div class="input-row">
+              <input type="number" id="toAmount" placeholder="0.0" disabled />
+              <div class="token-badge xsudlmqvbag x2wl7trk" onclick="openModal('to')">
+                <span class="dot" id="toDot">₹</span>
+                <span id="toLabel">INR</span>
+                <span style="font-size:0.6rem;color:var(--text-dim)">▾</span>
+              </div>
             </div>
           </div>
-          <div class="rate-line"><span>Best offer (est.)</span><b id="p2pRate">1 USDT ≈ — INR</b></div>
-          <div class="rate-line"><span>You receive (est.)</span><b id="p2pReceive">— INR</b></div>
-          <div class="rate-line"><span>Escrow</span><b>Held until both sides confirm</b></div>
-          <div class="rate-line"><span>Payment window</span><b>15 minutes</b></div>
-          <button class="main-action" onclick="getStarted()">View P2P Offers</button>
-          <div class="widget-note">Trade directly with other verified users; funds are escrow-protected</div>
+
+          <!-- Rate Info -->
+          <div class="rate-info">
+            <span>Rate</span>
+            <b id="rateDisplay">1 BTC ≈ ₹—</b>
+          </div>
+          <div class="rate-info">
+            <span>Platform fee</span>
+            <b>0.20%</b>
+          </div>
+          <div class="rate-info">
+            <span>Est. settlement</span>
+            <b id="settlementInfo">Instant to few minutes</b>
+          </div>
+
+          <!-- Action Button -->
+          <button class="main-action xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet to trade')">
+            <span class="btn-glow"></span>
+            Connect Wallet & Trade
+          </button>
+          <div class="widget-note">Live rates from CoinGecko · indicative only</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- MARKETS -->
+  <!-- ===== MARKETS ===== -->
   <div class="container" id="markets">
     <div class="section">
       <div class="badge">📈 LIVE MARKETS</div>
-      <h2 style="font-size:2rem;margin-bottom:12px">Live crypto rates in INR</h2>
-      <p style="color:var(--text-secondary);max-width:600px">Prices update automatically every 30 seconds, sourced live from CoinGecko.</p>
+      <h2 style="font-size:2rem;margin-bottom:12px">Real-time crypto prices in INR</h2>
+      <p style="color:var(--text-secondary);max-width:600px">Updated every 30 seconds from global markets.</p>
       <div class="rates-table" id="ratesTable">
         <div class="rates-row head">
-          <span>Asset</span><span>Price (INR)</span><span>24h change</span><span class="vol-col"></span>
+          <span>Asset</span><span>Price (INR)</span><span>24h Change</span><span class="vol-col"></span>
         </div>
-        <div class="rates-row"><span>Loading live rates…</span><span></span><span></span><span></span></div>
+        <div class="rates-row"><span>Loading…</span><span></span><span></span><span></span></div>
       </div>
     </div>
   </div>
 
-  <!-- WHY BHARAT EXCHANGE -->
+  <!-- ===== FEATURES ===== -->
   <div style="background:var(--bg-secondary);border-top:1px solid var(--border-glow);border-bottom:1px solid var(--border-glow)">
-    <div class="container"><div class="section">
+    <div class="container"><div class="section" id="features">
       <div class="badge">🇮🇳 WHY BHARAT EXCHANGE</div>
-      <h2 style="font-size:2rem;margin-bottom:12px">Built around how India trades</h2>
+      <h2 style="font-size:2rem;margin-bottom:12px">Built for how India trades</h2>
       <div class="features-grid">
-        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer — no card fees, no international routing.</p></div>
-        <div class="feature"><div class="feature-icon">🤝</div><h3>P2P with escrow</h3><p>Trade directly with other users at negotiated rates, with funds held in escrow until both sides confirm.</p></div>
-        <div class="feature"><div class="feature-icon">🔑</div><h3>Self-custody swaps</h3><p>Prefer to hold your own keys? Swap tokens directly from your own TRON or EVM wallet — Bharat Exchange never takes custody.</p></div>
-        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download trade statements formatted for India's 30% crypto gains tax and 1% TDS reporting.</p></div>
-        <div class="feature"><div class="feature-icon">⚡</div><h3>Fast settlement</h3><p>Most UPI deposits and crypto swaps confirm within minutes, not hours.</p></div>
-        <div class="feature"><div class="feature-icon">🆔</div><h3>Aadhaar/PAN KYC</h3><p>Verify once with Aadhaar and PAN, then buy, sell and withdraw without repeated paperwork.</p></div>
+        <div class="feature">
+          <div class="feature-icon">📲</div>
+          <h3>UPI-first deposits</h3>
+          <p>Add INR directly with UPI, IMPS or bank transfer — no card fees, no international routing.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🔐</div>
+          <h3>Self-custody swaps</h3>
+          <p>Swap tokens directly from your own wallet — Bharat Exchange never takes custody of your keys.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🤝</div>
+          <h3>P2P with escrow</h3>
+          <p>Trade directly with verified users at negotiated rates, with funds held in escrow until confirmation.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🧾</div>
+          <h3>Tax-ready reports</h3>
+          <p>Download trade statements formatted for India's 30% crypto gains tax and 1% TDS reporting.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Fast settlement</h3>
+          <p>Most UPI deposits and crypto swaps confirm within minutes, not hours.</p>
+        </div>
+        <div class="feature">
+          <div class="feature-icon">🆔</div>
+          <h3>Aadhaar/PAN KYC</h3>
+          <p>Verify once with Aadhaar and PAN, then trade without repeated paperwork.</p>
+        </div>
       </div>
     </div></div>
   </div>
 
-  <!-- SECURITY -->
-  <div class="container" id="security">
-    <div class="section">
-      <div class="badge">🛡️ SECURITY & TRANSPARENCY</div>
-      <div class="security-grid">
-        <div>
-          <h2 style="font-size:2rem;margin-bottom:16px">How Bharat Exchange protects your funds</h2>
-          <div style="display:flex;flex-direction:column;gap:20px">
-            <div style="display:flex;gap:14px"><span style="font-size:1.3rem">🔐</span><div><strong>Cold storage majority</strong><div style="font-size:0.8rem;color:var(--text-secondary)">The large majority of user crypto is held in offline cold storage, with only operational balances kept in hot wallets.</div></div></div>
-            <div style="display:flex;gap:14px"><span style="font-size:1.3rem">📱</span><div><strong>2FA on every account</strong><div style="font-size:0.8rem;color:var(--text-secondary)">Two-factor authentication is required for login, withdrawals, and changes to payout details.</div></div></div>
-            <div style="display:flex;gap:14px"><span style="font-size:1.3rem">🧪</span><div><strong>Independent audits, published when complete</strong><div style="font-size:0.8rem;color:var(--text-secondary)">Third-party security reviews of our smart contracts and infrastructure will be linked here as soon as they are finalized.</div></div></div>
-            <div style="display:flex;gap:14px"><span style="font-size:1.3rem">🔑</span><div><strong>Self-custody where it matters</strong><div style="font-size:0.8rem;color:var(--text-secondary)">On-chain swaps are signed from your own wallet — Bharat Exchange never has access to those private keys.</div></div></div>
-          </div>
-        </div>
-        <div class="practice-list">
-          <div class="practice-item"><span>🏦</span><div><strong>Segregated user funds</strong><div style="font-size:0.75rem;color:var(--text-secondary)">User balances are kept separate from operating funds.</div></div></div>
-          <div class="practice-item"><span>🔍</span><div><strong>Withdrawal address whitelisting</strong><div style="font-size:0.75rem;color:var(--text-secondary)">Optional allow-list to block withdrawals to unrecognized addresses.</div></div></div>
-          <div class="practice-item"><span>📊</span><div><strong>Real-time rate feeds</strong><div style="font-size:0.75rem;color:var(--text-secondary)">Market prices are pulled live rather than cached, reducing stale-quote risk.</div></div></div>
-          <div style="margin-top:24px;text-align:center;padding:20px;background:var(--bg-elev);border-radius:20px">
-            <div style="font-size:1.3rem;font-weight:700;font-family:var(--font-display);background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent">Security is a practice, not a badge</div>
-            <div style="font-size:0.7rem;color:var(--text-secondary);margin-top:6px">Audit reports and incident history will be published here as they become available.</div>
-            <button class="btn btn-primary" style="margin-top:16px;width:100%" onclick="switchTab('buy')">Start Trading</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- FAQ -->
+  <!-- ===== FAQ ===== -->
   <div class="container" id="faq">
     <div class="section">
-      <div style="text-align:center;margin-bottom:48px"><div class="badge" style="display:inline-flex">❓ FAQ</div><h2 style="font-size:2rem">Frequently Asked Questions</h2><p style="color:var(--text-secondary);margin-top:8px">Buying, selling, swapping and trading crypto in India — explained</p></div>
+      <div style="text-align:center;margin-bottom:48px">
+        <div class="badge" style="display:inline-flex">❓ FAQ</div>
+        <h2 style="font-size:2rem">Frequently Asked Questions</h2>
+        <p style="color:var(--text-secondary);margin-top:8px">Everything you need to know about trading crypto in India</p>
+      </div>
       <div class="faq-grid" id="faqGrid"></div>
     </div>
   </div>
 
-  <!-- CTA -->
-  <div style="background:linear-gradient(135deg, #120E1A 0%, #1B1425 100%);border-top:1px solid var(--border-glow);text-align:center;padding:80px 24px">
-    <h2 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:20px">Your rupees.<br><span class="gradient-text">Your crypto, your terms.</span></h2>
-    <p style="color:var(--text-secondary);margin-bottom:32px">Sign up in minutes and start buying, selling or swapping crypto with INR.</p>
-    <button class="btn btn-primary" onclick="getStarted()" style="padding:14px 48px;font-size:1rem">Open Bharat Exchange →</button>
+  <!-- ===== CTA ===== -->
+  <div style="background:linear-gradient(135deg, #0A0711 0%, #1B1425 100%);border-top:1px solid var(--border-glow);text-align:center;padding:80px 24px">
+    <h2 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:20px">
+      Your rupees.<br><span class="gradient-text">Your crypto, your rules.</span>
+    </h2>
+    <p style="color:var(--text-secondary);margin-bottom:32px">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
+    <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px;font-size:1rem">
+      <span class="btn-glow"></span> Start Trading →
+    </button>
   </div>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div>
         <div class="logo" style="margin-bottom:16px">
-          <svg class="logo-icon" width="38" height="38" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:38px;height:38px;">
-            <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGradF1)" stroke-width="1.5" />
+          <svg class="logo-icon" width="38" height="38" viewBox="0 0 44 44" fill="none" style="width:38px;height:38px;">
+            <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGradF)" stroke-width="1.5" />
             <path d="M13 16h18M13 22h18" stroke="#FF9F45" stroke-width="2.2" stroke-linecap="round" />
             <path d="M20 29l7-7-7-7" stroke="#1FAE6D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-            <defs>
-              <linearGradient id="ringGradF1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" />
-              </linearGradient>
-            </defs>
+            <defs><linearGradient id="ringGradF" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
           </svg>
-          <span class="logo-text" style="font-size:1.05rem"><span class="bharat">Bharat</span> <span class="exchange-grad">Exchange</span></span>
+          <span class="logo-text" style="font-size:1.05rem"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
         </div>
-        <p style="color:var(--text-secondary);font-size:0.8rem">A crypto trading platform built for India — buy, sell, swap and trade peer-to-peer with INR.</p>
+        <p style="color:var(--text-secondary);font-size:0.8rem">India's crypto trading platform — buy, sell, swap and trade with INR.</p>
       </div>
-      <div><h5>Trade</h5><a href="#trade">Buy</a><a href="#trade">Sell</a><a href="#swap">Swap</a><a href="#p2p">P2P</a></div>
-      <div><h5>Resources</h5><a href="#markets">Markets</a><a href="#security">Security</a><a href="#faq">FAQ</a></div>
-      <div><h5>Community</h5><a href="#">Twitter / X</a><a href="#">Telegram</a><a href="#">Instagram</a></div>
+      <div><h5>Trade</h5><a href="#">Buy</a><a href="#">Sell</a><a href="#">Swap</a><a href="#">P2P</a></div>
+      <div><h5>Resources</h5><a href="#markets">Markets</a><a href="#features">Features</a><a href="#faq">FAQ</a></div>
+      <div><h5>Community</h5><a href="#">Twitter</a><a href="#">Telegram</a><a href="#">Instagram</a></div>
     </div>
     <div class="disclaimer">
-      Cryptocurrency trading is subject to market risk. Bharat Exchange does not provide investment advice. Applicable Indian tax rules, including TDS on crypto transfers and gains tax, are the responsibility of the user. This page is a product template — replace placeholder verification tags, OG image, and security claims with your organization's real, verified information before publishing.
+      Cryptocurrency trading is subject to market risk. Bharat Exchange does not provide investment advice. 
+      Indian tax rules including 30% gains tax and 1% TDS apply. This is a demo — replace with verified 
+      information before launch.
     </div>
-    <div style="margin-top:24px;text-align:center;font-size:0.7rem;color:var(--text-dim);border-top:1px solid var(--border-glow);padding-top:24px">© 2026 Bharat Exchange · All rights reserved · BTC/INR: <span id="footerBtcPrice"></span></div>
+    <div style="margin-top:24px;text-align:center;font-size:0.7rem;color:var(--text-dim);border-top:1px solid var(--border-glow);padding-top:24px">
+      © 2026 Bharat Exchange · All rights reserved · BTC/INR: <span id="footerBtcPrice">—</span>
+    </div>
   </div>
 </footer>
 
+<!-- ===== TOAST ===== -->
 <div id="globalToast" class="toast"></div>
 
+<!-- ===== COIN SELECTOR MODAL ===== -->
+<div class="modal-overlay" id="coinModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <h3 style="margin-bottom:12px">Select a coin</h3>
+    <input type="text" class="modal-search" id="coinSearch" placeholder="Search coin..." oninput="filterCoins()" />
+    <div class="modal-list" id="coinList"></div>
+  </div>
+</div>
+
 <script>
-(function() {
-  "use strict";
+// ============================================================
+// CONFIGURATION
+// ============================================================
+const COINS = {
+  BTC:  { id: 'bitcoin',      symbol: 'B', name: 'Bitcoin', icon: '₿' },
+  ETH:  { id: 'ethereum',     symbol: 'E', name: 'Ethereum', icon: '⟠' },
+  USDT: { id: 'tether',       symbol: 'U', name: 'Tether', icon: '₮' },
+  BNB:  { id: 'binancecoin',  symbol: 'B', name: 'BNB', icon: '◆' },
+  XRP:  { id: 'ripple',       symbol: 'X', name: 'XRP', icon: '✕' },
+  SOL:  { id: 'solana',       symbol: 'S', name: 'Solana', icon: '◎' },
+  DOGE: { id: 'dogecoin',     symbol: 'D', name: 'Dogecoin', icon: 'Ð' },
+  TRX:  { id: 'tron',         symbol: 'T', name: 'TRON', icon: '⟁' },
+  INR:  { id: null,           symbol: '₹', name: 'Indian Rupee', icon: '₹' }
+};
 
-  // ─── COIN CONFIG ───
-  const COINS = {
-    BTC:  { id: 'bitcoin',      symbol: 'B', name: 'Bitcoin' },
-    ETH:  { id: 'ethereum',     symbol: 'E', name: 'Ethereum' },
-    USDT: { id: 'tether',       symbol: 'U', name: 'Tether' },
-    BNB:  { id: 'binancecoin',  symbol: 'B', name: 'BNB' },
-    XRP:  { id: 'ripple',       symbol: 'X', name: 'XRP' },
-    SOL:  { id: 'solana',       symbol: 'S', name: 'Solana' },
-    DOGE: { id: 'dogecoin',     symbol: 'D', name: 'Dogecoin' },
-    TRX:  { id: 'tron',         symbol: 'T', name: 'TRON' }
-  };
-  const COIN_KEYS = Object.keys(COINS);
-  let prices = {}; // { BTC: { inr, change24h } }
+const COIN_KEYS = ['BTC', 'ETH', 'USDT', 'BNB', 'XRP', 'SOL', 'DOGE', 'TRX'];
 
-  async function fetchPrices() {
-    try {
-      const ids = COIN_KEYS.map(k => COINS[k].id).join(',');
-      const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=inr&include_24hr_change=true`;
-      const resp = await fetch(url);
-      if (!resp.ok) throw new Error('HTTP ' + resp.status);
-      const data = await resp.json();
-      COIN_KEYS.forEach(k => {
-        const d = data[COINS[k].id];
-        if (d && d.inr) prices[k] = { inr: d.inr, change24h: d.inr_24h_change || 0 };
-      });
-      renderTicker();
-      renderRatesTable();
-      updateHeaderPrice();
-      calcBuy(); calcSell(); calcSwap(); calcP2p();
-    } catch (e) {
-      console.warn('CoinGecko error', e);
-    }
-  }
+let prices = {};
+let fromKey = 'BTC';
+let toKey = 'INR';
+let modalContext = 'from'; // 'from' or 'to'
 
-  function fmtInr(n) {
-    if (n === undefined || n === null || isNaN(n)) return '—';
-    if (n >= 1) return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 2 });
-    return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 6 });
-  }
-
-  function updateHeaderPrice() {
-    const btc = prices.BTC;
-    if (!btc) return;
-    document.getElementById('btcInrPrice').textContent = fmtInr(btc.inr);
-    document.getElementById('footerBtcPrice').textContent = fmtInr(btc.inr);
-    const chgEl = document.getElementById('btcInrChange');
-    const sign = btc.change24h >= 0 ? '▲' : '▼';
-    chgEl.textContent = sign + Math.abs(btc.change24h).toFixed(2) + '%';
-    chgEl.style.color = btc.change24h >= 0 ? '#1FAE6D' : '#FF6B6B';
-  }
-
-  function renderTicker() {
-    const track = document.getElementById('tickerTrack');
-    const items = COIN_KEYS.map(k => {
-      const p = prices[k];
-      if (!p) return '';
-      const sign = p.change24h >= 0 ? '▲' : '▼';
-      const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
-      return `<span class="ticker-item"><b>${k}</b> ${fmtInr(p.inr)} <span class="${cls}">${sign}${Math.abs(p.change24h).toFixed(2)}%</span></span>`;
-    }).join('');
-    track.innerHTML = items + items; // duplicate for seamless loop
-  }
-
-  function renderRatesTable() {
-    const table = document.getElementById('ratesTable');
-    let rows = `<div class="rates-row head"><span>Asset</span><span>Price (INR)</span><span>24h change</span><span class="vol-col"></span></div>`;
+// ============================================================
+// PRICE FETCHING
+// ============================================================
+async function fetchPrices() {
+  try {
+    const ids = COIN_KEYS.map(k => COINS[k].id).join(',');
+    const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=inr&include_24hr_change=true`;
+    const resp = await fetch(url);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
     COIN_KEYS.forEach(k => {
-      const p = prices[k];
-      if (!p) return;
-      const sign = p.change24h >= 0 ? '▲' : '▼';
-      const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
-      rows += `<div class="rates-row">
-        <span class="coin-name"><span class="token-dot" style="width:26px;height:26px;font-size:0.65rem">${COINS[k].symbol}</span>${COINS[k].name} <span style="color:var(--text-dim);font-weight:400">${k}</span></span>
-        <span class="price">${fmtInr(p.inr)}</span>
-        <span class="${cls}">${sign}${Math.abs(p.change24h).toFixed(2)}%</span>
-        <span class="vol-col trade-link" onclick="switchTab('buy')">Trade →</span>
-      </div>`;
+      const d = data[COINS[k].id];
+      if (d && d.inr) prices[k] = { inr: d.inr, change24h: d.inr_24h_change || 0 };
     });
-    table.innerHTML = rows;
+    updateAll();
+  } catch (e) {
+    console.warn('Price fetch error:', e);
   }
+}
 
-  fetchPrices();
-  setInterval(fetchPrices, 30000);
+// ============================================================
+// UI UPDATES
+// ============================================================
+function fmtInr(n) {
+  if (n === undefined || n === null || isNaN(n)) return '—';
+  if (n >= 1) return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 2 });
+  return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 6 });
+}
 
-  // ─── PARTICLE CANVAS ───
-  const canvas = document.getElementById('particleCanvas');
-  const ctx = canvas.getContext('2d');
-  function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
-  window.addEventListener('resize', resizeCanvas);
-  resizeCanvas();
-  const particles = Array.from({ length: 70 }, () => ({
-    x: Math.random() * canvas.width, y: Math.random() * canvas.height,
-    radius: Math.random() * 2 + 1, alpha: Math.random() * 0.3 + 0.1,
-    vx: (Math.random() - 0.5) * 0.4, vy: (Math.random() - 0.5) * 0.3,
-    warm: Math.random() > 0.5
-  }));
-  function drawParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => {
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-      ctx.fillStyle = p.warm ? `rgba(255, 159, 69, ${p.alpha})` : `rgba(31, 174, 109, ${p.alpha})`;
-      ctx.fill();
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0) p.x = canvas.width; if (p.x > canvas.width) p.x = 0;
-      if (p.y < 0) p.y = canvas.height; if (p.y > canvas.height) p.y = 0;
-    });
-    requestAnimationFrame(drawParticles);
-  }
-  drawParticles();
-
-  // ─── TOAST ───
-  function showToast(msg) {
-    const el = document.getElementById('globalToast');
-    el.textContent = msg;
-    el.classList.add('show');
-    clearTimeout(el._timer);
-    el._timer = setTimeout(() => el.classList.remove('show'), 3000);
-  }
-  window.showToast = showToast;
-
-  function getStarted() { showToast('Sign-up flow goes here — connect your onboarding/auth system'); }
-  window.getStarted = getStarted;
-
-  // ─── TABS ───
-  function switchTab(name) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === name));
-    document.querySelectorAll('.panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + name));
-    document.querySelector('.hero').scrollIntoView({ behavior: 'smooth' });
-  }
-  window.switchTab = switchTab;
-
-  function selectPay(el) {
-    document.querySelectorAll('.pay-chip').forEach(c => c.classList.remove('active'));
-    el.classList.add('active');
-  }
-  window.selectPay = selectPay;
-
-  // ─── COIN PICKERS (cycle through list on click, demo-style) ───
-  const cycleState = { buy: 0, sell: 0, swapFrom: 0, swapTo: 2, p2p: 2 };
-  function cycleCoin(which) {
-    cycleState[which] = (cycleState[which] + 1) % COIN_KEYS.length;
-    const key = COIN_KEYS[cycleState[which]];
-    if (which === 'buy') { document.getElementById('buyCoinLabel').textContent = key; document.getElementById('buyCoinDot').textContent = COINS[key].symbol; calcBuy(); }
-    if (which === 'sell') { document.getElementById('sellCoinLabel').textContent = key; document.getElementById('sellCoinDot').textContent = COINS[key].symbol; calcSell(); }
-    if (which === 'swapFrom') { document.getElementById('swapFromLabel').textContent = key; document.getElementById('swapFromDot').textContent = COINS[key].symbol; calcSwap(); }
-    if (which === 'swapTo') { document.getElementById('swapToLabel').textContent = key; document.getElementById('swapToDot').textContent = COINS[key].symbol; calcSwap(); }
-    if (which === 'p2p') { document.getElementById('p2pCoinLabel').textContent = key; document.getElementById('p2pCoinDot').textContent = COINS[key].symbol; calcP2p(); }
-  }
-  window.cycleCoin = cycleCoin;
-
-  // ─── BUY ───
-  function calcBuy() {
-    const key = COIN_KEYS[cycleState.buy];
-    const p = prices[key];
-    const rateEl = document.getElementById('buyRate');
-    const out = document.getElementById('buyReceive');
-    if (!p) { rateEl.textContent = `1 ${key} ≈ — INR`; return; }
-    rateEl.textContent = `1 ${key} ≈ ${fmtInr(p.inr)}`;
-    const amt = parseFloat(document.getElementById('buyAmount').value);
-    if (isNaN(amt) || amt <= 0) { out.value = ''; return; }
-    const fee = 0.002;
-    out.value = ((amt * (1 - fee)) / p.inr).toFixed(6);
-  }
-  window.calcBuy = calcBuy;
-
-  // ─── SELL ───
-  function calcSell() {
-    const key = COIN_KEYS[cycleState.sell];
-    const p = prices[key];
-    const rateEl = document.getElementById('sellRate');
-    const out = document.getElementById('sellReceive');
-    if (!p) { rateEl.textContent = `1 ${key} ≈ — INR`; return; }
-    rateEl.textContent = `1 ${key} ≈ ${fmtInr(p.inr)}`;
-    const amt = parseFloat(document.getElementById('sellAmount').value);
-    if (isNaN(amt) || amt <= 0) { out.value = ''; return; }
-    const fee = 0.002;
-    out.value = (amt * p.inr * (1 - fee)).toFixed(2);
-  }
-  window.calcSell = calcSell;
-
-  // ─── SWAP ───
-  function calcSwap() {
-    const fromKey = COIN_KEYS[cycleState.swapFrom];
-    const toKey = COIN_KEYS[cycleState.swapTo];
-    const pf = prices[fromKey], pt = prices[toKey];
-    const rateEl = document.getElementById('swapRate');
-    const out = document.getElementById('swapReceive');
-    if (!pf || !pt) { rateEl.textContent = `1 ${fromKey} ≈ — ${toKey}`; return; }
-    const rate = pf.inr / pt.inr;
-    rateEl.textContent = `1 ${fromKey} ≈ ${rate.toFixed(4)} ${toKey}`;
-    const amt = parseFloat(document.getElementById('swapAmount').value);
-    if (isNaN(amt) || amt <= 0) { out.value = ''; return; }
-    const fee = 0.003;
-    out.value = (amt * rate * (1 - fee)).toFixed(6);
-  }
-  window.calcSwap = calcSwap;
-
-  function flipSwap() {
-    const tmp = cycleState.swapFrom;
-    cycleState.swapFrom = cycleState.swapTo;
-    cycleState.swapTo = tmp;
-    const fromKey = COIN_KEYS[cycleState.swapFrom];
-    const toKey = COIN_KEYS[cycleState.swapTo];
-    document.getElementById('swapFromLabel').textContent = fromKey;
-    document.getElementById('swapFromDot').textContent = COINS[fromKey].symbol;
-    document.getElementById('swapToLabel').textContent = toKey;
-    document.getElementById('swapToDot').textContent = COINS[toKey].symbol;
-    calcSwap();
-  }
-  window.flipSwap = flipSwap;
-
-  // ─── P2P ───
-  function calcP2p() {
-    const key = COIN_KEYS[cycleState.p2p];
-    const p = prices[key];
-    const rateEl = document.getElementById('p2pRate');
-    const out = document.getElementById('p2pReceive');
-    if (!p) { rateEl.textContent = `1 ${key} ≈ — INR`; return; }
-    const p2pRate = p.inr * 1.002; // indicative small premium typical of P2P offers
-    rateEl.textContent = `1 ${key} ≈ ${fmtInr(p2pRate)}`;
-    const amt = parseFloat(document.getElementById('p2pAmount').value);
-    if (isNaN(amt) || amt <= 0) { out.textContent = '— INR'; return; }
-    out.textContent = fmtInr(amt * p2pRate) + ' INR';
-  }
-  window.calcP2p = calcP2p;
-
-  // ─── FAQ (33 questions, India crypto-exchange focused) ───
-  const faqs = [
-    ["What is Bharat Exchange?", "Bharat Exchange is a crypto trading platform for India. It lets you buy and sell Bitcoin, Ethereum, USDT and other tokens using INR via UPI, IMPS or bank transfer, swap crypto-to-crypto, and trade peer-to-peer with other users."],
-    ["Is cryptocurrency legal to buy in India?", "Yes, buying, holding and trading cryptocurrency is legal in India. It is not recognized as legal tender, and profits are taxed under India's crypto tax rules, including a flat gains tax and TDS on transfers."],
-    ["How do I buy Bitcoin in India on Bharat Exchange?", "Sign up, complete KYC with your PAN and Aadhaar, deposit INR via UPI or bank transfer, then enter the amount you want to spend on the Buy tab. Your Bitcoin is credited once the payment settles."],
-    ["What is the 30% crypto tax in India?", "Under current Indian tax rules, profits from transferring virtual digital assets like crypto are taxed at a flat 30%, with no deduction allowed for expenses other than the cost of acquisition, and losses cannot be offset against other income."],
-    ["What is 1% TDS on crypto transactions?", "India levies a 1% Tax Deducted at Source on crypto transfers above specified thresholds. Bharat Exchange withholds and reports this TDS automatically on applicable trades, and you can download a summary for your tax filing."],
-    ["How do I complete KYC on Bharat Exchange?", "KYC requires your PAN card, Aadhaar-based identity verification, and a selfie for liveness checks. Most verifications complete within a few minutes once documents are submitted."],
-    ["What payment methods can I use to buy crypto?", "You can deposit INR using UPI, IMPS, or a direct bank transfer (NEFT/RTGS). UPI deposits are typically the fastest to reflect in your account."],
-    ["How do I sell crypto for INR?", "Open the Sell tab, choose the coin and amount, confirm the quoted rate, and the INR proceeds are credited to your linked bank account after the trade settles."],
-    ["What is P2P trading?", "Peer-to-peer (P2P) trading lets you buy or sell crypto directly with another user at a negotiated price, with funds held in escrow by the platform until both sides confirm the trade."],
-    ["Is P2P trading safe?", "P2P trades on Bharat Exchange are escrow-protected — the crypto is locked by the platform until the buyer confirms the INR payment was received, reducing the risk of either party being scammed."],
-    ["How does crypto-to-crypto swap work?", "The Swap tab lets you exchange one token for another directly, such as BTC for USDT, at the live market rate plus a small swap fee, without first converting to INR."],
-    ["What are the trading fees on Bharat Exchange?", "Buy and sell trades carry a 0.20% platform fee, and crypto-to-crypto swaps carry a 0.30% fee. P2P trades depend on the rate offered by the counterparty."],
-    ["What is the minimum amount to buy crypto in India?", "You can start buying crypto on Bharat Exchange from as little as ₹500, making it accessible for first-time investors to try small amounts before committing more."],
-    ["How long do INR deposits and withdrawals take?", "UPI deposits typically reflect within minutes. Bank withdrawals to your linked account usually settle within a few hours on business days, subject to bank processing times."],
-    ["What is USDT and why do people trade it?", "USDT (Tether) is a stablecoin pegged to the US dollar. Traders use it to move value between crypto pairs or hold value without full INR conversion, since its price stays close to $1."],
-    ["What documents are required for KYC?", "You'll need a PAN card, an Aadhaar number for identity verification, and a bank account or UPI ID in your own name for deposits and withdrawals."],
-    ["Can NRIs trade on Bharat Exchange?", "NRI account support depends on regulatory and banking eligibility. NRIs should check current onboarding requirements, as verification documents may differ from resident accounts."],
-    ["What is a TRC-20 token?", "TRC-20 is the token standard used on the TRON network, similar to Ethereum's ERC-20. USDT on TRON (TRC-20) is popular for its low network fees when swapping or withdrawing."],
-    ["What is slippage in crypto trading?", "Slippage is the difference between the price you expect and the price your trade actually executes at, which can happen when the market moves or a pool has limited depth. Setting a slippage tolerance protects you from unfavorable execution."],
-    ["How do I withdraw crypto to an external wallet?", "Go to your wallet section, choose the coin and network (e.g. TRC-20 or ERC-20), paste the verified receiving address, and confirm with 2FA. Double-check the network matches your destination wallet."],
-    ["What is the daily withdrawal limit?", "Withdrawal limits depend on your KYC verification level. Fully verified accounts typically have higher daily and monthly limits than accounts with basic verification only."],
-    ["How do I enable two-factor authentication (2FA)?", "In account security settings, enable 2FA using an authenticator app. Once active, 2FA is required for login, withdrawals, and changes to your payout bank account."],
-    ["What happens if I lose access to my 2FA device?", "You'll need to go through the account recovery process, which typically involves additional identity verification, to protect against unauthorized account takeover."],
-    ["Does Bharat Exchange support Aadhaar-based KYC?", "Yes, identity verification uses Aadhaar-based checks alongside PAN validation to confirm your identity in line with Indian KYC norms."],
-    ["What is the difference between spot trading and P2P?", "Spot trading (Buy/Sell/Swap) executes instantly against the platform's live market rate. P2P lets you negotiate directly with another trader, which can sometimes offer better rates but takes longer to settle."],
-    ["Are my funds insured on Bharat Exchange?", "Crypto exchanges generally do not carry government deposit insurance the way banks do. Bharat Exchange applies security practices like cold storage and 2FA, but you should only invest what you can afford to have at risk."],
-    ["How does Bharat Exchange determine live prices?", "Market prices are pulled live from major price data providers and refreshed every 30 seconds, so the rates shown reflect current global market conditions in INR."],
-    ["Can I trade crypto 24/7 in India?", "Yes, the crypto market doesn't close like traditional stock exchanges, so you can buy, sell and swap on Bharat Exchange at any time, including weekends and holidays."],
-    ["What is a stablecoin and why use one?", "A stablecoin is a token designed to hold a steady value, usually pegged to a currency like the US dollar. Traders use stablecoins like USDT to reduce volatility exposure between trades."],
-    ["Is my crypto safe in a hot wallet vs cold storage?", "Cold storage keeps private keys fully offline, making it far harder to compromise remotely, while hot wallets stay online for fast transactions. Bharat Exchange keeps the large majority of user funds in cold storage."],
-    ["What is the difference between a centralized exchange and a self-custody wallet?", "A centralized exchange like the Buy/Sell/P2P side of Bharat Exchange holds funds on your behalf for convenience, while a self-custody wallet — used for the Swap feature — means only you control the private keys."],
-    ["How do I track live crypto prices in INR?", "The Markets section on Bharat Exchange lists live INR prices and 24-hour change for major coins, refreshed automatically, and the top ticker bar shows a scrolling summary."],
-    ["What should I check before making a large crypto trade?", "Verify the current rate on the Markets page, confirm the receiving wallet address and network if withdrawing, and be aware that crypto prices are volatile and can move significantly within minutes."]
-  ];
-
-  const grid = document.getElementById('faqGrid');
-  faqs.forEach(([q, a]) => {
-    const item = document.createElement('div');
-    item.className = 'faq-item';
-    item.innerHTML = `<div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0">${q} <span>+</span></div><div class="faq-answer">${a}</div>`;
-    grid.appendChild(item);
+function updatePairUI() {
+  const from = COINS[fromKey];
+  const to = COINS[toKey];
+  
+  document.getElementById('fromIcon').textContent = from.symbol;
+  document.getElementById('fromSymbol').textContent = fromKey;
+  document.getElementById('fromName').textContent = from.name;
+  document.getElementById('fromDot').textContent = from.symbol;
+  document.getElementById('fromLabel').textContent = fromKey;
+  
+  document.getElementById('toIcon').textContent = to.symbol;
+  document.getElementById('toSymbol').textContent = toKey;
+  document.getElementById('toName').textContent = to.name;
+  document.getElementById('toDot').textContent = to.symbol;
+  document.getElementById('toLabel').textContent = toKey;
+  
+  // Update presets
+  document.querySelectorAll('.preset').forEach(p => {
+    p.classList.toggle('active', p.dataset.from === fromKey && p.dataset.to === toKey);
   });
+}
 
-  function toggleFaq(el) {
-    const answer = el.nextElementSibling;
-    const isOpen = answer.classList.contains('open');
-    answer.classList.toggle('open', !isOpen);
-    el.querySelector('span').textContent = isOpen ? '+' : '−';
-  }
-  window.toggleFaq = toggleFaq;
+function updateHeaderPrice() {
+  const btc = prices.BTC;
+  if (!btc) return;
+  document.getElementById('btcPrice').textContent = fmtInr(btc.inr);
+  document.getElementById('footerBtcPrice').textContent = fmtInr(btc.inr);
+  const chgEl = document.getElementById('btcChange');
+  const sign = btc.change24h >= 0 ? '▲' : '▼';
+  chgEl.textContent = sign + Math.abs(btc.change24h).toFixed(2) + '%';
+  chgEl.style.color = btc.change24h >= 0 ? '#1FAE6D' : '#FF6B6B';
+}
 
-  document.getElementById('faqGrid').addEventListener('keydown', (e) => {
-    if ((e.key === 'Enter' || e.key === ' ') && e.target.classList.contains('faq-question')) {
-      e.preventDefault();
-      toggleFaq(e.target);
-    }
+function renderTicker() {
+  const track = document.getElementById('tickerTrack');
+  const items = COIN_KEYS.map(k => {
+    const p = prices[k];
+    if (!p) return '';
+    const sign = p.change24h >= 0 ? '▲' : '▼';
+    const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
+    return `<span class="ticker-item"><b>${k}</b> ${fmtInr(p.inr)} <span class="${cls}">${sign}${Math.abs(p.change24h).toFixed(2)}%</span></span>`;
+  }).join('');
+  track.innerHTML = items + items;
+}
+
+function renderRatesTable() {
+  const table = document.getElementById('ratesTable');
+  let rows = `<div class="rates-row head"><span>Asset</span><span>Price (INR)</span><span>24h change</span><span class="vol-col"></span></div>`;
+  COIN_KEYS.forEach(k => {
+    const p = prices[k];
+    if (!p) return;
+    const sign = p.change24h >= 0 ? '▲' : '▼';
+    const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
+    rows += `<div class="rates-row">
+      <span class="coin-name"><span class="token-dot" style="width:26px;height:26px;border-radius:50%;background:var(--accent-grad);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:#120E1A;">${COINS[k].symbol}</span>${COINS[k].name} <span style="color:var(--text-dim);font-weight:400">${k}</span></span>
+      <span class="price">${fmtInr(p.inr)}</span>
+      <span class="${cls}">${sign}${Math.abs(p.change24h).toFixed(2)}%</span>
+      <span class="vol-col trade-link" onclick="setPair('${k}','INR')">Trade →</span>
+    </div>`;
   });
+  table.innerHTML = rows;
+}
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(([q, a]) => ({
-      "@type": "Question", "name": q,
-      "acceptedAnswer": { "@type": "Answer", "text": a }
-    }))
-  };
-  const script = document.createElement('script');
-  script.type = 'application/ld+json';
-  script.textContent = JSON.stringify(faqSchema);
-  document.head.appendChild(script);
-})();
+function calculate() {
+  const fromPrice = prices[fromKey];
+  const toPrice = prices[toKey];
+  const fromAmt = parseFloat(document.getElementById('fromAmount').value);
+  const toInput = document.getElementById('toAmount');
+  
+  if (!fromPrice || !toPrice || isNaN(fromAmt) || fromAmt <= 0) {
+    toInput.value = '';
+    document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ — ${toKey}`;
+    document.getElementById('settlementInfo').textContent = '—';
+    return;
+  }
+  
+  const fee = 0.002;
+  let rate;
+  let result;
+  let settlement;
+  
+  if (toKey === 'INR') {
+    rate = fromPrice.inr;
+    result = fromAmt * rate * (1 - fee);
+    settlement = 'Instant to few minutes';
+  } else if (fromKey === 'INR') {
+    rate = 1 / toPrice.inr;
+    result = fromAmt * rate * (1 - fee);
+    settlement = 'Instant to few minutes';
+  } else {
+    rate = fromPrice.inr / toPrice.inr;
+    result = fromAmt * rate * (1 - fee);
+    settlement = 'On-chain swap ~2-5 min';
+  }
+  
+  toInput.value = result.toFixed(6);
+  document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ ${fmtInr(rate)} ${toKey}`;
+  document.getElementById('settlementInfo').textContent = settlement;
+}
+
+function updateAll() {
+  updateHeaderPrice();
+  renderTicker();
+  renderRatesTable();
+  updatePairUI();
+  calculate();
+}
+
+// ============================================================
+// PAIR MANAGEMENT
+// ============================================================
+function setPair(from, to) {
+  fromKey = from;
+  toKey = to;
+  updateAll();
+  closeModal();
+}
+
+function swapPair() {
+  const temp = fromKey;
+  fromKey = toKey;
+  toKey = temp;
+  updateAll();
+}
+
+// ============================================================
+// MODAL
+// ============================================================
+function openModal(context) {
+  modalContext = context;
+  document.getElementById('coinModal').classList.add('active');
+  document.getElementById('coinSearch').value = '';
+  renderCoinList();
+  setTimeout(() => document.getElementById('coinSearch').focus(), 100);
+}
+
+function closeModal() {
+  document.getElementById('coinModal').classList.remove('active');
+}
+
+function renderCoinList() {
+  const search = document.getElementById('coinSearch').value.toLowerCase();
+  const list = document.getElementById('coinList');
+  const keys = Object.keys(COINS).filter(k => {
+    const coin = COINS[k];
+    const match = k.toLowerCase().includes(search) || 
+                  coin.name.toLowerCase().includes(search) ||
+                  coin.symbol.includes(search);
+    // INR shows only in 'to' context
+    if (k === 'INR' && modalContext === 'from') return false;
+    // Crypto shows in both
+    return match;
+  });
+  
+  list.innerHTML = keys.map(k => {
+    const coin = COINS[k];
+    const isActive = (modalContext === 'from' && k === fromKey) || 
+                     (modalContext === 'to' && k === toKey);
+    return `<div class="modal-item" onclick="setPair('${modalContext === 'from' ? k : fromKey}', '${modalContext === 'to' ? k : toKey}')" style="${isActive ? 'background:var(--bg-elev);border:1px solid var(--accent-1);' : ''}">
+      <div class="icon">${coin.symbol}</div>
+      <div class="info">
+        <span class="symbol">${k}</span>
+        <span class="name">${coin.name}</span>
+      </div>
+      ${isActive ? '<span style="color:var(--accent-1);font-size:0.7rem;">✓</span>' : ''}
+    </div>`;
+  }).join('');
+}
+
+function filterCoins() { renderCoinList(); }
+
+// ============================================================
+// PRESETS
+// ============================================================
+document.querySelectorAll('.preset').forEach(p => {
+  p.addEventListener('click', function() {
+    setPair(this.dataset.from, this.dataset.to);
+  });
+});
+
+// ============================================================
+// TOAST
+// ============================================================
+function showToast(msg) {
+  const el = document.getElementById('globalToast');
+  el.textContent = msg;
+  el.classList.add('show');
+  clearTimeout(el._timer);
+  el._timer = setTimeout(() => el.classList.remove('show'), 3000);
+}
+
+// ============================================================
+// FAQ
+// ============================================================
+const faqs = [
+  ["What is Bharat Exchange?", "Bharat Exchange is India's crypto trading platform. Buy, sell, and swap Bitcoin, Ethereum, USDT and other tokens using INR via UPI, IMPS or bank transfer. Trade peer-to-peer with verified users, all with live market rates."],
+  ["Is crypto legal in India?", "Yes, buying and holding cryptocurrency is legal in India. Crypto is not legal tender, but profits are taxed under India's crypto tax rules — 30% gains tax and 1% TDS on transfers."],
+  ["How do I buy Bitcoin in India?", "Sign up, complete KYC with PAN and Aadhaar, deposit INR via UPI or bank transfer, then enter the amount you want to spend. Your Bitcoin is credited once payment settles."],
+  ["What is the 30% crypto tax?", "India taxes profits from transferring virtual digital assets at a flat 30%, with no deductions except the cost of acquisition. Losses cannot be offset against other income."],
+  ["How does P2P trading work?", "P2P lets you buy or sell crypto directly with another user at a negotiated price. Funds are held in escrow until both sides confirm the trade, reducing scam risk."],
+  ["What fees does Bharat Exchange charge?", "Buy/sell trades carry a 0.20% platform fee. Crypto-to-crypto swaps have a 0.30% fee. P2P trades depend on the counterparty's offered rate."],
+  ["How long do deposits take?", "UPI deposits typically reflect within minutes. Bank transfers (NEFT/RTGS) may take a few hours on business days."],
+  ["What is USDT?", "USDT (Tether) is a stablecoin pegged to the US dollar. Traders use it to move value between crypto pairs or hold value without converting to INR."]
+];
+
+const grid = document.getElementById('faqGrid');
+faqs.forEach(([q, a]) => {
+  const item = document.createElement('div');
+  item.className = 'faq-item';
+  item.innerHTML = `
+    <div class="faq-question" onclick="toggleFaq(this)" role="button" tabindex="0">
+      ${q} <span>+</span>
+    </div>
+    <div class="faq-answer">${a}</div>
+  `;
+  grid.appendChild(item);
+});
+
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const isOpen = answer.classList.contains('open');
+  answer.classList.toggle('open', !isOpen);
+  el.querySelector('span').textContent = isOpen ? '+' : '−';
+  el.classList.toggle('open', !isOpen);
+}
+
+// ============================================================
+// INIT
+// ============================================================
+fetchPrices();
+setInterval(fetchPrices, 30000);
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+  if (e.key === 'Enter' && document.activeElement?.id === 'coinSearch') {
+    const first = document.querySelector('.modal-item');
+    if (first) first.click();
+  }
+});
+
+console.log('🚀 Bharat Exchange loaded successfully');
+console.log('📊 Live prices updating every 30 seconds');
+console.log('💱 Exchange widget ready');
 </script>
+
+<!-- ===== MODERNIZR (as requested) ===== -->
+<script src="./modernizr-3.12.0.js" type="module"></script>
+<!-- Fallback for older browsers -->
+<script nomodule src="./modernizr-3.12.0.js"></script>
+
 </body>
 </html>
