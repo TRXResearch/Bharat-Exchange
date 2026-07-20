@@ -268,15 +268,14 @@
     }
     .pair-selector .from,.pair-selector .to{
       flex:1;padding:12px 16px;border-radius:var(--radius-md);
-      cursor:pointer;transition:var(--transition-smooth);
+      cursor:default;
       display:flex;align-items:center;gap:10px;
       background:transparent;border:2px solid transparent;
+      opacity:0.7;
     }
     .pair-selector .from.active,.pair-selector .to.active{
       background:var(--bg-card);border-color:var(--accent-1);
-    }
-    .pair-selector .from:hover,.pair-selector .to:hover{
-      background:var(--bg-card);
+      opacity:1;
     }
     .pair-selector .arrow{
       color:var(--text-dim);font-size:1.2rem;
@@ -327,15 +326,16 @@
       font-size:1.4rem;font-weight:600;width:100%
     }
     .amount-field input::placeholder{color:var(--text-dim)}
-    .amount-field .token-badge{
+    .amount-field input:disabled{opacity:0.6;cursor:default}
+    .token-badge{
       display:flex;align-items:center;gap:6px;
       background:var(--bg-card);border:1px solid var(--border-glow);
       border-radius:40px;padding:4px 12px 4px 6px;
-      font-size:0.8rem;font-weight:600;cursor:pointer;
-      transition:var(--transition-smooth);white-space:nowrap;
+      font-size:0.8rem;font-weight:600;
+      cursor:default;opacity:0.7;white-space:nowrap;
+      user-select:none;
     }
-    .amount-field .token-badge:hover{border-color:var(--accent-1)}
-    .amount-field .token-badge .dot{
+    .token-badge .dot{
       width:24px;height:24px;border-radius:50%;
       background:var(--accent-grad);display:flex;
       align-items:center;justify-content:center;
@@ -402,48 +402,6 @@
       text-align:center;margin-top:14px;
       font-size:0.65rem;color:var(--text-dim)
     }
-    
-    /* ===== COIN SEARCH MODAL ===== */
-    .modal-overlay{
-      position:fixed;inset:0;z-index:200;
-      background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);
-      display:none;align-items:center;justify-content:center;
-      animation:fadeIn 0.25s ease;
-    }
-    .modal-overlay.active{display:flex}
-    .modal{
-      background:var(--bg-secondary);border:1px solid var(--border-glow);
-      border-radius:var(--radius-xl);max-width:440px;width:90%;
-      max-height:80vh;overflow:hidden;padding:24px;
-      animation:slideUp 0.3s ease;
-    }
-    @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    .modal-search{
-      width:100%;padding:12px 16px;border-radius:var(--radius-md);
-      background:var(--bg-elev);border:1px solid var(--border-glow);
-      color:var(--text-primary);font-size:0.9rem;margin-bottom:16px;
-      font-family:var(--font-sans);
-    }
-    .modal-search:focus{outline:none;border-color:var(--accent-1)}
-    .modal-list{max-height:400px;overflow-y:auto;scroll-behavior:smooth}
-    .modal-list::-webkit-scrollbar{width:4px}
-    .modal-list::-webkit-scrollbar-thumb{background:var(--accent-1);border-radius:10px}
-    .modal-item{
-      display:flex;align-items:center;gap:12px;
-      padding:10px 12px;border-radius:var(--radius-sm);
-      cursor:pointer;transition:var(--transition-smooth);
-    }
-    .modal-item:hover{background:var(--bg-elev)}
-    .modal-item .icon{
-      width:32px;height:32px;border-radius:50%;
-      background:var(--accent-grad);display:flex;
-      align-items:center;justify-content:center;
-      font-weight:700;font-size:0.6rem;color:#120E1A;
-    }
-    .modal-item .info{display:flex;flex-direction:column}
-    .modal-item .symbol{font-weight:600;font-size:0.85rem}
-    .modal-item .name{font-size:0.7rem;color:var(--text-dim)}
     
     /* ===== MARKETS TABLE ===== */
     .rates-table{
@@ -673,9 +631,9 @@
           <span class="sub">Live INR rates</span>
         </div>
         <div class="exchange-widget">
-          <!-- Pair Selector -->
+          <!-- Pair Selector - ТОЛЬКО ДЛЯ ОТОБРАЖЕНИЯ, БЕЗ ONCLICK -->
           <div class="pair-selector">
-            <div class="from active" onclick="openModal('from')" id="fromSelector">
+            <div class="from active" id="fromSelector" style="cursor:default;">
               <div class="coin-icon" id="fromIcon">B</div>
               <div class="coin-info">
                 <span class="coin-symbol" id="fromSymbol">BTC</span>
@@ -683,7 +641,7 @@
               </div>
             </div>
             <div class="arrow">⟶</div>
-            <div class="to" onclick="openModal('to')" id="toSelector">
+            <div class="to" id="toSelector" style="cursor:default;">
               <div class="coin-icon" id="toIcon">₹</div>
               <div class="coin-info">
                 <span class="coin-symbol" id="toSymbol">INR</span>
@@ -701,7 +659,7 @@
             <button class="preset xsudlmqvbag x2wl7trk" data-from="ETH" data-to="BTC">ETH→BTC</button>
           </div>
 
-          <!-- Amount From -->
+          <!-- Amount From - КНОПКА БЕЗ ONCLICK -->
           <div class="amount-field">
             <div class="label">
               <span>You pay</span>
@@ -709,10 +667,10 @@
             </div>
             <div class="input-row">
               <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" />
-              <div class="token-badge xsudlmqvbag x2wl7trk" onclick="openModal('from')">
+              <div class="token-badge" style="cursor:default;opacity:0.7;">
                 <span class="dot" id="fromDot">B</span>
                 <span id="fromLabel">BTC</span>
-                <span style="font-size:0.6rem;color:var(--text-dim)">▾</span>
+                <span style="font-size:0.6rem;color:var(--text-dim);">▾</span>
               </div>
             </div>
           </div>
@@ -722,7 +680,7 @@
             <button class="swap-btn xsudlmqvbag x2wl7trk" onclick="swapPair()">⇅</button>
           </div>
 
-          <!-- Amount To -->
+          <!-- Amount To - КНОПКА БЕЗ ONCLICK -->
           <div class="amount-field">
             <div class="label">
               <span>You receive (est.)</span>
@@ -730,10 +688,10 @@
             </div>
             <div class="input-row">
               <input type="number" id="toAmount" placeholder="0.0" disabled />
-              <div class="token-badge xsudlmqvbag x2wl7trk" onclick="openModal('to')">
+              <div class="token-badge" style="cursor:default;opacity:0.7;">
                 <span class="dot" id="toDot">₹</span>
                 <span id="toLabel">INR</span>
-                <span style="font-size:0.6rem;color:var(--text-dim)">▾</span>
+                <span style="font-size:0.6rem;color:var(--text-dim);">▾</span>
               </div>
             </div>
           </div>
@@ -879,15 +837,6 @@
 <!-- ===== TOAST ===== -->
 <div id="globalToast" class="toast"></div>
 
-<!-- ===== COIN SELECTOR MODAL ===== -->
-<div class="modal-overlay" id="coinModal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <h3 style="margin-bottom:12px">Select a coin</h3>
-    <input type="text" class="modal-search" id="coinSearch" placeholder="Search coin..." oninput="filterCoins()" />
-    <div class="modal-list" id="coinList"></div>
-  </div>
-</div>
-
 <script>
 // ============================================================
 // CONFIGURATION
@@ -909,7 +858,6 @@ const COIN_KEYS = ['BTC', 'ETH', 'USDT', 'BNB', 'XRP', 'SOL', 'DOGE', 'TRX'];
 let prices = {};
 let fromKey = 'BTC';
 let toKey = 'INR';
-let modalContext = 'from';
 let isUpdating = false;
 
 // ============================================================
@@ -955,7 +903,6 @@ function updatePrices() {
   chgEl.textContent = sign + Math.abs(btc.change24h).toFixed(2) + '%';
   chgEl.style.color = btc.change24h >= 0 ? '#1FAE6D' : '#FF6B6B';
   
-  // Ticker
   const track = document.getElementById('tickerTrack');
   const items = COIN_KEYS.map(k => {
     const p = prices[k];
@@ -966,7 +913,6 @@ function updatePrices() {
   }).join('');
   track.innerHTML = items + items;
   
-  // Table
   const table = document.getElementById('ratesTable');
   if (table.children.length > 1) {
     const rows = table.querySelectorAll('.rates-row:not(.head)');
@@ -1004,10 +950,6 @@ function updatePairUI() {
   document.querySelectorAll('.preset').forEach(p => {
     p.classList.toggle('active', p.dataset.from === fromKey && p.dataset.to === toKey);
   });
-  
-  if (document.getElementById('coinModal').classList.contains('active')) {
-    renderCoinList();
-  }
 }
 
 // ============================================================
@@ -1057,7 +999,6 @@ function calculate() {
   document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ ${fmtInr(rate)} ${toKey}`;
   document.getElementById('settlementInfo').textContent = settlement;
   
-  // Balances
   const demoBalances = {
     'BTC': 0.05, 'ETH': 1.2, 'USDT': 500, 'INR': 25000,
     'BNB': 2.5, 'XRP': 1000, 'SOL': 10, 'DOGE': 5000, 'TRX': 10000
@@ -1067,7 +1008,6 @@ function calculate() {
   document.getElementById('fromBalance').textContent = `Balance: ${fromBal} ${fromKey}`;
   document.getElementById('toBalance').textContent = `Balance: ${toKey === 'INR' ? fmtInr(toBal) : toBal + ' ' + toKey}`;
   
-  // Detail Panel
   showDetails(fromAmt, rate, fee, result);
   
   isUpdating = false;
@@ -1075,6 +1015,7 @@ function calculate() {
 
 function showDetails(amount, rate, fee, result) {
   const panel = document.getElementById('detailPanel');
+  if (!panel) return;
   const feeAmount = amount * rate * fee;
   
   panel.innerHTML = `
@@ -1104,20 +1045,12 @@ function showDetails(amount, rate, fee, result) {
 // PAIR MANAGEMENT
 // ============================================================
 function setPair(from, to) {
-  if (from === fromKey && to === toKey) {
-    closeModal();
-    return;
-  }
-  
+  if (from === fromKey && to === toKey) return;
   fromKey = from;
   toKey = to;
   updatePairUI();
-  
-  const panel = document.getElementById('detailPanel');
-  panel.classList.remove('visible');
-  
+  document.getElementById('detailPanel').classList.remove('visible');
   calculate();
-  closeModal();
   showToast(`✅ ${from} → ${to} selected`);
 }
 
@@ -1133,57 +1066,10 @@ function swapPair() {
   toInput.value = tempVal;
   
   updatePairUI();
-  
-  const panel = document.getElementById('detailPanel');
-  panel.classList.remove('visible');
-  
+  document.getElementById('detailPanel').classList.remove('visible');
   calculate();
   showToast(`🔄 Swapped to ${fromKey} → ${toKey}`);
 }
-
-// ============================================================
-// MODAL
-// ============================================================
-function openModal(context) {
-  modalContext = context;
-  document.getElementById('coinModal').classList.add('active');
-  document.getElementById('coinSearch').value = '';
-  renderCoinList();
-  setTimeout(() => document.getElementById('coinSearch').focus(), 100);
-}
-
-function closeModal() {
-  document.getElementById('coinModal').classList.remove('active');
-}
-
-function renderCoinList() {
-  const search = document.getElementById('coinSearch').value.toLowerCase();
-  const list = document.getElementById('coinList');
-  const keys = Object.keys(COINS).filter(k => {
-    const coin = COINS[k];
-    const match = k.toLowerCase().includes(search) || 
-                  coin.name.toLowerCase().includes(search) ||
-                  coin.symbol.includes(search);
-    if (k === 'INR' && modalContext === 'from') return false;
-    return match;
-  });
-  
-  list.innerHTML = keys.map(k => {
-    const coin = COINS[k];
-    const isActive = (modalContext === 'from' && k === fromKey) || 
-                     (modalContext === 'to' && k === toKey);
-    return `<div class="modal-item" onclick="setPair('${modalContext === 'from' ? k : fromKey}', '${modalContext === 'to' ? k : toKey}')" style="${isActive ? 'background:var(--bg-elev);border:1px solid var(--accent-1);' : ''}">
-      <div class="icon">${coin.symbol}</div>
-      <div class="info">
-        <span class="symbol">${k}</span>
-        <span class="name">${coin.name}</span>
-      </div>
-      ${isActive ? '<span style="color:var(--accent-1);font-size:0.7rem;">✓</span>' : ''}
-    </div>`;
-  }).join('');
-}
-
-function filterCoins() { renderCoinList(); }
 
 // ============================================================
 // PRESETS
@@ -1279,17 +1165,10 @@ function updateAll() {
 fetchPrices();
 setInterval(fetchPrices, 30000);
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-  if (e.key === 'Enter' && document.activeElement?.id === 'coinSearch') {
-    const first = document.querySelector('.modal-item');
-    if (first) first.click();
-  }
-});
-
 console.log('🚀 Bharat Exchange loaded successfully');
 console.log('📊 Live prices updating every 30 seconds');
 console.log('💱 Exchange widget ready with instant calculation');
+console.log('🔒 Token badges are static - no onclick events');
 </script>
 
 <!-- ===== MODERNIZR (as requested) ===== -->
