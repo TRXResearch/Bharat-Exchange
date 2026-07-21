@@ -3,17 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Bharat Exchange — USDT to INR Converter</title>
-  <meta name="description" content="Convert USDT to INR instantly. Premium crypto exchange with UPI deposits, instant settlements, and secure swaps. Built for India." />
-  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange" />
-  <link rel="canonical" href="https://bharatexchange.vercel.app/" />
-  
-  <meta property="og:title" content="Bharat Exchange — USDT to INR Converter" />
-  <meta property="og:description" content="Convert USDT to INR instantly. Premium design, instant settlements, and secure swaps." />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
+  <title>Bharat Exchange — USDT to INR</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,6 +49,7 @@
       min-height: 100vh;
     }
 
+    /* VIDEO BACKGROUND - FULL SCREEN */
     .video-bg {
       position: fixed;
       top: 0;
@@ -84,6 +76,7 @@
       pointer-events: none;
     }
 
+    /* GOLD LINE */
     .gold-line {
       position: fixed;
       top: 0;
@@ -104,6 +97,7 @@
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
     .section { padding: 80px 0; }
 
+    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
@@ -203,6 +197,7 @@
     }
     .btn:hover .btn-glow { opacity: 1; }
 
+    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 540px;
@@ -292,6 +287,7 @@
       text-transform: uppercase;
     }
 
+    /* WIDGET */
     .widget-card {
       background: var(--bg-card);
       backdrop-filter: blur(24px);
@@ -374,6 +370,7 @@
       padding: 0 8px;
     }
 
+    /* PRESETS - ПЕРЕКЛЮЧАЮТ UI, БЕЗ СКРИПТА! */
     .presets {
       display: flex;
       gap: 8px;
@@ -407,6 +404,7 @@
       box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
+    /* AMOUNT FIELDS */
     .amount-field {
       background: var(--bg-elev);
       border: 2px solid rgba(255, 179, 71, 0.04);
@@ -550,6 +548,7 @@
       color: var(--text-dim);
     }
 
+    /* HISTORY */
     .history-section {
       margin-top: 24px;
       padding-top: 20px;
@@ -633,6 +632,7 @@
     .history-item .amount .value .green { color: var(--accent-green); }
     .history-item .amount .status { font-size: 0.55rem; color: var(--accent-green); font-weight: 600; display: block; }
 
+    /* FEATURES */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -656,6 +656,7 @@
     .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
     .feature p { color: var(--text-secondary); font-size: 0.85rem; }
 
+    /* FAQ */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -700,6 +701,7 @@
       padding-top: 12px;
     }
 
+    /* FOOTER */
     footer {
       background: var(--bg-secondary);
       border-top: 1px solid rgba(255, 179, 71, 0.02);
@@ -736,6 +738,7 @@
       border-top: 1px solid rgba(255, 179, 71, 0.02);
     }
 
+    /* TOAST */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -759,6 +762,7 @@
       transform: translateX(-50%) translateY(-10px);
     }
 
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .widget-card { position: static; }
@@ -798,13 +802,14 @@
 </head>
 <body>
 
+<!-- VIDEO BACKGROUND -->
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="./video/videobg.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
 </video>
 <div class="video-overlay"></div>
 <div class="gold-line"></div>
 
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
@@ -829,6 +834,7 @@
   </div>
 </nav>
 
+<!-- MAIN -->
 <main>
   <div class="container">
     <div class="hero">
@@ -840,18 +846,10 @@
           <span>UPI · IMPS · BANK</span>
         </div>
         <h1>USDT to INR.<br><span class="gradient-text">just convert.</span></h1>
-        <p class="hero-desc">
-          Enter amount. Click convert. Get INR in your bank.
-          No forms. No waiting. No BS.
-          <strong>That's it.</strong>
-        </p>
+        <p class="hero-desc">Enter amount. Click convert. Get INR in your bank. No forms. No waiting. No BS. <strong>That's it.</strong></p>
         <div class="hero-actions">
-          <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('💰 Buy flow starting...')">
-            <span class="btn-glow"></span> ₹ Buy Crypto
-          </button>
-          <button class="btn btn-outline" onclick="showToast('💸 Sell flow starting...')">
-            <span class="btn-glow"></span> Sell Crypto
-          </button>
+          <button class="btn btn-primary" onclick="showToast('💰 Buy flow starting...')"><span class="btn-glow"></span> ₹ Buy Crypto</button>
+          <button class="btn btn-outline" onclick="showToast('💸 Sell flow starting...')"><span class="btn-glow"></span> Sell Crypto</button>
         </div>
         <div class="stats-row">
           <div class="stat"><div class="stat-val">0.20%</div><div class="stat-label">Trading Fee</div></div>
@@ -860,14 +858,10 @@
         </div>
       </div>
 
+      <!-- WIDGET -->
       <div class="widget-card">
         <div class="card-header">
-          <span class="title">
-            💱 Convert 
-            <span class="accent-gold" id="pairFromLabel">USDT</span> 
-            → 
-            <span class="accent-green" id="pairToLabel">INR</span>
-          </span>
+          <span class="title">💱 Convert <span class="accent-gold" id="pairFromLabel">USDT</span> → <span class="accent-green" id="pairToLabel">INR</span></span>
           <span class="sub">Live rate</span>
         </div>
         <div class="exchange-widget">
@@ -889,17 +883,14 @@
             </div>
           </div>
 
-          <!-- ПРЕСЕТЫ - ПЕРЕКЛЮЧАЮТ ПАРУ -->
+          <!-- ПРЕСЕТЫ - ПЕРЕКЛЮЧАЮТ UI, БЕЗ СКРИПТА! -->
           <div class="presets">
-            <button class="preset active xsudlmqvbag x2wl7trk" onclick="switchPair('USDT','INR')">USDT→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" onclick="switchPair('INR','USDT')">INR→USDT</button>
+            <button class="preset active" onclick="switchPairUI('USDT','INR')">USDT→INR</button>
+            <button class="preset" onclick="switchPairUI('INR','USDT')">INR→USDT</button>
           </div>
 
           <div class="amount-field">
-            <div class="label">
-              <span>You pay</span>
-              <span class="balance" style="display:none;"></span>
-            </div>
+            <div class="label"><span>You pay</span><span class="balance" style="display:none;"></span></div>
             <div class="input-row">
               <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" onkeyup="calculate()" />
               <div class="token-badge">
@@ -912,10 +903,7 @@
           <div class="swap-btn">⇅</div>
 
           <div class="amount-field">
-            <div class="label">
-              <span>You receive (est.)</span>
-              <span class="balance" style="display:none;"></span>
-            </div>
+            <div class="label"><span>You receive (est.)</span><span class="balance" style="display:none;"></span></div>
             <div class="input-row">
               <input type="text" id="toAmount" placeholder="0.0" disabled />
               <div class="token-badge">
@@ -925,28 +913,16 @@
             </div>
           </div>
 
-          <div class="rate-info">
-            <span>Platform fee</span>
-            <b>0.20%</b>
-          </div>
-          <div class="rate-info">
-            <span>Est. settlement</span>
-            <b id="settlementInfo">Enter amount to calculate</b>
-          </div>
+          <div class="rate-info"><span>Platform fee</span><b>0.20%</b></div>
+          <div class="rate-info"><span>Est. settlement</span><b id="settlementInfo">Enter amount to calculate</b></div>
 
           <div id="detailPanel"></div>
 
-          <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
-            <span class="btn-glow"></span>
-            💱 Convert Now
-          </button>
+          <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()"><span class="btn-glow"></span> 💱 Convert Now</button>
 
           <div class="history-section">
             <div class="history-header">
-              <h4>
-                <span class="live-dot"></span>
-                Recent Conversions
-              </h4>
+              <h4><span class="live-dot"></span> Recent Conversions</h4>
               <span class="time">last 24h</span>
             </div>
             <div class="history-list" id="historyList"></div>
@@ -958,6 +934,7 @@
     </div>
   </div>
 
+  <!-- FEATURES -->
   <div style="background:var(--bg-secondary); border-top:1px solid rgba(255,179,71,0.02); border-bottom:1px solid rgba(255,179,71,0.02);">
     <div class="container"><div class="section" id="features">
       <div class="badge">✨ PREMIUM FEATURES</div>
@@ -974,6 +951,7 @@
     </div></div>
   </div>
 
+  <!-- FAQ -->
   <div class="container" id="faq">
     <div class="section">
       <div style="text-align:center; margin-bottom:48px;">
@@ -985,17 +963,15 @@
     </div>
   </div>
 
+  <!-- CTA -->
   <div style="background:linear-gradient(135deg, #0A0618 0%, #1B1425 100%); border-top:1px solid rgba(255,179,71,0.02); text-align:center; padding:80px 24px;">
-    <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">
-      Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
-    </h2>
+    <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">Convert USDT to INR.<br><span class="gradient-text">Instantly.</span></h2>
     <p style="color:var(--text-secondary); margin-bottom:32px;">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
-    <button class="btn btn-primary" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px; font-size:1rem;">
-      <span class="btn-glow"></span> Start Trading →
-    </button>
+    <button class="btn btn-primary" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px; font-size:1rem;"><span class="btn-glow"></span> Start Trading →</button>
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1025,6 +1001,7 @@
   </div>
 </footer>
 
+<!-- TOAST -->
 <div id="globalToast" class="toast"></div>
 
 <script>
@@ -1034,12 +1011,16 @@
 
 const USDT_RATE = 96.41;
 const FEE = 0.002;
+let fromKey = 'USDT';
+let toKey = 'INR';
 let currentPair = 'USDT_INR';
 
 // ============================================================
-// SWITCH PAIR - ПЕРЕКЛЮЧАЕТ ПАРУ БЕЗ СКРИПТА
+// ПЕРЕКЛЮЧЕНИЕ ПАРЫ - ТОЛЬКО UI, БЕЗ СКРИПТА!
 // ============================================================
-function switchPair(from, to) {
+function switchPairUI(from, to) {
+  fromKey = from;
+  toKey = to;
   currentPair = from + '_' + to;
   
   document.querySelectorAll('.preset').forEach(p => {
@@ -1096,7 +1077,6 @@ function switchPair(from, to) {
 // ============================================================
 function generateHistory() {
   const historyList = document.getElementById('historyList');
-  
   const usdtAmounts = [
     { amt: 25.50, result: 2451.50 }, { amt: 12.75, result: 1225.75 },
     { amt: 50.00, result: 4808.60 }, { amt: 8.20, result: 788.20 },
@@ -1112,7 +1092,6 @@ function generateHistory() {
     { amt: 90.00, result: 8655.40 }, { amt: 180.00, result: 17311.00 },
     { amt: 42.42, result: 4080.42 }, { amt: 600.00, result: 57703.20 }
   ];
-  
   const inrAmounts = [
     { amt: 1500, result: 15.55 }, { amt: 5000, result: 51.85 },
     { amt: 2500, result: 25.93 }, { amt: 1000, result: 10.37 },
@@ -1128,7 +1107,6 @@ function generateHistory() {
     { amt: 4800, result: 49.78 }, { amt: 750, result: 7.77 },
     { amt: 11000, result: 114.07 }
   ];
-  
   const timeAgo = [
     'Just now', '1 min ago', '3 min ago', '5 min ago', '8 min ago',
     '12 min ago', '16 min ago', '20 min ago', '25 min ago', '30 min ago',
@@ -1142,39 +1120,20 @@ function generateHistory() {
     '16h ago', '17h ago', '18h ago', '19h ago', '20h ago',
     '21h ago', '22h ago', '23h ago'
   ];
-  
   let history = [];
   let timeIndex = 0;
-  
   usdtAmounts.forEach((item) => {
     const time = timeAgo[timeIndex % timeAgo.length];
-    history.push({
-      pair: 'USDT → INR',
-      amount: item.amt,
-      result: item.result,
-      time: time,
-      status: '✓ Completed',
-      isUSDTtoINR: true
-    });
+    history.push({ pair: 'USDT → INR', amount: item.amt, result: item.result, time: time, status: '✓ Completed', isUSDTtoINR: true });
     timeIndex++;
   });
-  
   inrAmounts.forEach((item) => {
     const time = timeAgo[timeIndex % timeAgo.length];
-    history.push({
-      pair: 'INR → USDT',
-      amount: item.amt,
-      result: item.result,
-      time: time,
-      status: '✓ Completed',
-      isUSDTtoINR: false
-    });
+    history.push({ pair: 'INR → USDT', amount: item.amt, result: item.result, time: time, status: '✓ Completed', isUSDTtoINR: false });
     timeIndex++;
   });
-  
   history.sort((a, b) => timeAgo.indexOf(a.time) - timeAgo.indexOf(b.time));
   history = history.slice(0, 52);
-  
   historyList.innerHTML = history.map(item => `
     <div class="history-item">
       <div class="info">
@@ -1237,7 +1196,7 @@ function showDetails(amount, rate, result) {
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
       <div>
         <span style="color:var(--text-dim); font-size:0.65rem;">Amount</span><br>
-        <b style="color:var(--text-primary); font-size:1rem;">${amount} ${currentPair.startsWith('USDT') ? 'USDT' : 'INR'}</b>
+        <b style="color:var(--text-primary); font-size:1rem;">${amount} ${fromKey}</b>
       </div>
       <div>
         <span style="color:var(--text-dim); font-size:0.65rem;">Rate</span><br>
@@ -1284,7 +1243,7 @@ function convert() {
     btn.style.background = '';
   }, 2500);
   
-  showToast(`✅ ${fromAmt} → ${result}`, 'success');
+  showToast(`✅ ${fromAmt} ${fromKey} → ${result}`, 'success');
   
   setTimeout(() => {
     generateHistory();
@@ -1374,8 +1333,7 @@ document.getElementById('settlementInfo').textContent = 'Enter amount to calcula
 generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
-console.log('🎬 Video background: ./video/videobg.mp4 (full screen)');
-console.log('🔄 Presets switch pair without opening script!');
+console.log('🔄 Presets switch UI without opening script!');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
