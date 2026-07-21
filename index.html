@@ -285,13 +285,10 @@
       background:var(--bg-card);border:1px solid var(--border-glow);
       border-radius:40px;padding:4px 12px 4px 6px;
       font-size:0.8rem;font-weight:600;
-      cursor:pointer;white-space:nowrap;
-      transition:var(--transition-smooth);
+      cursor:default;
+      white-space:nowrap;
+      opacity:0.7;
       user-select:none;
-    }
-    .token-badge:hover{
-      border-color:var(--accent-1);
-      box-shadow:0 0 20px rgba(255,159,69,0.1);
     }
     .token-badge .dot{
       width:24px;height:24px;border-radius:50%;
@@ -642,8 +639,7 @@
             </div>
             <div class="input-row">
               <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" onkeyup="calculate()" />
-              <!-- ===== КНОПКА БЕЗ ONCLICK ===== -->
-              <div class="token-badge" style="cursor:default;opacity:0.7;">
+              <div class="token-badge">
                 <span class="dot" id="fromDot">B</span>
                 <span id="fromLabel">BTC</span>
                 <span style="font-size:0.6rem;color:var(--text-dim);">▾</span>
@@ -662,8 +658,7 @@
             </div>
             <div class="input-row">
               <input type="number" id="toAmount" placeholder="0.0" disabled />
-              <!-- ===== КНОПКА БЕЗ ONCLICK ===== -->
-              <div class="token-badge" style="cursor:default;opacity:0.7;">
+              <div class="token-badge">
                 <span class="dot" id="toDot">₹</span>
                 <span id="toLabel">INR</span>
                 <span style="font-size:0.6rem;color:var(--text-dim);">▾</span>
@@ -673,7 +668,7 @@
 
           <div class="rate-info">
             <span>Rate</span>
-            <b id="rateDisplay">1 BTC ≈ ₹—</b>
+            <b id="rateDisplay">⏳ Loading rates...</b>
           </div>
           <div class="rate-info">
             <span>Platform fee</span>
@@ -681,7 +676,7 @@
           </div>
           <div class="rate-info">
             <span>Est. settlement</span>
-            <b id="settlementInfo">Instant to few minutes</b>
+            <b id="settlementInfo">—</b>
           </div>
 
           <div id="detailPanel"></div>
@@ -810,24 +805,38 @@ let fromKey = 'BTC';
 let toKey = 'INR';
 let modalContext = 'from';
 let isUpdating = false;
+let isPricesLoaded = false;
 
 // ============================================================
 // PRICE FETCHING
 // ============================================================
 async function fetchPrices() {
   try {
+    document.getElementById('rateDisplay').textContent = '⏳ Loading rates...';
+    
     const ids = COIN_KEYS.map(k => COINS[k].id).join(',');
     const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=inr&include_24hr_change=true`;
     const resp = await fetch(url);
+    
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    
     const data = await resp.json();
+    
     COIN_KEYS.forEach(k => {
       const d = data[COINS[k].id];
-      if (d && d.inr) prices[k] = { inr: d.inr, change24h: d.inr_24h_change || 0 };
+      if (d && d.inr) {
+        prices[k] = { inr: d.inr, change24h: d.inr_24h_change || 0 };
+      }
     });
+    
+    isPricesLoaded = true;
     updateAll();
+    
   } catch (e) {
     console.warn('Price fetch error:', e);
+    isPricesLoaded = false;
+    document.getElementById('rateDisplay').textContent = '⚠️ Failed to load rates';
+    showToast('⚠️ Unable to fetch live prices. Please refresh.', 'error');
   }
 }
 
@@ -849,6 +858,7 @@ function updatePrices() {
   
   document.getElementById('btcPrice').textContent = fmtInr(btc.inr);
   document.getElementById('footerBtcPrice').textContent = fmtInr(btc.inr);
+  
   const chgEl = document.getElementById('btcChange');
   const sign = btc.change24h >= 0 ? '▲' : '▼';
   chgEl.textContent = sign + Math.abs(btc.change24h).toFixed(2) + '%';
@@ -907,7 +917,6 @@ function updatePairUI() {
 // CALCULATE
 // ============================================================
 function calculate() {
-  console.log('calculate() called');
   if (isUpdating) return;
   isUpdating = true;
   
@@ -917,12 +926,30 @@ function calculate() {
   const toInput = document.getElementById('toAmount');
   const fromAmt = parseFloat(fromInput.value);
   
-  console.log('fromPrice:', fromPrice, 'toPrice:', toPrice, 'fromAmt:', fromAmt);
-  
-  if (!fromPrice || !toPrice || isNaN(fromAmt) || fromAmt <= 0) {
+  if (!isPricesLoaded) {
     toInput.value = '';
-    document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ — ${toKey}`;
+    document.getElementById('rateDisplay').textContent = '⏳ Loading rates...';
     document.getElementById('settlementInfo').textContent = '—';
+    document.getElementById('fromBalance').textContent = 'Loading...';
+    document.getElementById('toBalance').textContent = 'Loading...';
+    document.getElementById('detailPanel').classList.remove('visible');
+    isUpdating = false;
+    return;
+  }
+  
+  if (!fromPrice || !toPrice) {
+    toInput.value = '';
+    document.getElementById('rateDisplay').textContent = `⚠️ Price not available`;
+    document.getElementById('settlementInfo').textContent = '—';
+    document.getElementById('detailPanel').classList.remove('visible');
+    isUpdating = false;
+    return;
+  }
+  
+  if (isNaN(fromAmt) || fromAmt <= 0) {
+    toInput.value = '';
+    document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ ${fmtInr(fromPrice.inr)} ${toKey}`;
+    document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
     document.getElementById('fromBalance').textContent = `Balance: —`;
     document.getElementById('toBalance').textContent = `Balance: —`;
     document.getElementById('detailPanel').classList.remove('visible');
@@ -949,7 +976,14 @@ function calculate() {
     settlement = '⛓️ On-chain swap ~2-5 min';
   }
   
-  console.log('result:', result, 'rate:', rate);
+  // Анимация
+  toInput.style.transition = 'all 0.15s ease';
+  toInput.style.transform = 'scale(1.02)';
+  toInput.style.color = '#1FAE6D';
+  setTimeout(() => {
+    toInput.style.transform = 'scale(1)';
+    toInput.style.color = '';
+  }, 150);
   
   toInput.value = result.toFixed(toKey === 'INR' ? 2 : 6);
   document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ ${fmtInr(rate)} ${toKey}`;
@@ -1009,6 +1043,11 @@ function setPair(from, to) {
   toKey = to;
   updatePairUI();
   document.getElementById('detailPanel').classList.remove('visible');
+  
+  const fromInput = document.getElementById('fromAmount');
+  fromInput.value = '';
+  document.getElementById('toAmount').value = '';
+  
   calculate();
   closeModal();
   showToast(`✅ ${from} → ${to} selected`);
@@ -1104,7 +1143,7 @@ function renderRatesTable() {
   COIN_KEYS.forEach(k => {
     const p = prices[k];
     if (!p) {
-      rows += `<div class="rates-row"><span>${k}</span><span>—</span><span>—</span><span></span></div>`;
+      rows += `<div class="rates-row"><span>${k}</span><span>Loading...</span><span>—</span><span></span></div>`;
       return;
     }
     const sign = p.change24h >= 0 ? '▲' : '▼';
@@ -1203,6 +1242,8 @@ function updateAll() {
 // ============================================================
 // INIT
 // ============================================================
+document.getElementById('rateDisplay').textContent = '⏳ Loading rates...';
+
 fetchPrices();
 setInterval(fetchPrices, 30000);
 
@@ -1215,7 +1256,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 console.log('🚀 Bharat Exchange loaded successfully');
-console.log('📊 Live prices updating every 30 seconds');
+console.log('📊 Waiting for prices to load...');
 console.log('💱 Exchange widget ready with instant calculation');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
