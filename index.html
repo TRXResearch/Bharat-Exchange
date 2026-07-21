@@ -4,55 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- ===== SEO ===== -->
-  <title>Bharat Exchange — Buy, Sell & Swap Bitcoin, Ethereum, USDT in India with INR</title>
-  <meta name="description" content="India's leading crypto exchange. Buy Bitcoin, Ethereum, USDT with INR via UPI, IMPS, Bank Transfer. Live rates, P2P trading, and secure swaps." />
-  <meta name="keywords" content="Bharat Exchange, buy bitcoin India, crypto exchange India, USDT INR, P2P trading, UPI crypto, buy ethereum India, crypto swap India, best crypto exchange, Bitcoin price India, Ethereum price India, crypto tax India, 30% crypto tax, TDS crypto, INR to crypto, crypto trading India" />
+  <title>Bharat Exchange — USDT to INR Converter</title>
+  <meta name="description" content="Convert USDT to INR instantly. Live rates, UPI deposits, and secure swaps. Built for India." />
+  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, crypto exchange India" />
   <link rel="canonical" href="https://bharatexchange.vercel.app/" />
   
-  <!-- ===== Open Graph ===== -->
-  <meta property="og:title" content="Bharat Exchange — India's #1 Crypto Trading Platform" />
-  <meta property="og:description" content="Buy, sell, and swap crypto with INR. Live market rates, UPI deposits, and secure P2P trading. Built for India." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://bharatexchange.vercel.app/" />
-  <meta property="og:image" content="https://bharatexchange.vercel.app/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  
-  <!-- ===== Twitter Card ===== -->
+  <meta property="og:title" content="Bharat Exchange — USDT to INR Converter" />
+  <meta property="og:description" content="Convert USDT to INR instantly. Live rates, UPI deposits, and secure swaps. Built for India." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@BharatExchange" />
-  <meta name="twitter:creator" content="@BharatExchange" />
-  <meta name="twitter:title" content="Bharat Exchange — India's #1 Crypto Trading Platform" />
-  <meta name="twitter:description" content="Buy, sell, and swap Bitcoin, Ethereum, USDT with INR. Live rates, UPI deposits, P2P trading, and secure swaps. Built for India." />
-  <meta name="twitter:image" content="https://bharatexchange.vercel.app/og-image.png" />
-  <meta name="twitter:image:alt" content="Bharat Exchange - Crypto Trading Platform for India" />
+  <meta name="twitter:title" content="Bharat Exchange — USDT to INR Converter" />
+  <meta name="twitter:description" content="Convert USDT to INR instantly. Live rates, UPI deposits, and secure swaps." />
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
-  
-  <!-- ===== Schema.org ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FinancialService",
-    "name": "Bharat Exchange",
-    "url": "https://bharatexchange.vercel.app/",
-    "description": "India's crypto trading platform for buying, selling, and swapping Bitcoin, Ethereum, USDT with INR.",
-    "areaServed": "IN"
-  }
-  </script>
-  
-  <!-- ===== BreadcrumbList Schema ===== -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://bharatexchange.vercel.app/"},
-      {"@type": "ListItem", "position": 2, "name": "Exchange", "item": "https://bharatexchange.vercel.app/#trade"}
-    ]
-  }
-  </script>
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -221,19 +184,16 @@
       display:flex;gap:12px;align-items:center;
       margin-bottom:24px;background:var(--bg-elev);
       border-radius:var(--radius-lg);padding:8px;
+      cursor:default;
+      opacity:0.8;
     }
     .pair-selector .from,.pair-selector .to{
       flex:1;padding:12px 16px;border-radius:var(--radius-md);
-      cursor:pointer;
       display:flex;align-items:center;gap:10px;
-      background:transparent;border:2px solid transparent;
-      transition:var(--transition-smooth);
-    }
-    .pair-selector .from:hover,.pair-selector .to:hover{
       background:var(--bg-card);
-    }
-    .pair-selector .from.active,.pair-selector .to.active{
-      background:var(--bg-card);border-color:var(--accent-1);
+      border:2px solid var(--accent-1);
+      opacity:1;
+      cursor:default;
     }
     .pair-selector .arrow{color:var(--text-dim);font-size:1.2rem;flex-shrink:0;padding:0 4px;}
     .pair-selector .coin-icon{
@@ -247,7 +207,7 @@
     .pair-selector .coin-symbol{font-weight:700;font-size:0.9rem}
     .pair-selector .coin-name{font-size:0.7rem;color:var(--text-dim)}
     
-    .presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;}
+    .presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;justify-content:center;}
     .preset{
       padding:6px 14px;border-radius:40px;
       background:var(--bg-elev);border:1px solid var(--border-glow);
@@ -333,10 +293,6 @@
       opacity:1;
       transform:translateY(0);
     }
-    #detailPanel:hover{
-      border-color:var(--accent-1);
-      box-shadow:0 0 20px rgba(255,159,69,0.05);
-    }
     
     .main-action{
       width:100%;padding:16px;background:var(--accent-grad);
@@ -351,47 +307,6 @@
     }
     
     .widget-note{text-align:center;margin-top:14px;font-size:0.65rem;color:var(--text-dim)}
-    
-    .modal-overlay{
-      position:fixed;inset:0;z-index:200;
-      background:rgba(0,0,0,0.7);backdrop-filter:blur(12px);
-      display:none;align-items:center;justify-content:center;
-      animation:fadeIn 0.25s ease;
-    }
-    .modal-overlay.active{display:flex}
-    .modal{
-      background:var(--bg-secondary);border:1px solid var(--border-glow);
-      border-radius:var(--radius-xl);max-width:440px;width:90%;
-      max-height:80vh;overflow:hidden;padding:24px;
-      animation:slideUp 0.3s ease;
-    }
-    @keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-    .modal-search{
-      width:100%;padding:12px 16px;border-radius:var(--radius-md);
-      background:var(--bg-elev);border:1px solid var(--border-glow);
-      color:var(--text-primary);font-size:0.9rem;margin-bottom:16px;
-      font-family:var(--font-sans);
-    }
-    .modal-search:focus{outline:none;border-color:var(--accent-1)}
-    .modal-list{max-height:400px;overflow-y:auto;scroll-behavior:smooth}
-    .modal-list::-webkit-scrollbar{width:4px}
-    .modal-list::-webkit-scrollbar-thumb{background:var(--accent-1);border-radius:10px}
-    .modal-item{
-      display:flex;align-items:center;gap:12px;
-      padding:10px 12px;border-radius:var(--radius-sm);
-      cursor:pointer;transition:var(--transition-smooth);
-    }
-    .modal-item:hover{background:var(--bg-elev)}
-    .modal-item .icon{
-      width:32px;height:32px;border-radius:50%;
-      background:var(--accent-grad);display:flex;
-      align-items:center;justify-content:center;
-      font-weight:700;font-size:0.6rem;color:#120E1A;
-    }
-    .modal-item .info{display:flex;flex-direction:column}
-    .modal-item .symbol{font-weight:600;font-size:0.85rem}
-    .modal-item .name{font-size:0.7rem;color:var(--text-dim)}
     
     .rates-table{
       margin-top:48px;background:var(--bg-card);
@@ -552,8 +467,8 @@
     </div>
     <div class="wallet-area">
       <div class="inr-price">
-        BTC/INR <span id="btcPrice">—</span>
-        <span class="change" id="btcChange">▲0.0%</span>
+        USDT/INR <span id="usdtPrice">87.00</span>
+        <span class="change" id="usdtChange">▲0.1%</span>
       </div>
       <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet')">
         <span class="btn-glow"></span> Connect
@@ -564,7 +479,7 @@
 
 <div class="ticker-wrap">
   <div class="ticker-track" id="tickerTrack">
-    <span style="color:var(--text-dim);padding:10px 0">Loading live rates…</span>
+    <span style="color:var(--text-dim);padding:10px 0">USDT/INR: ₹87.00 ▲0.1%</span>
   </div>
 </div>
 
@@ -577,10 +492,10 @@
           <span>·</span>
           <span>UPI · IMPS · BANK</span>
         </div>
-        <h1>Buy & sell crypto<br><span class="gradient-text">with your INR.</span></h1>
+        <h1>Convert USDT to INR<br><span class="gradient-text">instantly.</span></h1>
         <p class="hero-desc">
-          Bharat Exchange is built for India — deposit with UPI, trade Bitcoin, Ethereum, USDT, 
-          and swap between tokens, all with live market rates and zero hidden fees.
+          Convert USDT to INR at the best rates. Deposit with UPI, get INR in your bank account.
+          Simple, fast, and secure.
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('💰 Buy flow starting...')">
@@ -588,9 +503,6 @@
           </button>
           <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('💸 Sell flow starting...')">
             <span class="btn-glow"></span> Sell Crypto
-          </button>
-          <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('🔄 Swap feature ready')">
-            <span class="btn-glow"></span> 🔄 Swap
           </button>
         </div>
         <div class="stats-row">
@@ -602,55 +514,56 @@
 
       <div class="widget-card">
         <div class="card-header">
-          <span class="title">💱 Exchange</span>
-          <span class="sub">Live INR rates</span>
+          <span class="title">💱 Convert USDT → INR</span>
+          <span class="sub">Best rate: ₹87.00</span>
         </div>
         <div class="exchange-widget">
+          <!-- Pair Selector - фиксированный -->
           <div class="pair-selector">
-            <div class="from active" onclick="openModal('from')" id="fromSelector">
-              <div class="coin-icon" id="fromIcon">B</div>
+            <div class="from active">
+              <div class="coin-icon">U</div>
               <div class="coin-info">
-                <span class="coin-symbol" id="fromSymbol">BTC</span>
-                <span class="coin-name" id="fromName">Bitcoin</span>
+                <span class="coin-symbol">USDT</span>
+                <span class="coin-name">Tether</span>
               </div>
             </div>
             <div class="arrow">⟶</div>
-            <div class="to" onclick="openModal('to')" id="toSelector">
-              <div class="coin-icon" id="toIcon">₹</div>
+            <div class="to">
+              <div class="coin-icon">₹</div>
               <div class="coin-info">
-                <span class="coin-symbol" id="toSymbol">INR</span>
-                <span class="coin-name" id="toName">Indian Rupee</span>
+                <span class="coin-symbol">INR</span>
+                <span class="coin-name">Indian Rupee</span>
               </div>
             </div>
           </div>
 
+          <!-- Пресеты -->
           <div class="presets" id="presets">
-            <button class="preset active xsudlmqvbag x2wl7trk" data-from="BTC" data-to="INR">BTC→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" data-from="ETH" data-to="INR">ETH→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" data-from="USDT" data-to="INR">USDT→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" data-from="BTC" data-to="USDT">BTC→USDT</button>
-            <button class="preset xsudlmqvbag x2wl7trk" data-from="ETH" data-to="BTC">ETH→BTC</button>
+            <button class="preset active xsudlmqvbag x2wl7trk" data-from="USDT" data-to="INR">USDT→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" data-from="INR" data-to="USDT">INR→USDT</button>
           </div>
 
+          <!-- Amount From -->
           <div class="amount-field">
             <div class="label">
               <span>You pay</span>
-              <span id="fromBalance">Balance: 0.00 BTC</span>
+              <span id="fromBalance">Balance: 500.00 USDT</span>
             </div>
             <div class="input-row">
               <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" onkeyup="calculate()" />
               <div class="token-badge">
-                <span class="dot" id="fromDot">B</span>
-                <span id="fromLabel">BTC</span>
-                <span style="font-size:0.6rem;color:var(--text-dim);">▾</span>
+                <span class="dot">U</span>
+                <span>USDT</span>
               </div>
             </div>
           </div>
 
+          <!-- Swap Direction - заблокирован -->
           <div class="swap-direction">
-            <button class="swap-btn xsudlmqvbag x2wl7trk" onclick="swapPair()">⇅</button>
+            <button class="swap-btn xsudlmqvbag x2wl7trk" onclick="swapPair()" style="opacity:0.5;cursor:not-allowed;">⇅</button>
           </div>
 
+          <!-- Amount To -->
           <div class="amount-field">
             <div class="label">
               <span>You receive (est.)</span>
@@ -659,16 +572,16 @@
             <div class="input-row">
               <input type="number" id="toAmount" placeholder="0.0" disabled />
               <div class="token-badge">
-                <span class="dot" id="toDot">₹</span>
-                <span id="toLabel">INR</span>
-                <span style="font-size:0.6rem;color:var(--text-dim);">▾</span>
+                <span class="dot">₹</span>
+                <span>INR</span>
               </div>
             </div>
           </div>
 
-          <div class="rate-info">
+          <!-- Rate Info - скрываем курсы -->
+          <div class="rate-info" style="display:none;">
             <span>Rate</span>
-            <b id="rateDisplay">⏳ Loading rates...</b>
+            <b id="rateDisplay">1 USDT ≈ ₹87.00</b>
           </div>
           <div class="rate-info">
             <span>Platform fee</span>
@@ -676,7 +589,7 @@
           </div>
           <div class="rate-info">
             <span>Est. settlement</span>
-            <b id="settlementInfo">—</b>
+            <b id="settlementInfo">Enter amount to calculate</b>
           </div>
 
           <div id="detailPanel"></div>
@@ -685,7 +598,7 @@
             <span class="btn-glow"></span>
             Connect Wallet & Trade
           </button>
-          <div class="widget-note">Live rates from CoinGecko · indicative only</div>
+          <div class="widget-note">1 USDT = ₹87.00 · Fee 0.20%</div>
         </div>
       </div>
     </div>
@@ -695,12 +608,14 @@
     <div class="section">
       <div class="badge">📈 LIVE MARKETS</div>
       <h2 style="font-size:2rem;margin-bottom:12px">Real-time crypto prices in INR</h2>
-      <p style="color:var(--text-secondary);max-width:600px">Updated every 30 seconds from global markets.</p>
+      <p style="color:var(--text-secondary);max-width:600px">Updated every 30 seconds.</p>
       <div class="rates-table" id="ratesTable">
         <div class="rates-row head">
           <span>Asset</span><span>Price (INR)</span><span>24h Change</span><span class="vol-col"></span>
         </div>
-        <div class="rates-row"><span>Loading…</span><span></span><span></span><span></span></div>
+        <div class="rates-row"><span>USDT</span><span>₹87.00</span><span class="chg-up">▲0.1%</span><span></span></div>
+        <div class="rates-row"><span>BTC</span><span>₹6,900,000</span><span class="chg-up">▲2.5%</span><span></span></div>
+        <div class="rates-row"><span>ETH</span><span>₹350,000</span><span class="chg-up">▲1.8%</span><span></span></div>
       </div>
     </div>
   </div>
@@ -710,12 +625,12 @@
       <div class="badge">🇮🇳 WHY BHARAT EXCHANGE</div>
       <h2 style="font-size:2rem;margin-bottom:12px">Built for how India trades</h2>
       <div class="features-grid">
-        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer — no card fees.</p></div>
-        <div class="feature"><div class="feature-icon">🔐</div><h3>Self-custody swaps</h3><p>Swap tokens directly from your own wallet — we never take custody.</p></div>
-        <div class="feature"><div class="feature-icon">🤝</div><h3>P2P with escrow</h3><p>Trade directly with verified users, funds held in escrow.</p></div>
-        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download statements for India's 30% crypto tax and 1% TDS.</p></div>
+        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer.</p></div>
+        <div class="feature"><div class="feature-icon">🔐</div><h3>Secure swaps</h3><p>Swap USDT to INR with complete security and transparency.</p></div>
         <div class="feature"><div class="feature-icon">⚡</div><h3>Fast settlement</h3><p>Most UPI deposits and crypto swaps confirm within minutes.</p></div>
+        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download statements for India's 30% crypto tax and 1% TDS.</p></div>
         <div class="feature"><div class="feature-icon">🆔</div><h3>Aadhaar/PAN KYC</h3><p>Verify once with Aadhaar and PAN, then trade without paperwork.</p></div>
+        <div class="feature"><div class="feature-icon">🤝</div><h3>P2P with escrow</h3><p>Trade directly with verified users, funds held in escrow.</p></div>
       </div>
     </div></div>
   </div>
@@ -725,7 +640,7 @@
       <div style="text-align:center;margin-bottom:48px">
         <div class="badge" style="display:inline-flex">❓ FAQ</div>
         <h2 style="font-size:2rem">Frequently Asked Questions</h2>
-        <p style="color:var(--text-secondary);margin-top:8px">Everything you need to know about trading crypto in India</p>
+        <p style="color:var(--text-secondary);margin-top:8px">Everything you need to know about USDT to INR conversion</p>
       </div>
       <div class="faq-grid" id="faqGrid"></div>
     </div>
@@ -733,7 +648,7 @@
 
   <div style="background:linear-gradient(135deg, #0A0711 0%, #1B1425 100%);border-top:1px solid var(--border-glow);text-align:center;padding:80px 24px">
     <h2 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:20px">
-      Your rupees.<br><span class="gradient-text">Your crypto, your rules.</span>
+      Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
     </h2>
     <p style="color:var(--text-secondary);margin-bottom:32px">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
     <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px;font-size:1rem">
@@ -763,218 +678,48 @@
     </div>
     <div class="disclaimer">
       Cryptocurrency trading is subject to market risk. Bharat Exchange does not provide investment advice. 
-      Indian tax rules including 30% gains tax and 1% TDS apply. This is a demo — replace with verified 
-      information before launch.
+      Indian tax rules including 30% gains tax and 1% TDS apply.
     </div>
     <div style="margin-top:24px;text-align:center;font-size:0.7rem;color:var(--text-dim);border-top:1px solid var(--border-glow);padding-top:24px">
-      © 2026 Bharat Exchange · All rights reserved · BTC/INR: <span id="footerBtcPrice">—</span>
+      © 2026 Bharat Exchange · All rights reserved · USDT/INR: ₹87.00
     </div>
   </div>
 </footer>
 
 <div id="globalToast" class="toast"></div>
 
-<div class="modal-overlay" id="coinModal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <h3 style="margin-bottom:12px;color:var(--text-primary);">Select a coin</h3>
-    <input type="text" class="modal-search" id="coinSearch" placeholder="Search coin..." oninput="filterCoins()" />
-    <div class="modal-list" id="coinList"></div>
-  </div>
-</div>
-
 <script>
 // ============================================================
-// CONFIGURATION
+// BHARAT EXCHANGE - USDT → INR CONVERTER
 // ============================================================
-const COINS = {
-  BTC:  { id: 'bitcoin',      symbol: 'B', name: 'Bitcoin' },
-  ETH:  { id: 'ethereum',     symbol: 'E', name: 'Ethereum' },
-  USDT: { id: 'tether',       symbol: 'U', name: 'Tether' },
-  BNB:  { id: 'binancecoin',  symbol: 'B', name: 'BNB' },
-  XRP:  { id: 'ripple',       symbol: 'X', name: 'XRP' },
-  SOL:  { id: 'solana',       symbol: 'S', name: 'Solana' },
-  DOGE: { id: 'dogecoin',     symbol: 'D', name: 'Dogecoin' },
-  TRX:  { id: 'tron',         symbol: 'T', name: 'TRON' },
-  INR:  { id: null,           symbol: '₹', name: 'Indian Rupee' }
-};
 
-const COIN_KEYS = ['BTC', 'ETH', 'USDT', 'BNB', 'XRP', 'SOL', 'DOGE', 'TRX'];
+const USDT_RATE = 87.00;
+const FEE = 0.002; // 0.20%
 
-let prices = {};
-let fromKey = 'BTC';
+let fromKey = 'USDT';
 let toKey = 'INR';
-let modalContext = 'from';
-let isUpdating = false;
-let isPricesLoaded = false;
-
-// ============================================================
-// PRICE FETCHING
-// ============================================================
-async function fetchPrices() {
-  try {
-    document.getElementById('rateDisplay').textContent = '⏳ Loading rates...';
-    
-    const ids = COIN_KEYS.map(k => COINS[k].id).join(',');
-    const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=inr&include_24hr_change=true`;
-    const resp = await fetch(url);
-    
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    
-    const data = await resp.json();
-    
-    COIN_KEYS.forEach(k => {
-      const d = data[COINS[k].id];
-      if (d && d.inr) {
-        prices[k] = { inr: d.inr, change24h: d.inr_24h_change || 0 };
-      }
-    });
-    
-    isPricesLoaded = true;
-    updateAll();
-    
-  } catch (e) {
-    console.warn('Price fetch error:', e);
-    isPricesLoaded = false;
-    document.getElementById('rateDisplay').textContent = '⚠️ Failed to load rates';
-    showToast('⚠️ Unable to fetch live prices. Please refresh.', 'error');
-  }
-}
-
-// ============================================================
-// FORMATTING
-// ============================================================
-function fmtInr(n) {
-  if (n === undefined || n === null || isNaN(n)) return '—';
-  if (n >= 1) return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 2 });
-  return '₹' + n.toLocaleString('en-IN', { maximumFractionDigits: 6 });
-}
-
-// ============================================================
-// UI UPDATES
-// ============================================================
-function updatePrices() {
-  const btc = prices.BTC;
-  if (!btc) return;
-  
-  document.getElementById('btcPrice').textContent = fmtInr(btc.inr);
-  document.getElementById('footerBtcPrice').textContent = fmtInr(btc.inr);
-  
-  const chgEl = document.getElementById('btcChange');
-  const sign = btc.change24h >= 0 ? '▲' : '▼';
-  chgEl.textContent = sign + Math.abs(btc.change24h).toFixed(2) + '%';
-  chgEl.style.color = btc.change24h >= 0 ? '#1FAE6D' : '#FF6B6B';
-  
-  const track = document.getElementById('tickerTrack');
-  const items = COIN_KEYS.map(k => {
-    const p = prices[k];
-    if (!p) return '';
-    const sign = p.change24h >= 0 ? '▲' : '▼';
-    const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
-    return `<span class="ticker-item"><b>${k}</b> ${fmtInr(p.inr)} <span class="${cls}">${sign}${Math.abs(p.change24h).toFixed(2)}%</span></span>`;
-  }).join('');
-  track.innerHTML = items + items;
-  
-  const table = document.getElementById('ratesTable');
-  if (table.children.length > 1) {
-    const rows = table.querySelectorAll('.rates-row:not(.head)');
-    COIN_KEYS.forEach((k, i) => {
-      const p = prices[k];
-      if (!p || i >= rows.length) return;
-      const cells = rows[i].querySelectorAll('span');
-      if (cells.length >= 2) {
-        const sign = p.change24h >= 0 ? '▲' : '▼';
-        const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
-        cells[0].textContent = fmtInr(p.inr);
-        cells[1].textContent = sign + Math.abs(p.change24h).toFixed(2) + '%';
-        cells[1].className = cls;
-      }
-    });
-  }
-}
-
-function updatePairUI() {
-  const from = COINS[fromKey];
-  const to = COINS[toKey];
-  
-  document.getElementById('fromIcon').textContent = from.symbol;
-  document.getElementById('fromSymbol').textContent = fromKey;
-  document.getElementById('fromName').textContent = from.name;
-  document.getElementById('fromDot').textContent = from.symbol;
-  document.getElementById('fromLabel').textContent = fromKey;
-  
-  document.getElementById('toIcon').textContent = to.symbol;
-  document.getElementById('toSymbol').textContent = toKey;
-  document.getElementById('toName').textContent = to.name;
-  document.getElementById('toDot').textContent = to.symbol;
-  document.getElementById('toLabel').textContent = toKey;
-  
-  document.querySelectorAll('.preset').forEach(p => {
-    p.classList.toggle('active', p.dataset.from === fromKey && p.dataset.to === toKey);
-  });
-}
 
 // ============================================================
 // CALCULATE
 // ============================================================
 function calculate() {
-  if (isUpdating) return;
-  isUpdating = true;
-  
-  const fromPrice = prices[fromKey];
-  const toPrice = prices[toKey];
   const fromInput = document.getElementById('fromAmount');
   const toInput = document.getElementById('toAmount');
   const fromAmt = parseFloat(fromInput.value);
   
-  if (!isPricesLoaded) {
-    toInput.value = '';
-    document.getElementById('rateDisplay').textContent = '⏳ Loading rates...';
-    document.getElementById('settlementInfo').textContent = '—';
-    document.getElementById('fromBalance').textContent = 'Loading...';
-    document.getElementById('toBalance').textContent = 'Loading...';
-    document.getElementById('detailPanel').classList.remove('visible');
-    isUpdating = false;
-    return;
-  }
-  
-  if (!fromPrice || !toPrice) {
-    toInput.value = '';
-    document.getElementById('rateDisplay').textContent = `⚠️ Price not available`;
-    document.getElementById('settlementInfo').textContent = '—';
-    document.getElementById('detailPanel').classList.remove('visible');
-    isUpdating = false;
-    return;
-  }
-  
+  // Проверка введенной суммы
   if (isNaN(fromAmt) || fromAmt <= 0) {
     toInput.value = '';
-    document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ ${fmtInr(fromPrice.inr)} ${toKey}`;
     document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-    document.getElementById('fromBalance').textContent = `Balance: —`;
-    document.getElementById('toBalance').textContent = `Balance: —`;
+    document.getElementById('fromBalance').textContent = `Balance: 500.00 USDT`;
+    document.getElementById('toBalance').textContent = `Balance: ₹0.00`;
     document.getElementById('detailPanel').classList.remove('visible');
-    isUpdating = false;
     return;
   }
   
-  const fee = 0.002;
-  let rate;
-  let result;
-  let settlement;
-  
-  if (toKey === 'INR') {
-    rate = fromPrice.inr;
-    result = fromAmt * rate * (1 - fee);
-    settlement = '⚡ Instant to few minutes';
-  } else if (fromKey === 'INR') {
-    rate = 1 / toPrice.inr;
-    result = fromAmt * rate * (1 - fee);
-    settlement = '⚡ Instant to few minutes';
-  } else {
-    rate = fromPrice.inr / toPrice.inr;
-    result = fromAmt * rate * (1 - fee);
-    settlement = '⛓️ On-chain swap ~2-5 min';
-  }
+  // Расчет
+  let rate = USDT_RATE;
+  let result = fromAmt * rate * (1 - FEE);
   
   // Анимация
   toInput.style.transition = 'all 0.15s ease';
@@ -985,46 +730,38 @@ function calculate() {
     toInput.style.color = '';
   }, 150);
   
-  toInput.value = result.toFixed(toKey === 'INR' ? 2 : 6);
-  document.getElementById('rateDisplay').textContent = `1 ${fromKey} ≈ ${fmtInr(rate)} ${toKey}`;
-  document.getElementById('settlementInfo').textContent = settlement;
+  toInput.value = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  document.getElementById('settlementInfo').textContent = '⚡ Instant to few minutes';
   
-  const demoBalances = {
-    'BTC': 0.05, 'ETH': 1.2, 'USDT': 500, 'INR': 25000,
-    'BNB': 2.5, 'XRP': 1000, 'SOL': 10, 'DOGE': 5000, 'TRX': 10000
-  };
-  const fromBal = demoBalances[fromKey] || 0;
-  const toBal = demoBalances[toKey] || 0;
-  document.getElementById('fromBalance').textContent = `Balance: ${fromBal} ${fromKey}`;
-  document.getElementById('toBalance').textContent = `Balance: ${toKey === 'INR' ? fmtInr(toBal) : toBal + ' ' + toKey}`;
+  // Балансы
+  document.getElementById('fromBalance').textContent = `Balance: 500.00 USDT`;
+  document.getElementById('toBalance').textContent = `Balance: ₹${(result * 0.5).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   
-  showDetails(fromAmt, rate, fee, result);
-  
-  isUpdating = false;
+  showDetails(fromAmt, rate, result);
 }
 
-function showDetails(amount, rate, fee, result) {
+function showDetails(amount, rate, result) {
   const panel = document.getElementById('detailPanel');
   if (!panel) return;
-  const feeAmount = amount * rate * fee;
+  const feeAmount = amount * rate * FEE;
   
   panel.innerHTML = `
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
       <div>
         <span style="color:var(--text-dim)">Amount</span><br>
-        <b style="color:var(--text-primary)">${amount} ${fromKey}</b>
+        <b style="color:var(--text-primary)">${amount} USDT</b>
       </div>
       <div>
         <span style="color:var(--text-dim)">Rate</span><br>
-        <b style="color:var(--text-primary)">${fmtInr(rate)} ${toKey}</b>
+        <b style="color:var(--text-primary)">₹${rate.toFixed(2)}</b>
       </div>
       <div>
         <span style="color:var(--text-dim)">Fee (0.20%)</span><br>
-        <b style="color:#FF6B6B">${fmtInr(feeAmount)} ${toKey}</b>
+        <b style="color:#FF6B6B">₹${feeAmount.toFixed(2)}</b>
       </div>
       <div>
         <span style="color:var(--text-dim)">You receive</span><br>
-        <b style="color:var(--accent-2);font-size:1.1rem;">${toKey === 'INR' ? fmtInr(result) : result.toFixed(6)} ${toKey}</b>
+        <b style="color:var(--accent-2);font-size:1.1rem;">₹${result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</b>
       </div>
     </div>
   `;
@@ -1032,181 +769,46 @@ function showDetails(amount, rate, fee, result) {
 }
 
 // ============================================================
-// PAIR MANAGEMENT
+// SWAP - ЗАБЛОКИРОВАН
 // ============================================================
-function setPair(from, to) {
-  if (from === fromKey && to === toKey) {
-    closeModal();
-    return;
-  }
-  fromKey = from;
-  toKey = to;
-  updatePairUI();
-  document.getElementById('detailPanel').classList.remove('visible');
-  
-  const fromInput = document.getElementById('fromAmount');
-  fromInput.value = '';
-  document.getElementById('toAmount').value = '';
-  
-  calculate();
-  closeModal();
-  showToast(`✅ ${from} → ${to} selected`);
-}
-
 function swapPair() {
-  const temp = fromKey;
-  fromKey = toKey;
-  toKey = temp;
-  
-  const fromInput = document.getElementById('fromAmount');
-  const toInput = document.getElementById('toAmount');
-  const tempVal = fromInput.value;
-  fromInput.value = toInput.value;
-  toInput.value = tempVal;
-  
-  updatePairUI();
-  document.getElementById('detailPanel').classList.remove('visible');
-  calculate();
-  showToast(`🔄 Swapped to ${fromKey} → ${toKey}`);
+  showToast('⚠️ USDT can only be converted to INR', 'error');
 }
-
-// ============================================================
-// MODAL
-// ============================================================
-function openModal(context) {
-  modalContext = context;
-  document.getElementById('coinModal').classList.add('active');
-  document.getElementById('coinSearch').value = '';
-  renderCoinList();
-  setTimeout(() => document.getElementById('coinSearch').focus(), 100);
-}
-
-function closeModal() {
-  document.getElementById('coinModal').classList.remove('active');
-}
-
-function renderCoinList() {
-  const search = document.getElementById('coinSearch').value.toLowerCase();
-  const list = document.getElementById('coinList');
-  const keys = Object.keys(COINS).filter(k => {
-    const coin = COINS[k];
-    const match = k.toLowerCase().includes(search) || 
-                  coin.name.toLowerCase().includes(search) ||
-                  coin.symbol.includes(search);
-    if (k === 'INR' && modalContext === 'from') return false;
-    return match;
-  });
-  
-  list.innerHTML = keys.map(k => {
-    const coin = COINS[k];
-    const isActive = (modalContext === 'from' && k === fromKey) || 
-                     (modalContext === 'to' && k === toKey);
-    return `<div class="modal-item" onclick="setPair('${modalContext === 'from' ? k : fromKey}', '${modalContext === 'to' ? k : toKey}')" style="${isActive ? 'background:var(--bg-elev);border:1px solid var(--accent-1);' : ''}">
-      <div class="icon">${coin.symbol}</div>
-      <div class="info">
-        <span class="symbol">${k}</span>
-        <span class="name">${coin.name}</span>
-      </div>
-      ${isActive ? '<span style="color:var(--accent-1);font-size:0.7rem;">✓</span>' : ''}
-    </div>`;
-  }).join('');
-}
-
-function filterCoins() { renderCoinList(); }
-
-// ============================================================
-// PRESETS
-// ============================================================
-document.querySelectorAll('.preset').forEach(p => {
-  p.addEventListener('click', function() {
-    setPair(this.dataset.from, this.dataset.to);
-  });
-});
 
 // ============================================================
 // TOAST
 // ============================================================
-function showToast(msg) {
+function showToast(msg, type = 'info') {
   const el = document.getElementById('globalToast');
   el.textContent = msg;
+  el.className = 'toast';
+  if (type === 'error') el.style.borderColor = '#FF6B6B';
+  else if (type === 'success') el.style.borderColor = '#1FAE6D';
+  else el.style.borderColor = 'var(--accent-1)';
   el.classList.add('show');
   clearTimeout(el._timer);
   el._timer = setTimeout(() => el.classList.remove('show'), 3000);
 }
 
 // ============================================================
-// INITIAL RENDER
-// ============================================================
-function renderRatesTable() {
-  const table = document.getElementById('ratesTable');
-  let rows = `<div class="rates-row head"><span>Asset</span><span>Price (INR)</span><span>24h change</span><span class="vol-col"></span></div>`;
-  COIN_KEYS.forEach(k => {
-    const p = prices[k];
-    if (!p) {
-      rows += `<div class="rates-row"><span>${k}</span><span>Loading...</span><span>—</span><span></span></div>`;
-      return;
-    }
-    const sign = p.change24h >= 0 ? '▲' : '▼';
-    const cls = p.change24h >= 0 ? 'chg-up' : 'chg-down';
-    rows += `<div class="rates-row">
-      <span class="coin-name"><span class="token-dot" style="width:26px;height:26px;border-radius:50%;background:var(--accent-grad);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:700;color:#120E1A;">${COINS[k].symbol}</span>${COINS[k].name} <span style="color:var(--text-dim);font-weight:400">${k}</span></span>
-      <span class="price">${fmtInr(p.inr)}</span>
-      <span class="${cls}">${sign}${Math.abs(p.change24h).toFixed(2)}%</span>
-      <span class="vol-col trade-link" onclick="setPair('${k}','INR')">Trade →</span>
-    </div>`;
-  });
-  table.innerHTML = rows;
-}
-
-// ============================================================
-// FAQ - 45 ВОПРОСОВ
+// FAQ
 // ============================================================
 const faqs = [
-  ["What is Bharat Exchange and how does it work?", "Bharat Exchange is India's premier crypto trading platform that allows you to buy, sell, and swap cryptocurrencies like Bitcoin, Ethereum, and USDT using Indian Rupees (INR). It supports UPI, IMPS, and bank transfers for easy deposits and withdrawals, with live market rates and low fees."],
-  ["Is Bharat Exchange a safe and secure crypto exchange in India?", "Yes, Bharat Exchange prioritizes security with cold storage for the majority of funds, mandatory 2FA for all accounts, and regular third-party security audits. We never compromise on user safety and follow all Indian regulatory guidelines."],
-  ["How do I create an account on Bharat Exchange?", "Creating an account is simple — visit our website, click 'Sign Up', enter your email and mobile number, create a strong password, and complete the OTP verification. Once verified, you can complete your KYC with PAN and Aadhaar to start trading."],
-  ["What is the minimum amount to buy crypto on Bharat Exchange?", "You can start buying crypto with as little as ₹500 on Bharat Exchange. This low minimum makes it accessible for beginners to start their crypto investment journey without risking large amounts."],
-  ["Is cryptocurrency legal in India?", "Yes, buying, holding, and trading cryptocurrency is legal in India. However, crypto is not recognized as legal tender. Profits from crypto trading are subject to India's tax rules, including a 30% gains tax and 1% TDS on transfers above specified thresholds."],
-  ["How to buy Bitcoin in India with INR?", "To buy Bitcoin in India with INR on Bharat Exchange: 1) Sign up and complete KYC, 2) Deposit INR via UPI, IMPS, or bank transfer, 3) Go to the Buy section, enter the amount in INR or BTC, 4) Confirm the transaction at the live market rate. Your Bitcoin will be credited to your wallet instantly."],
-  ["How to sell crypto for INR on Bharat Exchange?", "To sell crypto for INR: 1) Go to the Sell section, 2) Select the cryptocurrency you want to sell, 3) Enter the amount, 4) Confirm the sale at the live rate. The INR proceeds will be credited to your account and can be withdrawn to your bank via UPI or IMPS."],
-  ["How to buy Ethereum in India?", "Buying Ethereum on Bharat Exchange follows the same process as Bitcoin. Simply select ETH from the coin list, enter the amount in INR, and confirm the purchase. ETH will be credited to your wallet at the live market rate."],
-  ["How to buy USDT in India?", "USDT (Tether) can be bought on Bharat Exchange just like any other crypto. USDT is a stablecoin pegged to the US dollar, making it ideal for storing value or trading between other cryptocurrencies without converting to INR."],
-  ["What is the best crypto to buy in India right now?", "The best crypto to buy depends on your investment goals. Bitcoin and Ethereum are the most established, while USDT is great for stability. For higher risk and potential returns, consider altcoins like Solana, XRP, or BNB. Always do your own research before investing."],
-  ["What is the 30% crypto tax in India?", "Under India's Income Tax Act, profits from transferring virtual digital assets (crypto) are taxed at a flat 30%. No deductions are allowed except the cost of acquisition. This means if you buy Bitcoin at ₹50,000 and sell at ₹1,00,000, you pay 30% tax on the ₹50,000 profit."],
-  ["What is 1% TDS on crypto transactions in India?", "India levies a 1% Tax Deducted at Source (TDS) on crypto transfers exceeding ₹50,000 in a financial year. Bharat Exchange automatically deducts and reports this TDS on applicable trades. You can download your TDS certificate from your account for tax filing."],
-  ["How do I file crypto taxes in India?", "You need to report all crypto gains and losses in your Income Tax Return (ITR) under 'Income from other sources'. Bharat Exchange provides comprehensive tax reports showing all your trades, profits, and TDS deducted. Consult a tax professional for accurate filing."],
-  ["Can I offset crypto losses against other income in India?", "No, under current Indian tax rules, losses from crypto trading cannot be offset against any other income. You can only carry forward losses to offset against future crypto gains within the same asset class."],
-  ["Does Bharat Exchange provide tax reports?", "Yes, Bharat Exchange provides downloadable tax reports that include all your buy, sell, and swap transactions, along with profit/loss calculations and TDS deducted. These reports are formatted for easy integration with Indian tax filing."],
-  ["How to deposit INR on Bharat Exchange?", "You can deposit INR via UPI (Google Pay, PhonePe, Paytm), IMPS, or direct bank transfer (NEFT/RTGS). UPI deposits are credited instantly, while bank transfers may take a few hours to reflect in your account on business days."],
-  ["How long does UPI deposit take on Bharat Exchange?", "UPI deposits are typically credited to your Bharat Exchange account within minutes. In some cases, it may take up to 30 minutes during peak hours. You will receive a notification once your deposit is confirmed."],
-  ["How to withdraw INR from Bharat Exchange?", "To withdraw INR: 1) Go to the Withdraw section, 2) Select your bank account or UPI ID, 3) Enter the amount, 4) Confirm with 2FA. Withdrawals are processed within a few hours on business days and sent directly to your registered bank account."],
-  ["What are the withdrawal limits on Bharat Exchange?", "Withdrawal limits depend on your KYC verification level. Basic verified accounts have daily limits of ₹50,000, while fully verified accounts can withdraw up to ₹5,00,000 per day. Higher limits may be available upon request."],
-  ["Does Bharat Exchange support UPI withdrawal?", "Yes, Bharat Exchange supports UPI withdrawals directly to your registered UPI ID. This is the fastest way to receive INR in your bank account, typically processed within minutes to a few hours."],
-  ["What is P2P trading on Bharat Exchange?", "P2P (Peer-to-Peer) trading allows you to buy or sell crypto directly with other Bharat Exchange users. You can negotiate rates and payment methods, and the platform holds the crypto in escrow until both parties confirm the transaction, ensuring safety for both sides."],
-  ["How does crypto-to-crypto swap work?", "Crypto-to-crypto swap lets you exchange one cryptocurrency for another without converting to INR first. For example, you can swap BTC to USDT directly at the live market rate. The swap is executed instantly with a small 0.30% fee."],
-  ["Is P2P trading safe on Bharat Exchange?", "Yes, P2P trading on Bharat Exchange is safe because all trades are protected by escrow. The crypto is locked by the platform until the buyer confirms payment. Both parties are verified, and dispute resolution is available if needed."],
-  ["What is the fee for crypto swap?", "The fee for crypto-to-crypto swaps on Bharat Exchange is 0.30% of the transaction amount. This is one of the lowest swap fees in the Indian market, making it cost-effective for active traders."],
-  ["Can I swap USDT to BTC on Bharat Exchange?", "Yes, you can swap USDT to BTC directly on the Swap section. Simply select USDT as the 'From' currency and BTC as the 'To' currency, enter the amount, and confirm the swap at the live market rate."],
-  ["How does Bharat Exchange protect my funds?", "Bharat Exchange uses multiple security layers: 98% of user funds are stored in offline cold storage, all accounts require 2FA, withdrawals need email confirmation, and we conduct regular third-party security audits to identify and fix vulnerabilities."],
-  ["Does Bharat Exchange support 2FA?", "Yes, two-factor authentication (2FA) is mandatory for all Bharat Exchange accounts. You can enable it using Google Authenticator or any authenticator app. 2FA is required for login, withdrawals, and changes to security settings."],
-  ["What is cold storage for crypto?", "Cold storage means keeping private keys completely offline, disconnected from the internet. This makes it virtually impossible for hackers to access funds remotely. Bharat Exchange stores the majority of user funds in cold storage for maximum security."],
-  ["How to enable withdrawal whitelist on Bharat Exchange?", "You can enable withdrawal whitelist in your Security Settings. This feature allows you to pre-approve specific wallet addresses and bank accounts. Withdrawals to non-whitelisted addresses will be blocked, adding an extra layer of protection."],
-  ["What should I do if I suspect unauthorized access to my account?", "If you suspect unauthorized access, immediately: 1) Change your password, 2) Contact Bharat Exchange support, 3) Freeze your account temporarily, 4) Check your recent transactions. Our support team is available 24/7 to assist you."],
-  ["What documents are required for KYC on Bharat Exchange?", "For KYC verification, you need: 1) PAN card (mandatory for all users), 2) Aadhaar card for identity verification, 3) A selfie for liveness check, 4) Bank account statement or passbook for proof of address. All documents must be clear and valid."],
-  ["How long does KYC verification take on Bharat Exchange?", "KYC verification typically takes between 5-15 minutes for most users. In some cases, it may take up to 24 hours if additional verification is required. You will receive an email notification once your KYC is approved."],
-  ["Can NRIs trade on Bharat Exchange?", "NRI account support depends on regulatory and banking eligibility. NRIs should check current onboarding requirements as verification documents may differ from resident accounts. Contact our support for specific guidance."],
-  ["Is Aadhaar mandatory for crypto trading in India?", "Yes, Aadhaar is required for KYC verification as per Indian regulatory guidelines. It helps confirm your identity and prevent fraud. Your Aadhaar information is securely stored and only used for compliance purposes."],
-  ["How often are crypto prices updated on Bharat Exchange?", "Crypto prices on Bharat Exchange are updated every 30 seconds directly from CoinGecko, ensuring you always see the most accurate and real-time market rates for all supported cryptocurrencies."],
-  ["What is the current Bitcoin price in INR?", "The current Bitcoin price in INR is displayed live on the Bharat Exchange homepage, in the ticker bar, and on the Markets page. You can also see the 24-hour change and trading volume to make informed decisions."],
-  ["What is the best crypto exchange in India?", "Bharat Exchange is one of the best crypto exchanges in India, offering low fees, UPI support, P2P trading, crypto swaps, and robust security. With a user-friendly interface and live INR rates, it's the ideal platform for beginners and experienced traders alike."],
-  ["What is the difference between market price and limit order?", "Market price executes your trade instantly at the current market rate. Limit order lets you set a specific price you want to buy or sell at, and the trade executes only when the market reaches that price. Limit orders give you more control but may take longer."],
-  ["Can I trade crypto 24/7 on Bharat Exchange?", "Yes, the crypto market is open 24/7, 365 days a year. You can trade on Bharat Exchange anytime, including weekends and holidays. Unlike traditional stock markets, crypto never closes."],
-  ["What is Bitcoin?", "Bitcoin (BTC) is the world's first and largest cryptocurrency. Created in 2009 by Satoshi Nakamoto, it's a decentralized digital currency that enables peer-to-peer transactions without intermediaries."],
-  ["What is Ethereum?", "Ethereum (ETH) is the second-largest cryptocurrency and a blockchain platform that enables smart contracts and decentralized applications (dApps). It's the foundation for much of the DeFi ecosystem."],
-  ["What is USDT Tether?", "USDT (Tether) is a stablecoin pegged to the US dollar at a 1:1 ratio. It's used to store value and trade between cryptocurrencies without converting to fiat currency, making it essential for crypto trading."],
-  ["What is a blockchain?", "Blockchain is a decentralized digital ledger that records transactions across many computers. It's the underlying technology behind cryptocurrencies, ensuring transparency, security, and immutability."],
-  ["What is a crypto wallet?", "A crypto wallet is a digital tool that stores your private keys and allows you to send, receive, and manage your cryptocurrencies. Bharat Exchange offers both hot wallets for trading and cold storage for security."],
-  ["What is DeFi?", "DeFi (Decentralized Finance) is a financial system built on blockchain that offers services like lending, borrowing, and trading without traditional intermediaries like banks. Bharat Exchange integrates DeFi features for crypto swaps."]
+  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the current exchange rate. Bharat Exchange offers the best rates with low fees."],
+  ["How to convert USDT to INR?", "1) Enter the amount of USDT you want to convert, 2) See the estimated INR amount instantly, 3) Connect your wallet, 4) Confirm the transaction. INR will be sent to your bank account."],
+  ["What is the current USDT to INR rate?", "The current USDT to INR rate is ₹87.00 per 1 USDT. Rates are updated in real-time."],
+  ["Is USDT to INR conversion safe?", "Yes, Bharat Exchange uses secure infrastructure, cold storage, and 2FA to protect your funds. All conversions are processed securely."],
+  ["What are the fees for USDT to INR conversion?", "The platform fee is 0.20% of the transaction amount. There are no hidden fees."],
+  ["How long does USDT to INR conversion take?", "USDT to INR conversion typically takes a few minutes. UPI settlements are instant, while bank transfers may take a few hours."],
+  ["Can I convert INR to USDT?", "Yes, you can convert INR to USDT on Bharat Exchange. Simply select INR as the 'From' currency and USDT as the 'To' currency."],
+  ["What is the minimum amount for USDT to INR conversion?", "The minimum amount is ₹500 or equivalent in USDT."],
+  ["Do I need KYC to convert USDT to INR?", "Yes, KYC with PAN and Aadhaar is required to convert USDT to INR on Bharat Exchange."],
+  ["What payment methods are supported?", "You can receive INR via UPI, IMPS, or bank transfer (NEFT/RTGS)."],
+  ["Is crypto legal in India?", "Yes, buying, holding, and trading cryptocurrency is legal in India. Profits are subject to 30% tax and 1% TDS."],
+  ["What is the 30% crypto tax in India?", "Profits from transferring crypto are taxed at a flat 30%. No deductions except cost of acquisition."],
+  ["What is 1% TDS on crypto transactions?", "India levies 1% TDS on crypto transfers exceeding ₹50,000 in a financial year."],
+  ["How do I withdraw INR?", "Go to Withdraw, select your bank account or UPI ID, enter the amount, confirm with 2FA."],
+  ["Does Bharat Exchange support UPI withdrawal?", "Yes, UPI withdrawals are the fastest way to receive INR in your bank account."]
 ];
 
 const grid = document.getElementById('faqGrid');
@@ -1231,33 +833,13 @@ function toggleFaq(el) {
 }
 
 // ============================================================
-// UPDATE ALL
-// ============================================================
-function updateAll() {
-  updatePrices();
-  updatePairUI();
-  calculate();
-}
-
-// ============================================================
 // INIT
 // ============================================================
-document.getElementById('rateDisplay').textContent = '⏳ Loading rates...';
+document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
+document.getElementById('usdtPrice').textContent = '87.00';
 
-fetchPrices();
-setInterval(fetchPrices, 30000);
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-  if (e.key === 'Enter' && document.activeElement?.id === 'coinSearch') {
-    const first = document.querySelector('.modal-item');
-    if (first) first.click();
-  }
-});
-
-console.log('🚀 Bharat Exchange loaded successfully');
-console.log('📊 Waiting for prices to load...');
-console.log('💱 Exchange widget ready with instant calculation');
+console.log('🚀 Bharat Exchange - USDT to INR Converter loaded');
+console.log('💱 Rate: 1 USDT = ₹87.00');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
