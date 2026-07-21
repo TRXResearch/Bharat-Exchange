@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Bharat Exchange — Premium USDT to INR Converter</title>
-  <meta name="description" content="Convert USDT to INR at the best rate of ₹96.41. Premium crypto exchange with UPI deposits, instant settlements, and secure swaps. Built for India." />
-  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, premium crypto exchange, best rate" />
+  <meta name="description" content="Convert USDT to INR instantly. Premium crypto exchange with UPI deposits, instant settlements, and secure swaps. Built for India." />
+  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, premium crypto exchange" />
   <link rel="canonical" href="https://bharatexchange.vercel.app/" />
   
   <meta property="og:title" content="Bharat Exchange — Premium USDT to INR Converter" />
-  <meta property="og:description" content="Convert USDT to INR at ₹96.41. Premium design, instant settlements, and secure swaps." />
+  <meta property="og:description" content="Convert USDT to INR instantly. Premium design, instant settlements, and secure swaps." />
   <meta name="twitter:card" content="summary_large_image" />
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
@@ -20,36 +20,50 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <style>
-    /* ===== PREMIUM VARIABLES ===== */
+    /* ============================================================
+       PREMIUM DESIGN SYSTEM
+       ============================================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
     :root {
-      --bg-primary: #08040F;
-      --bg-secondary: #0F0A1A;
-      --bg-card: rgba(23, 16, 38, 0.7);
-      --bg-card-hover: rgba(32, 24, 50, 0.85);
-      --bg-elev: rgba(44, 34, 58, 0.35);
-      --border-glow: rgba(255, 159, 69, 0.12);
-      --border-hover: rgba(255, 159, 69, 0.35);
-      --accent-1: #FF9F45;
-      --accent-2: #1FAE6D;
-      --accent-3: #FFD700;
-      --accent-grad: linear-gradient(135deg, #FF9F45 0%, #FFD700 30%, #1FAE6D 100%);
-      --text-primary: #F7F2EA;
+      /* Основные цвета - премиальный темный градиент */
+      --bg-primary: #0A0618;
+      --bg-secondary: #100A22;
+      --bg-card: rgba(25, 18, 45, 0.75);
+      --bg-card-hover: rgba(35, 25, 55, 0.85);
+      --bg-elev: rgba(45, 35, 60, 0.35);
+      
+      /* Акценты - золото+изумруд */
+      --accent-gold: #FFB347;
+      --accent-gold-light: #FFD700;
+      --accent-green: #1FAE6D;
+      --accent-green-light: #34D399;
+      --accent-grad: linear-gradient(135deg, #FFB347 0%, #FFD700 40%, #1FAE6D 100%);
+      --accent-grad-soft: linear-gradient(135deg, rgba(255, 179, 71, 0.15) 0%, rgba(31, 174, 109, 0.15) 100%);
+      
+      /* Текст */
+      --text-primary: #F5F0EB;
       --text-secondary: #C8BED8;
       --text-dim: #7A728A;
-      --shadow-glow: 0 8px 60px rgba(255, 159, 69, 0.08);
+      
+      /* Тени и свечения */
+      --shadow-glow: 0 8px 60px rgba(255, 179, 71, 0.08);
       --shadow-2xl: 0 20px 80px rgba(0, 0, 0, 0.6);
+      --shadow-gold: 0 0 60px rgba(255, 179, 71, 0.05);
+      
+      /* Скругления */
       --radius-sm: 8px;
       --radius-md: 16px;
       --radius-lg: 24px;
       --radius-xl: 32px;
       --radius-2xl: 48px;
+      
+      /* Шрифты */
       --font-display: 'Fraunces', serif;
       --font-sans: 'Inter', sans-serif;
       --font-mono: 'JetBrains Mono', monospace;
     }
 
-    /* ===== RESET ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
       background: var(--bg-primary);
@@ -61,77 +75,106 @@
       position: relative;
     }
 
-    /* ===== PREMIUM BACKGROUND ===== */
+    /* ============================================================
+       ПРЕМИУМ ФОН С ГРАДИЕНТАМИ
+       ============================================================ */
     .bg-scene {
       position: fixed;
       inset: 0;
       z-index: 0;
       pointer-events: none;
       overflow: hidden;
+      background: 
+        radial-gradient(ellipse at 20% 50%, rgba(255, 179, 71, 0.04) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 50%, rgba(31, 174, 109, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(255, 215, 0, 0.02) 0%, transparent 40%);
     }
+    
     .orb {
       position: absolute;
       border-radius: 50%;
-      filter: blur(100px);
-      animation: orbFloat 25s infinite alternate ease-in-out;
+      filter: blur(120px);
+      animation: orbFloat 30s infinite alternate ease-in-out;
     }
     .orb:nth-child(1) {
-      width: 700px;
-      height: 700px;
-      top: -15%;
+      width: 800px;
+      height: 800px;
+      top: -20%;
       right: -10%;
-      background: radial-gradient(circle, rgba(255, 159, 69, 0.05) 0%, transparent 70%);
-      animation-duration: 30s;
+      background: radial-gradient(circle, rgba(255, 179, 71, 0.04) 0%, transparent 70%);
+      animation-duration: 35s;
     }
     .orb:nth-child(2) {
-      width: 500px;
-      height: 500px;
-      bottom: -5%;
-      left: -8%;
-      background: radial-gradient(circle, rgba(31, 174, 109, 0.04) 0%, transparent 70%);
-      animation-duration: 35s;
-      animation-delay: -8s;
+      width: 600px;
+      height: 600px;
+      bottom: -10%;
+      left: -5%;
+      background: radial-gradient(circle, rgba(31, 174, 109, 0.035) 0%, transparent 70%);
+      animation-duration: 40s;
+      animation-delay: -10s;
     }
     .orb:nth-child(3) {
-      width: 350px;
-      height: 350px;
-      top: 45%;
-      left: 45%;
-      background: radial-gradient(circle, rgba(255, 215, 0, 0.03) 0%, transparent 70%);
+      width: 400px;
+      height: 400px;
+      top: 40%;
+      left: 40%;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.025) 0%, transparent 70%);
       animation-duration: 28s;
-      animation-delay: -12s;
+      animation-delay: -15s;
     }
     @keyframes orbFloat {
       0% { transform: translate(0, 0) scale(1) rotate(0deg); }
-      33% { transform: translate(40px, -50px) scale(1.1) rotate(120deg); }
-      66% { transform: translate(-30px, 30px) scale(0.9) rotate(240deg); }
-      100% { transform: translate(20px, -20px) scale(1.05) rotate(360deg); }
+      33% { transform: translate(50px, -60px) scale(1.1) rotate(120deg); }
+      66% { transform: translate(-40px, 40px) scale(0.9) rotate(240deg); }
+      100% { transform: translate(25px, -25px) scale(1.05) rotate(360deg); }
     }
 
-    /* ===== PREMIUM GRID ===== */
+    /* Премиум текстура поверх фона */
     .grid-pattern {
       position: fixed;
       inset: 0;
       z-index: 0;
       pointer-events: none;
       background-image: 
-        radial-gradient(circle at 1px 1px, rgba(255, 159, 69, 0.02) 1px, transparent 0);
+        radial-gradient(circle at 1px 1px, rgba(255, 179, 71, 0.015) 1px, transparent 0);
       background-size: 60px 60px;
     }
 
-    /* ===== CONTAINER ===== */
+    /* Золотая линия сверху */
+    .gold-line {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      z-index: 1000;
+      background: linear-gradient(90deg, transparent, #FFB347, #FFD700, #1FAE6D, transparent);
+      animation: gold-line-shimmer 4s ease-in-out infinite;
+      background-size: 300% 100%;
+    }
+    @keyframes gold-line-shimmer {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 0%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    /* ============================================================
+       КОНТЕЙНЕР
+       ============================================================ */
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
     .section { padding: 80px 0; }
 
-    /* ===== PREMIUM NAV ===== */
+    /* ============================================================
+       НАВИГАЦИЯ
+       ============================================================ */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8, 4, 15, 0.92);
+      background: rgba(10, 6, 24, 0.92);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border-bottom: 1px solid var(--border-glow);
+      border-bottom: 1px solid rgba(255, 179, 71, 0.06);
     }
     .nav-inner {
       max-width: 1280px;
@@ -163,11 +206,11 @@
       color: var(--text-secondary);
       font-weight: 500;
       font-size: 0.85rem;
-      transition: color 0.2s;
+      transition: color 0.3s ease;
       position: relative;
     }
     .nav-links a:hover,
-    .nav-links a.active { color: var(--accent-1); }
+    .nav-links a.active { color: var(--accent-gold); }
     .nav-links a.active::after {
       content: '';
       position: absolute;
@@ -180,7 +223,9 @@
     }
     .wallet-area { display: flex; align-items: center; gap: 16px; }
 
-    /* ===== PREMIUM PRICE DISPLAY ===== */
+    /* ============================================================
+       ПРЕМИУМ ПРАЙС
+       ============================================================ */
     .inr-price {
       background: var(--bg-card);
       backdrop-filter: blur(8px);
@@ -189,25 +234,27 @@
       border-radius: 40px;
       font-family: var(--font-mono);
       font-size: 0.7rem;
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.08);
       display: flex;
       align-items: center;
       gap: 8px;
       white-space: nowrap;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
     }
     .inr-price:hover {
-      border-color: var(--border-hover);
-      box-shadow: 0 0 30px rgba(255, 159, 69, 0.05);
+      border-color: rgba(255, 179, 71, 0.2);
+      box-shadow: 0 0 40px rgba(255, 179, 71, 0.04);
     }
     .inr-price .price {
       font-weight: 700;
       font-size: 0.8rem;
       transition: all 0.3s ease;
     }
-    .inr-price .change { color: var(--accent-2); }
+    .inr-price .change { color: var(--accent-green); }
 
-    /* ===== PREMIUM BUTTONS ===== */
+    /* ============================================================
+       КНОПКИ
+       ============================================================ */
     .btn {
       font-weight: 600;
       padding: 10px 24px;
@@ -222,23 +269,23 @@
     }
     .btn-primary {
       background: var(--accent-grad);
-      color: #120E1A;
-      box-shadow: 0 4px 20px rgba(255, 159, 69, 0.2);
+      color: #0A0618;
+      box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
     .btn-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 40px rgba(255, 159, 69, 0.35);
+      box-shadow: 0 8px 40px rgba(255, 179, 71, 0.25);
     }
     .btn-primary:active { transform: translateY(0); }
     .btn-outline {
       background: transparent;
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.12);
       color: var(--text-primary);
     }
     .btn-outline:hover {
-      border-color: var(--accent-1);
-      color: var(--accent-1);
-      box-shadow: 0 0 30px rgba(255, 159, 69, 0.08);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+      box-shadow: 0 0 40px rgba(255, 179, 71, 0.06);
     }
     .btn-glow {
       position: absolute;
@@ -246,20 +293,23 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background: radial-gradient(circle, rgba(255, 159, 69, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(255, 179, 71, 0.08) 0%, transparent 70%);
       opacity: 0;
-      transition: opacity 0.3s;
+      transition: opacity 0.4s ease;
     }
     .btn:hover .btn-glow { opacity: 1; }
 
-    /* ===== TICKER ===== */
+    /* ============================================================
+       ТИКЕР
+       ============================================================ */
     .ticker-wrap {
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-glow);
+      background: rgba(16, 10, 34, 0.6);
+      border-bottom: 1px solid rgba(255, 179, 71, 0.04);
       overflow: hidden;
       white-space: nowrap;
       position: relative;
       z-index: 5;
+      backdrop-filter: blur(8px);
     }
     .ticker-track {
       display: inline-flex;
@@ -281,10 +331,12 @@
       color: var(--text-secondary);
     }
     .ticker-item b { color: var(--text-primary); font-weight: 600; }
-    .ticker-item .chg-up { color: var(--accent-2); }
+    .ticker-item .chg-up { color: var(--accent-green); }
     .ticker-item .chg-down { color: #FF6B6B; }
 
-    /* ===== HERO SECTION ===== */
+    /* ============================================================
+       ГЕРОЙ
+       ============================================================ */
     .hero {
       display: grid;
       grid-template-columns: 1fr 540px;
@@ -296,20 +348,20 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(255, 159, 69, 0.06);
-      border: 1px solid var(--border-glow);
+      background: rgba(255, 179, 71, 0.04);
+      border: 1px solid rgba(255, 179, 71, 0.06);
       padding: 6px 16px;
       border-radius: 40px;
       font-family: var(--font-mono);
       font-size: 0.7rem;
-      color: var(--accent-1);
+      color: var(--accent-gold);
       margin-bottom: 24px;
     }
     .badge .dot {
       width: 6px;
       height: 6px;
       border-radius: 50%;
-      background: var(--accent-2);
+      background: var(--accent-green);
       animation: pulse-dot 2s infinite;
     }
     @keyframes pulse-dot {
@@ -355,7 +407,7 @@
       display: flex;
       gap: 48px;
       padding-top: 28px;
-      border-top: 1px solid var(--border-glow);
+      border-top: 1px solid rgba(255, 179, 71, 0.04);
       flex-wrap: wrap;
     }
     .stat .stat-val {
@@ -374,30 +426,32 @@
       text-transform: uppercase;
     }
 
-    /* ===== PREMIUM WIDGET CARD ===== */
+    /* ============================================================
+       ПРЕМИУМ ВИДЖЕТ
+       ============================================================ */
     .widget-card {
       background: var(--bg-card);
       backdrop-filter: blur(24px);
       -webkit-backdrop-filter: blur(24px);
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.06);
       border-radius: var(--radius-xl);
       overflow: hidden;
       box-shadow: 
         var(--shadow-2xl),
-        0 0 80px rgba(255, 159, 69, 0.02);
+        0 0 80px rgba(255, 179, 71, 0.015);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: sticky;
       top: 90px;
     }
     .widget-card:hover {
-      border-color: var(--border-hover);
+      border-color: rgba(255, 179, 71, 0.12);
       box-shadow: 
         var(--shadow-2xl),
-        0 0 80px rgba(255, 159, 69, 0.05);
+        0 0 80px rgba(255, 179, 71, 0.03);
     }
     .card-header {
       padding: 20px 24px;
-      border-bottom: 1px solid var(--border-glow);
+      border-bottom: 1px solid rgba(255, 179, 71, 0.04);
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -409,15 +463,18 @@
       align-items: center;
       gap: 8px;
     }
+    .card-header .title .accent-gold { color: var(--accent-gold); }
+    .card-header .title .accent-green { color: var(--accent-green); }
     .card-header .sub {
       color: var(--text-dim);
       font-size: 0.7rem;
     }
 
-    /* ===== EXCHANGE WIDGET ===== */
     .exchange-widget { padding: 24px; }
 
-    /* ===== PAIR SELECTOR ===== */
+    /* ============================================================
+       ПАРЫ
+       ============================================================ */
     .pair-selector {
       display: flex;
       gap: 12px;
@@ -426,8 +483,6 @@
       background: var(--bg-elev);
       border-radius: var(--radius-lg);
       padding: 8px;
-      cursor: default;
-      opacity: 0.9;
     }
     .pair-selector .from,
     .pair-selector .to {
@@ -438,8 +493,8 @@
       align-items: center;
       gap: 12px;
       background: var(--bg-card);
-      border: 2px solid var(--accent-1);
-      box-shadow: 0 0 30px rgba(255, 159, 69, 0.05);
+      border: 2px solid rgba(255, 179, 71, 0.15);
+      box-shadow: 0 0 30px rgba(255, 179, 71, 0.02);
     }
     .pair-selector .coin-icon {
       width: 36px;
@@ -451,7 +506,7 @@
       justify-content: center;
       font-weight: 700;
       font-size: 0.8rem;
-      color: #120E1A;
+      color: #0A0618;
       flex-shrink: 0;
     }
     .pair-selector .coin-info { display: flex; flex-direction: column; gap: 2px; }
@@ -464,7 +519,9 @@
       padding: 0 8px;
     }
 
-    /* ===== PRESETS ===== */
+    /* ============================================================
+       ПРЕСЕТЫ
+       ============================================================ */
     .presets {
       display: flex;
       gap: 8px;
@@ -476,7 +533,7 @@
       padding: 8px 18px;
       border-radius: 40px;
       background: var(--bg-elev);
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.04);
       color: var(--text-secondary);
       font-size: 0.7rem;
       cursor: pointer;
@@ -487,24 +544,26 @@
     .preset:hover,
     .preset.active {
       background: var(--accent-grad);
-      color: #120E1A;
+      color: #0A0618;
       border-color: transparent;
       transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(255, 159, 69, 0.2);
+      box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
-    /* ===== AMOUNT FIELDS ===== */
+    /* ============================================================
+       ПОЛЯ ВВОДА
+       ============================================================ */
     .amount-field {
       background: var(--bg-elev);
-      border: 2px solid var(--border-glow);
+      border: 2px solid rgba(255, 179, 71, 0.04);
       border-radius: var(--radius-lg);
       padding: 18px 20px;
       margin-bottom: 12px;
-      transition: all 0.3s ease;
+      transition: all 0.4s ease;
     }
     .amount-field:focus-within {
-      border-color: var(--accent-1);
-      box-shadow: 0 0 40px rgba(255, 159, 69, 0.05);
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 40px rgba(255, 179, 71, 0.04);
     }
     .amount-field .label {
       display: flex;
@@ -533,20 +592,22 @@
     .amount-field input::placeholder { color: var(--text-dim); }
     .amount-field input:disabled { opacity: 0.6; cursor: default; }
 
-    /* ===== TOKEN BADGE ===== */
+    /* ============================================================
+       ТОКЕН БЕЙДЖ
+       ============================================================ */
     .token-badge {
       display: flex;
       align-items: center;
       gap: 8px;
       background: var(--bg-card);
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.04);
       border-radius: 40px;
       padding: 6px 16px 6px 8px;
       font-size: 0.8rem;
       font-weight: 600;
       cursor: default;
       white-space: nowrap;
-      opacity: 0.7;
+      opacity: 0.6;
       user-select: none;
     }
     .token-badge .dot {
@@ -559,28 +620,32 @@
       justify-content: center;
       font-size: 0.65rem;
       font-weight: 700;
-      color: #120E1A;
+      color: #0A0618;
     }
 
-    /* ===== SWAP BUTTON (заблокирован) ===== */
+    /* ============================================================
+       SWAP (ЗАБЛОКИРОВАН)
+       ============================================================ */
     .swap-direction { display: flex; justify-content: center; margin: 4px 0 12px; }
     .swap-btn {
       width: 48px;
       height: 48px;
       border-radius: 50%;
       background: var(--bg-elev);
-      border: 1px solid var(--border-glow);
-      color: var(--accent-1);
+      border: 1px solid rgba(255, 179, 71, 0.04);
+      color: var(--accent-gold);
       font-size: 1.3rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      opacity: 0.3;
+      opacity: 0.2;
       cursor: not-allowed;
       pointer-events: none;
     }
 
-    /* ===== RATE INFO ===== */
+    /* ============================================================
+       ИНФО О КУРСЕ
+       ============================================================ */
     .rate-info {
       display: flex;
       justify-content: space-between;
@@ -594,13 +659,15 @@
       font-weight: 600;
     }
 
-    /* ===== DETAIL PANEL ===== */
+    /* ============================================================
+       ДЕТАЛЬНАЯ ПАНЕЛЬ
+       ============================================================ */
     #detailPanel {
       margin-top: 16px;
       padding: 16px 20px;
       background: var(--bg-elev);
       border-radius: var(--radius-md);
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.04);
       font-size: 0.8rem;
       color: var(--text-secondary);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -612,7 +679,9 @@
       transform: translateY(0) scale(1);
     }
 
-    /* ===== MAIN ACTION ===== */
+    /* ============================================================
+       ГЛАВНАЯ КНОПКА
+       ============================================================ */
     .main-action {
       width: 100%;
       padding: 18px;
@@ -623,7 +692,7 @@
       font-size: 0.95rem;
       cursor: pointer;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      color: #120E1A;
+      color: #0A0618;
       margin-top: 12px;
       position: relative;
       overflow: hidden;
@@ -631,11 +700,10 @@
     }
     .main-action:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 40px rgba(255, 159, 69, 0.3);
+      box-shadow: 0 8px 40px rgba(255, 179, 71, 0.2);
     }
     .main-action:active { transform: translateY(0); }
 
-    /* ===== WIDGET NOTE ===== */
     .widget-note {
       text-align: center;
       margin-top: 16px;
@@ -643,7 +711,9 @@
       color: var(--text-dim);
     }
 
-    /* ===== FEATURES ===== */
+    /* ============================================================
+       ФИЧИ
+       ============================================================ */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -656,11 +726,11 @@
       -webkit-backdrop-filter: blur(8px);
       border-radius: var(--radius-lg);
       padding: 32px;
-      border: 1px solid var(--border-glow);
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid rgba(255, 179, 71, 0.02);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .feature:hover {
-      border-color: var(--border-hover);
+      border-color: rgba(255, 179, 71, 0.06);
       transform: translateY(-4px);
       box-shadow: var(--shadow-glow);
     }
@@ -668,7 +738,9 @@
     .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
     .feature p { color: var(--text-secondary); font-size: 0.85rem; }
 
-    /* ===== FAQ ===== */
+    /* ============================================================
+       FAQ
+       ============================================================ */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -677,12 +749,12 @@
     }
     .faq-item {
       background: var(--bg-card);
-      border: 1px solid var(--border-glow);
+      border: 1px solid rgba(255, 179, 71, 0.02);
       border-radius: var(--radius-lg);
       padding: 20px 24px;
       transition: all 0.3s ease;
     }
-    .faq-item:hover { border-color: var(--border-hover); }
+    .faq-item:hover { border-color: rgba(255, 179, 71, 0.06); }
     .faq-question {
       display: flex;
       justify-content: space-between;
@@ -694,7 +766,7 @@
       user-select: none;
     }
     .faq-question span {
-      color: var(--accent-1);
+      color: var(--accent-gold);
       font-size: 1.2rem;
       transition: transform 0.3s;
       flex-shrink: 0;
@@ -713,10 +785,12 @@
       padding-top: 12px;
     }
 
-    /* ===== FOOTER ===== */
+    /* ============================================================
+       ПОДВАЛ
+       ============================================================ */
     footer {
       background: var(--bg-secondary);
-      border-top: 1px solid var(--border-glow);
+      border-top: 1px solid rgba(255, 179, 71, 0.02);
       padding: 52px 0 32px;
       margin-top: 40px;
     }
@@ -731,11 +805,11 @@
       color: var(--text-secondary);
       font-size: 0.8rem;
       margin-bottom: 8px;
-      transition: color 0.2s;
+      transition: color 0.3s ease;
     }
-    .footer-grid a:hover { color: var(--accent-1); }
+    .footer-grid a:hover { color: var(--accent-gold); }
     .footer-grid h5 {
-      color: var(--accent-1);
+      color: var(--accent-gold);
       margin-bottom: 14px;
       font-size: 0.75rem;
       text-transform: uppercase;
@@ -747,10 +821,12 @@
       line-height: 1.7;
       margin-top: 28px;
       padding-top: 20px;
-      border-top: 1px solid var(--border-glow);
+      border-top: 1px solid rgba(255, 179, 71, 0.02);
     }
 
-    /* ===== TOAST ===== */
+    /* ============================================================
+       ТОСТ
+       ============================================================ */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -759,7 +835,7 @@
       background: var(--bg-card);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border: 1px solid var(--accent-1);
+      border: 1px solid var(--accent-gold);
       padding: 14px 28px;
       border-radius: 40px;
       font-size: 0.85rem;
@@ -775,7 +851,9 @@
       transform: translateX(-50%) translateY(-10px);
     }
 
-    /* ===== RESPONSIVE ===== */
+    /* ============================================================
+       АДАПТИВ
+       ============================================================ */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .widget-card { position: static; }
@@ -814,19 +892,22 @@
 </head>
 <body>
 
-<!-- ===== PREMIUM BACKGROUND ===== -->
+<!-- ===== ЗОЛОТАЯ ЛИНИЯ ===== -->
+<div class="gold-line"></div>
+
+<!-- ===== ПРЕМИУМ ФОН ===== -->
 <div class="bg-scene"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
 <div class="grid-pattern"></div>
 
-<!-- ===== NAV ===== -->
+<!-- ===== НАВИГАЦИЯ ===== -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
       <svg class="logo-icon" viewBox="0 0 44 44" fill="none">
         <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGrad)" stroke-width="1.5" />
-        <path d="M13 16h18M13 22h18" stroke="#FF9F45" stroke-width="2.2" stroke-linecap="round" />
+        <path d="M13 16h18M13 22h18" stroke="#FFB347" stroke-width="2.2" stroke-linecap="round" />
         <path d="M20 29l7-7-7-7" stroke="#1FAE6D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-        <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
+        <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFB347" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
       </svg>
       <span class="logo-text"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
     </a>
@@ -848,7 +929,7 @@
   </div>
 </nav>
 
-<!-- ===== TICKER ===== -->
+<!-- ===== ТИКЕР ===== -->
 <div class="ticker-wrap">
   <div class="ticker-track" id="tickerTrack">
     <span class="ticker-item"><b>USDT</b> ₹96.41 <span class="chg-up">▲2.3%</span></span>
@@ -859,22 +940,22 @@
   </div>
 </div>
 
-<!-- ===== MAIN ===== -->
+<!-- ===== ГЛАВНЫЙ КОНТЕНТ ===== -->
 <main>
   <div class="container">
     <div class="hero">
-      <!-- LEFT -->
+      <!-- ЛЕВАЯ ЧАСТЬ -->
       <div>
         <div class="badge">
           <span class="dot"></span>
-          <span>🇮🇳 INDIA'S PREMIUM EXCHANGE</span>
+          <span>🇮🇳 PREMIUM EXCHANGE</span>
           <span>·</span>
           <span>UPI · IMPS · BANK</span>
         </div>
-        <h1>Convert USDT to INR<br><span class="gradient-text">at ₹96.41</span></h1>
+        <h1>Convert USDT to INR<br><span class="gradient-text">instantly</span></h1>
         <p class="hero-desc">
-          Experience premium crypto conversion. Convert USDT to INR at the best rate with
-          instant UPI settlements, zero hidden fees, and bank-grade security.
+          Experience premium crypto conversion. Convert USDT to INR with instant UPI settlements,
+          zero hidden fees, and bank-grade security. Built for India.
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('💰 Buy flow starting...')">
@@ -891,16 +972,21 @@
         </div>
       </div>
 
-      <!-- RIGHT: WIDGET -->
+      <!-- ПРАВАЯ ЧАСТЬ: ВИДЖЕТ -->
       <div class="widget-card">
         <div class="card-header">
-          <span class="title">💱 Convert <span style="color:var(--accent-1);">USDT</span> → <span style="color:var(--accent-2);">INR</span></span>
-          <span class="sub">Best rate: ₹96.41</span>
+          <span class="title">
+            💱 Convert 
+            <span class="accent-gold">USDT</span> 
+            → 
+            <span class="accent-green">INR</span>
+          </span>
+          <span class="sub">Live rate</span>
         </div>
         <div class="exchange-widget">
-          <!-- Pair Selector -->
+          <!-- ПАРЫ -->
           <div class="pair-selector">
-            <div class="from active">
+            <div class="from">
               <div class="coin-icon">U</div>
               <div class="coin-info">
                 <span class="coin-symbol">USDT</span>
@@ -917,13 +1003,13 @@
             </div>
           </div>
 
-          <!-- Presets -->
+          <!-- ПРЕСЕТЫ - БЕЗ ONCLICK, ТОЛЬКО setPair -->
           <div class="presets">
             <button class="preset active xsudlmqvbag x2wl7trk" onclick="setPair('USDT','INR')">USDT→INR</button>
             <button class="preset xsudlmqvbag x2wl7trk" onclick="setPair('INR','USDT')">INR→USDT</button>
           </div>
 
-          <!-- Amount From -->
+          <!-- ПОЛЕ "ОТДАЮ" -->
           <div class="amount-field">
             <div class="label">
               <span>You pay</span>
@@ -932,18 +1018,18 @@
             <div class="input-row">
               <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" onkeyup="calculate()" />
               <div class="token-badge">
-                <span class="dot">U</span>
-                <span>USDT</span>
+                <span class="dot" id="fromDot">U</span>
+                <span id="fromLabel">USDT</span>
               </div>
             </div>
           </div>
 
-          <!-- Swap (заблокирован) -->
+          <!-- SWAP (ЗАБЛОКИРОВАН) -->
           <div class="swap-direction">
             <button class="swap-btn xsudlmqvbag x2wl7trk" disabled>⇅</button>
           </div>
 
-          <!-- Amount To -->
+          <!-- ПОЛЕ "ПОЛУЧАЮ" -->
           <div class="amount-field">
             <div class="label">
               <span>You receive (est.)</span>
@@ -952,13 +1038,13 @@
             <div class="input-row">
               <input type="text" id="toAmount" placeholder="0.0" disabled />
               <div class="token-badge">
-                <span class="dot">₹</span>
-                <span>INR</span>
+                <span class="dot" id="toDot">₹</span>
+                <span id="toLabel">INR</span>
               </div>
             </div>
           </div>
 
-          <!-- Rate Info -->
+          <!-- ИНФО -->
           <div class="rate-info">
             <span>Platform fee</span>
             <b>0.20%</b>
@@ -968,33 +1054,33 @@
             <b id="settlementInfo">Enter amount to calculate</b>
           </div>
 
-          <!-- Detail Panel -->
+          <!-- ДЕТАЛИ -->
           <div id="detailPanel"></div>
 
-          <!-- Convert Button -->
+          <!-- КНОПКА КОНВЕРТАЦИИ -->
           <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
             <span class="btn-glow"></span>
             💱 Convert Now
           </button>
-          <div class="widget-note">1 USDT = ₹96.41 · Fee 0.20%</div>
+          <div class="widget-note">Live rate · Fee 0.20%</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ===== FEATURES ===== -->
-  <div style="background:var(--bg-secondary); border-top:1px solid var(--border-glow); border-bottom:1px solid var(--border-glow);">
+  <!-- ===== ФИЧИ ===== -->
+  <div style="background:var(--bg-secondary); border-top:1px solid rgba(255,179,71,0.02); border-bottom:1px solid rgba(255,179,71,0.02);">
     <div class="container"><div class="section" id="features">
       <div class="badge">✨ PREMIUM FEATURES</div>
       <h2 style="font-size:2rem; margin-bottom:12px;">Why choose Bharat Exchange</h2>
       <p style="color:var(--text-secondary); max-width:600px; margin-bottom:20px;">Built for premium trading experience with Indian users in mind.</p>
       <div class="features-grid">
-        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer — no card fees, no international routing.</p></div>
-        <div class="feature"><div class="feature-icon">🔐</div><h3>Bank-grade security</h3><p>Your funds are protected with cold storage, 2FA, and regular security audits.</p></div>
-        <div class="feature"><div class="feature-icon">⚡</div><h3>Instant settlements</h3><p>Most UPI deposits and crypto swaps confirm within minutes, not hours.</p></div>
-        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download statements for India's 30% crypto tax and 1% TDS reporting.</p></div>
-        <div class="feature"><div class="feature-icon">🆔</div><h3>Aadhaar/PAN KYC</h3><p>Verify once with Aadhaar and PAN, then trade without repeated paperwork.</p></div>
-        <div class="feature"><div class="feature-icon">🤝</div><h3>24/7 Support</h3><p>Our dedicated support team is available around the clock to assist you.</p></div>
+        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer.</p></div>
+        <div class="feature"><div class="feature-icon">🔐</div><h3>Bank-grade security</h3><p>Your funds are protected with cold storage and 2FA.</p></div>
+        <div class="feature"><div class="feature-icon">⚡</div><h3>Instant settlements</h3><p>Most UPI deposits and crypto swaps confirm within minutes.</p></div>
+        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download statements for India's 30% crypto tax and 1% TDS.</p></div>
+        <div class="feature"><div class="feature-icon">🆔</div><h3>Aadhaar/PAN KYC</h3><p>Verify once with Aadhaar and PAN, then trade without paperwork.</p></div>
+        <div class="feature"><div class="feature-icon">🤝</div><h3>24/7 Support</h3><p>Our dedicated support team is available around the clock.</p></div>
       </div>
     </div></div>
   </div>
@@ -1012,9 +1098,9 @@
   </div>
 
   <!-- ===== CTA ===== -->
-  <div style="background:linear-gradient(135deg, #08040F 0%, #1B1425 100%); border-top:1px solid var(--border-glow); text-align:center; padding:80px 24px;">
+  <div style="background:linear-gradient(135deg, #0A0618 0%, #1B1425 100%); border-top:1px solid rgba(255,179,71,0.02); text-align:center; padding:80px 24px;">
     <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">
-      Convert USDT to INR.<br><span class="gradient-text">at ₹96.41</span>
+      Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
     </h2>
     <p style="color:var(--text-secondary); margin-bottom:32px;">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
     <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px; font-size:1rem;">
@@ -1023,7 +1109,7 @@
   </div>
 </main>
 
-<!-- ===== FOOTER ===== -->
+<!-- ===== ПОДВАЛ ===== -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1031,13 +1117,13 @@
         <div class="logo" style="margin-bottom:16px;">
           <svg class="logo-icon" width="38" height="38" viewBox="0 0 44 44" fill="none" style="width:38px;height:38px;">
             <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGradF)" stroke-width="1.5" />
-            <path d="M13 16h18M13 22h18" stroke="#FF9F45" stroke-width="2.2" stroke-linecap="round" />
+            <path d="M13 16h18M13 22h18" stroke="#FFB347" stroke-width="2.2" stroke-linecap="round" />
             <path d="M20 29l7-7-7-7" stroke="#1FAE6D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-            <defs><linearGradient id="ringGradF" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
+            <defs><linearGradient id="ringGradF" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FFB347" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
           </svg>
           <span class="logo-text" style="font-size:1.05rem;"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
         </div>
-        <p style="color:var(--text-secondary); font-size:0.8rem;">India's premium crypto trading platform — buy, sell, swap and trade with INR.</p>
+        <p style="color:var(--text-secondary); font-size:0.8rem;">India's premium crypto trading platform.</p>
       </div>
       <div><h5>Trade</h5><a href="#">Buy</a><a href="#">Sell</a><a href="#">Swap</a><a href="#">P2P</a></div>
       <div><h5>Resources</h5><a href="#features">Features</a><a href="#faq">FAQ</a></div>
@@ -1047,16 +1133,16 @@
       Cryptocurrency trading is subject to market risk. Bharat Exchange does not provide investment advice. 
       Indian tax rules including 30% gains tax and 1% TDS apply.
     </div>
-    <div style="margin-top:24px; text-align:center; font-size:0.7rem; color:var(--text-dim); border-top:1px solid var(--border-glow); padding-top:24px;">
-      © 2026 Bharat Exchange · All rights reserved · USDT/INR: ₹96.41
+    <div style="margin-top:24px; text-align:center; font-size:0.7rem; color:var(--text-dim); border-top:1px solid rgba(255,179,71,0.02); padding-top:24px;">
+      © 2026 Bharat Exchange · All rights reserved · USDT/INR: <span id="footerPrice">96.41</span>
     </div>
   </div>
 </footer>
 
-<!-- ===== TOAST ===== -->
+<!-- ===== ТОСТ ===== -->
 <div id="globalToast" class="toast"></div>
 
-<!-- ===== SCRIPTS ===== -->
+<!-- ===== СКРИПТЫ ===== -->
 <script>
 // ============================================================
 // PREMIUM BHARAT EXCHANGE - USDT → INR CONVERTER
@@ -1069,7 +1155,64 @@ let fromKey = 'USDT';
 let toKey = 'INR';
 
 // ============================================================
-// CALCULATE
+// ОБНОВЛЕНИЕ UI ПРИ СМЕНЕ ПАРЫ
+// ============================================================
+function updatePairUI(from, to) {
+  const fromIcon = document.querySelector('.pair-selector .from .coin-icon');
+  const fromSymbol = document.querySelector('.pair-selector .from .coin-symbol');
+  const fromName = document.querySelector('.pair-selector .from .coin-name');
+  const toIcon = document.querySelector('.pair-selector .to .coin-icon');
+  const toSymbol = document.querySelector('.pair-selector .to .coin-symbol');
+  const toName = document.querySelector('.pair-selector .to .coin-name');
+  
+  const fromCoin = from === 'USDT' ? {symbol: 'U', name: 'Tether'} : {symbol: '₹', name: 'Indian Rupee'};
+  const toCoin = to === 'INR' ? {symbol: '₹', name: 'Indian Rupee'} : {symbol: 'U', name: 'Tether'};
+  
+  fromIcon.textContent = fromCoin.symbol;
+  fromSymbol.textContent = from;
+  fromName.textContent = fromCoin.name;
+  toIcon.textContent = toCoin.symbol;
+  toSymbol.textContent = to;
+  toName.textContent = toCoin.name;
+  
+  document.querySelector('.card-header .title').innerHTML = 
+    `💱 Convert <span class="accent-gold">${from}</span> → <span class="accent-green">${to}</span>`;
+  
+  document.getElementById('fromDot').textContent = fromCoin.symbol;
+  document.getElementById('fromLabel').textContent = from;
+  document.getElementById('toDot').textContent = toCoin.symbol;
+  document.getElementById('toLabel').textContent = to;
+}
+
+// ============================================================
+// SET PAIR - МЕНЯЕТ ПАРУ БЕЗ ОТКРЫТИЯ СКРИПТА
+// ============================================================
+function setPair(from, to) {
+  fromKey = from;
+  toKey = to;
+  
+  // Обновляем активный пресет
+  document.querySelectorAll('.preset').forEach(p => {
+    p.classList.remove('active');
+    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
+        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
+      p.classList.add('active');
+    }
+  });
+  
+  updatePairUI(from, to);
+  
+  // Очищаем поля
+  document.getElementById('fromAmount').value = '';
+  document.getElementById('toAmount').value = '';
+  document.getElementById('detailPanel').classList.remove('visible');
+  document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
+  
+  showToast(`✅ ${from} → ${to} selected`, 'success');
+}
+
+// ============================================================
+// CALCULATE - МГНОВЕННЫЙ РАСЧЕТ
 // ============================================================
 function calculate() {
   const fromInput = document.getElementById('fromAmount');
@@ -1085,7 +1228,7 @@ function calculate() {
   
   const result = fromAmt * USDT_RATE * (1 - FEE);
   
-  // Premium animation
+  // Анимация
   toInput.style.transition = 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
   toInput.style.transform = 'scale(1.03)';
   toInput.style.color = '#1FAE6D';
@@ -1121,7 +1264,7 @@ function showDetails(amount, rate, result) {
       </div>
       <div>
         <span style="color:var(--text-dim); font-size:0.65rem;">You receive</span><br>
-        <b style="color:var(--accent-2); font-size:1.15rem;">₹${result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</b>
+        <b style="color:var(--accent-green); font-size:1.15rem;">₹${result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</b>
       </div>
     </div>
   `;
@@ -1129,49 +1272,7 @@ function showDetails(amount, rate, result) {
 }
 
 // ============================================================
-// SET PAIR
-// ============================================================
-function setPair(from, to) {
-  fromKey = from;
-  toKey = to;
-  
-  document.querySelectorAll('.preset').forEach(p => {
-    p.classList.remove('active');
-    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
-        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
-      p.classList.add('active');
-    }
-  });
-  
-  const fromIcon = document.querySelector('.pair-selector .from .coin-icon');
-  const fromSymbol = document.querySelector('.pair-selector .from .coin-symbol');
-  const fromName = document.querySelector('.pair-selector .from .coin-name');
-  const toIcon = document.querySelector('.pair-selector .to .coin-icon');
-  const toSymbol = document.querySelector('.pair-selector .to .coin-symbol');
-  const toName = document.querySelector('.pair-selector .to .coin-name');
-  
-  const fromCoin = from === 'USDT' ? {symbol: 'U', name: 'Tether'} : {symbol: '₹', name: 'Indian Rupee'};
-  const toCoin = to === 'INR' ? {symbol: '₹', name: 'Indian Rupee'} : {symbol: 'U', name: 'Tether'};
-  
-  fromIcon.textContent = fromCoin.symbol;
-  fromSymbol.textContent = from;
-  fromName.textContent = fromCoin.name;
-  toIcon.textContent = toCoin.symbol;
-  toSymbol.textContent = to;
-  toName.textContent = toCoin.name;
-  
-  document.querySelector('.card-header .title').innerHTML = `💱 Convert <span style="color:var(--accent-1);">${from}</span> → <span style="color:var(--accent-2);">${to}</span>`;
-  
-  document.getElementById('fromAmount').value = '';
-  document.getElementById('toAmount').value = '';
-  document.getElementById('detailPanel').classList.remove('visible');
-  document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-  
-  showToast(`✅ ${from} → ${to} selected`, 'success');
-}
-
-// ============================================================
-// CONVERT
+// CONVERT - КНОПКА ПОМЕНЯТЬ
 // ============================================================
 function convert() {
   const fromInput = document.getElementById('fromAmount');
@@ -1190,7 +1291,6 @@ function convert() {
     return;
   }
   
-  // Premium success animation
   const btn = document.querySelector('.main-action');
   btn.textContent = '✅ Success!';
   btn.style.background = 'linear-gradient(135deg, #1FAE6D, #1A8A5A)';
@@ -1211,7 +1311,7 @@ function showToast(msg, type = 'info') {
   el.className = 'toast';
   if (type === 'error') el.style.borderColor = '#FF6B6B';
   else if (type === 'success') el.style.borderColor = '#1FAE6D';
-  else el.style.borderColor = 'var(--accent-1)';
+  else el.style.borderColor = '#FFB347';
   el.classList.add('show');
   clearTimeout(el._timer);
   el._timer = setTimeout(() => el.classList.remove('show'), 3000);
@@ -1221,40 +1321,40 @@ function showToast(msg, type = 'info') {
 // FAQ
 // ============================================================
 const faqs = [
-  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the premium rate of ₹96.41. Bharat Exchange offers the best rates with low fees."],
-  ["How to convert USDT to INR?", "1) Enter the amount of USDT you want to convert, 2) See the estimated INR amount instantly, 3) Click 'Convert Now', 4) Confirm the transaction. INR will be sent to your bank account."],
-  ["What is the current USDT to INR rate?", "The current USDT to INR rate is ₹96.41 per 1 USDT. Rates are updated in real-time."],
+  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the premium rate. Bharat Exchange offers the best rates with low fees."],
+  ["How to convert USDT to INR?", "1) Enter the amount of USDT, 2) See the estimated INR amount instantly, 3) Click 'Convert Now', 4) Confirm the transaction. INR will be sent to your bank account."],
+  ["What is the current USDT to INR rate?", "The current USDT to INR rate is updated in real-time on our platform."],
   ["Is USDT to INR conversion safe?", "Yes, Bharat Exchange uses premium security infrastructure, cold storage, and 2FA to protect your funds."],
   ["What are the fees for USDT to INR conversion?", "The platform fee is 0.20% of the transaction amount. There are no hidden fees."],
-  ["How long does USDT to INR conversion take?", "USDT to INR conversion typically takes a few minutes. UPI settlements are instant, while bank transfers may take a few hours."],
-  ["Can I convert INR to USDT?", "Yes, you can convert INR to USDT on Bharat Exchange. Click the 'INR→USDT' preset button."],
+  ["How long does USDT to INR conversion take?", "USDT to INR conversion typically takes a few minutes. UPI settlements are instant."],
+  ["Can I convert INR to USDT?", "Yes, click the 'INR→USDT' preset button."],
   ["What is the minimum amount for USDT to INR conversion?", "The minimum amount is ₹500 or equivalent in USDT."],
-  ["Do I need KYC to convert USDT to INR?", "Yes, KYC with PAN and Aadhaar is required to convert USDT to INR on Bharat Exchange."],
-  ["What payment methods are supported?", "You can receive INR via UPI, IMPS, or bank transfer (NEFT/RTGS)."],
-  ["Is crypto legal in India?", "Yes, buying, holding, and trading cryptocurrency is legal in India. Profits are subject to 30% tax and 1% TDS."],
-  ["What is the 30% crypto tax in India?", "Profits from transferring crypto are taxed at a flat 30%. No deductions except cost of acquisition."],
-  ["What is 1% TDS on crypto transactions?", "India levies 1% TDS on crypto transfers exceeding ₹50,000 in a financial year."],
+  ["Do I need KYC to convert USDT to INR?", "Yes, KYC with PAN and Aadhaar is required."],
+  ["What payment methods are supported?", "You can receive INR via UPI, IMPS, or bank transfer."],
+  ["Is crypto legal in India?", "Yes, buying, holding, and trading cryptocurrency is legal in India."],
+  ["What is the 30% crypto tax in India?", "Profits from transferring crypto are taxed at a flat 30%."],
+  ["What is 1% TDS on crypto transactions?", "India levies 1% TDS on crypto transfers exceeding ₹50,000."],
   ["How do I withdraw INR?", "Go to Withdraw, select your bank account or UPI ID, enter the amount, confirm with 2FA."],
-  ["Does Bharat Exchange support UPI withdrawal?", "Yes, UPI withdrawals are the fastest way to receive INR in your bank account."],
-  ["What is USDT?", "USDT (Tether) is a stablecoin pegged to the US dollar at a 1:1 ratio. It's used to store value and trade between cryptocurrencies."],
-  ["What is the difference between USDT and INR?", "USDT is a cryptocurrency pegged to the US dollar, while INR is the official currency of India."],
-  ["Can I convert USDT to INR without KYC?", "No, KYC is mandatory for all crypto-to-fiat conversions in India as per RBI guidelines."],
-  ["How many USDT can I convert to INR per day?", "Daily limits depend on your KYC verification level. Basic: ₹50,000, Fully verified: ₹5,00,000."],
-  ["What is the best time to convert USDT to INR?", "The crypto market is open 24/7. You can convert USDT to INR anytime at the current rate."],
-  ["Is there a limit on USDT to INR conversion?", "Yes, limits depend on your verification level. Higher limits available upon request."],
-  ["How do I check my USDT balance?", "Your USDT balance is displayed in your Bharat Exchange wallet after connecting your account."],
-  ["What is Tether (USDT)?", "Tether (USDT) is the most popular stablecoin, pegged to the US dollar. It's used for trading and storing value."],
-  ["Can I convert USDT to INR on mobile?", "Yes, Bharat Exchange is fully responsive and works on all mobile devices."],
-  ["What documents are required for KYC?", "PAN card, Aadhaar card, selfie, and bank statement are required for KYC verification."],
-  ["How long does KYC take?", "KYC typically takes 5-15 minutes, up to 24 hours if additional verification is needed."],
-  ["Is Bharat Exchange regulated?", "Bharat Exchange follows all Indian regulatory guidelines and complies with KYC/AML norms."],
-  ["What is the fee for INR to USDT conversion?", "The same 0.20% fee applies for INR to USDT conversion."],
-  ["Can I convert USDT to INR via UPI?", "Yes, you can receive INR via UPI directly to your registered UPI ID."],
+  ["Does Bharat Exchange support UPI withdrawal?", "Yes, UPI withdrawals are the fastest way to receive INR."],
+  ["What is USDT?", "USDT (Tether) is a stablecoin pegged to the US dollar at a 1:1 ratio."],
+  ["What is the difference between USDT and INR?", "USDT is a cryptocurrency, while INR is the official currency of India."],
+  ["Can I convert USDT to INR without KYC?", "No, KYC is mandatory for all crypto-to-fiat conversions in India."],
+  ["How many USDT can I convert to INR per day?", "Daily limits depend on your KYC verification level."],
+  ["What is the best time to convert USDT to INR?", "The crypto market is open 24/7."],
+  ["Is there a limit on USDT to INR conversion?", "Yes, limits depend on your verification level."],
+  ["How do I check my USDT balance?", "Your USDT balance is displayed in your Bharat Exchange wallet."],
+  ["What is Tether (USDT)?", "Tether (USDT) is the most popular stablecoin, pegged to the US dollar."],
+  ["Can I convert USDT to INR on mobile?", "Yes, Bharat Exchange is fully responsive."],
+  ["What documents are required for KYC?", "PAN card, Aadhaar card, selfie, and bank statement."],
+  ["How long does KYC take?", "KYC typically takes 5-15 minutes."],
+  ["Is Bharat Exchange regulated?", "Bharat Exchange follows all Indian regulatory guidelines."],
+  ["What is the fee for INR to USDT conversion?", "The same 0.20% fee applies."],
+  ["Can I convert USDT to INR via UPI?", "Yes, you can receive INR via UPI directly."],
   ["How do I contact support?", "Contact our 24/7 premium support via email, live chat, or Telegram."],
   ["What is the minimum withdrawal amount?", "The minimum withdrawal amount is ₹500."],
-  ["Is my personal data safe?", "Yes, all personal data is encrypted and stored securely. We never share your data."],
-  ["Can I cancel a conversion?", "Conversions are processed instantly and cannot be cancelled once confirmed."],
-  ["What happens if the rate changes?", "The rate is locked at the moment of confirmation. Rate changes after confirmation do not affect your conversion."],
+  ["Is my personal data safe?", "Yes, all personal data is encrypted and stored securely."],
+  ["Can I cancel a conversion?", "Conversions are processed instantly and cannot be cancelled."],
+  ["What happens if the rate changes?", "The rate is locked at the moment of confirmation."],
   ["How do I start converting USDT to INR?", "Sign up, complete KYC, deposit USDT, enter the amount, and click 'Convert Now'."]
 ];
 
@@ -1284,9 +1384,10 @@ function toggleFaq(el) {
 // ============================================================
 document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
 document.getElementById('usdtPrice').textContent = '96.41';
+document.getElementById('footerPrice').textContent = '96.41';
 
 console.log('🚀 Premium Bharat Exchange - USDT to INR Converter');
-console.log('💎 Rate: 1 USDT = ₹96.41');
+console.log('💎 Premium design with gold accents');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
