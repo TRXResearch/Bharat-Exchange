@@ -58,9 +58,7 @@
       min-height: 100vh;
     }
 
-    /* ============================================================
-       ВИДЕО ФОН - НА ВСЮ СТРАНИЦУ
-       ============================================================ */
+    /* VIDEO BACKGROUND - FULL SCREEN */
     .video-bg {
       position: fixed;
       top: 0;
@@ -87,9 +85,7 @@
       pointer-events: none;
     }
 
-    /* ============================================================
-       ЗОЛОТАЯ ЛИНИЯ
-       ============================================================ */
+    /* GOLD LINE */
     .gold-line {
       position: fixed;
       top: 0;
@@ -110,9 +106,7 @@
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
     .section { padding: 80px 0; }
 
-    /* ============================================================
-       НАВИГАЦИЯ
-       ============================================================ */
+    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
@@ -212,9 +206,7 @@
     }
     .btn:hover .btn-glow { opacity: 1; }
 
-    /* ============================================================
-       ГЕРОЙ
-       ============================================================ */
+    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 540px;
@@ -304,9 +296,7 @@
       text-transform: uppercase;
     }
 
-    /* ============================================================
-       ВИДЖЕТ
-       ============================================================ */
+    /* WIDGET */
     .widget-card {
       background: var(--bg-card);
       backdrop-filter: blur(24px);
@@ -389,9 +379,7 @@
       padding: 0 8px;
     }
 
-    /* ============================================================
-       ПРЕСЕТЫ - ВООБЩЕ БЕЗ ONCLICK, ТОЛЬКО DATA-АТРИБУТЫ
-       ============================================================ */
+    /* PRESETS - NO onclick, ONLY data-attributes */
     .presets {
       display: flex;
       gap: 8px;
@@ -425,9 +413,7 @@
       box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
-    /* ============================================================
-       ПОЛЯ
-       ============================================================ */
+    /* AMOUNT FIELDS */
     .amount-field {
       background: var(--bg-elev);
       border: 2px solid rgba(255, 179, 71, 0.04);
@@ -571,9 +557,7 @@
       color: var(--text-dim);
     }
 
-    /* ============================================================
-       ИСТОРИЯ ОБМЕНОВ
-       ============================================================ */
+    /* HISTORY */
     .history-section {
       margin-top: 24px;
       padding-top: 20px;
@@ -657,9 +641,7 @@
     .history-item .amount .value .green { color: var(--accent-green); }
     .history-item .amount .status { font-size: 0.55rem; color: var(--accent-green); font-weight: 600; display: block; }
 
-    /* ============================================================
-       ФИЧИ
-       ============================================================ */
+    /* FEATURES */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -683,9 +665,7 @@
     .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
     .feature p { color: var(--text-secondary); font-size: 0.85rem; }
 
-    /* ============================================================
-       FAQ
-       ============================================================ */
+    /* FAQ */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -730,9 +710,7 @@
       padding-top: 12px;
     }
 
-    /* ============================================================
-       ПОДВАЛ
-       ============================================================ */
+    /* FOOTER */
     footer {
       background: var(--bg-secondary);
       border-top: 1px solid rgba(255, 179, 71, 0.02);
@@ -769,9 +747,7 @@
       border-top: 1px solid rgba(255, 179, 71, 0.02);
     }
 
-    /* ============================================================
-       ТОСТ
-       ============================================================ */
+    /* TOAST */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -795,9 +771,7 @@
       transform: translateX(-50%) translateY(-10px);
     }
 
-    /* ============================================================
-       АДАПТИВ
-       ============================================================ */
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .widget-card { position: static; }
@@ -837,23 +811,17 @@
 </head>
 <body>
 
-<!-- ============================================================
-     ВИДЕО ФОН - НА ВСЮ СТРАНИЦУ
-     ============================================================ -->
+<!-- VIDEO BACKGROUND - FULL SCREEN -->
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="./video/videobg.mp4" type="video/mp4" />
-  Ваш браузер не поддерживает видео.
+  Your browser does not support the video tag.
 </video>
 <div class="video-overlay"></div>
 
-<!-- ============================================================
-     ЗОЛОТАЯ ЛИНИЯ
-     ============================================================ -->
+<!-- GOLD LINE -->
 <div class="gold-line"></div>
 
-<!-- ============================================================
-     НАВИГАЦИЯ
-     ============================================================ -->
+<!-- NAVIGATION -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
@@ -878,24 +846,23 @@
   </div>
 </nav>
 
-<!-- ============================================================
-     ГЛАВНЫЙ КОНТЕНТ
-     ============================================================ -->
+<!-- MAIN CONTENT -->
 <main>
   <div class="container">
     <div class="hero">
-      <!-- ЛЕВАЯ ЧАСТЬ -->
+      <!-- LEFT -->
       <div>
         <div class="badge">
           <span class="dot"></span>
-          <span>🇮🇳 PREMIUM EXCHANGE</span>
+          <span>🇮🇳 INDIA'S BEST RATE</span>
           <span>·</span>
           <span>UPI · IMPS · BANK</span>
         </div>
-        <h1>Convert USDT to INR<br><span class="gradient-text">instantly</span></h1>
+        <h1>USDT to INR.<br><span class="gradient-text">just convert.</span></h1>
         <p class="hero-desc">
-          Experience premium crypto conversion. Convert USDT to INR with instant UPI settlements,
-          zero hidden fees, and bank-grade security. Built for India.
+          Enter amount. Click convert. Get INR in your bank.
+          No forms. No waiting. No BS.
+          <strong>That's it.</strong>
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('💰 Buy flow starting...')">
@@ -912,7 +879,7 @@
         </div>
       </div>
 
-      <!-- ПРАВАЯ ЧАСТЬ: ВИДЖЕТ -->
+      <!-- RIGHT: WIDGET -->
       <div class="widget-card">
         <div class="card-header">
           <span class="title">
@@ -924,7 +891,7 @@
           <span class="sub">Live rate</span>
         </div>
         <div class="exchange-widget">
-          <!-- ПАРЫ -->
+          <!-- PAIR SELECTOR -->
           <div class="pair-selector">
             <div class="from">
               <div class="coin-icon" id="fromIcon">U</div>
@@ -943,13 +910,13 @@
             </div>
           </div>
 
-          <!-- ПРЕСЕТЫ - БЕЗ ONCLICK! -->
+          <!-- PRESETS - NO onclick! Only data-attributes -->
           <div class="presets">
             <button class="preset active xsudlmqvbag x2wl7trk" data-from="USDT" data-to="INR">USDT→INR</button>
             <button class="preset xsudlmqvbag x2wl7trk" data-from="INR" data-to="USDT">INR→USDT</button>
           </div>
 
-          <!-- ПОЛЕ "ОТДАЮ" -->
+          <!-- AMOUNT FROM -->
           <div class="amount-field">
             <div class="label">
               <span>You pay</span>
@@ -964,10 +931,10 @@
             </div>
           </div>
 
-          <!-- SWAP (ЗАБЛОКИРОВАН) -->
+          <!-- SWAP (DISABLED) -->
           <div class="swap-btn">⇅</div>
 
-          <!-- ПОЛЕ "ПОЛУЧАЮ" -->
+          <!-- AMOUNT TO -->
           <div class="amount-field">
             <div class="label">
               <span>You receive (est.)</span>
@@ -982,7 +949,7 @@
             </div>
           </div>
 
-          <!-- ИНФО -->
+          <!-- INFO -->
           <div class="rate-info">
             <span>Platform fee</span>
             <b>0.20%</b>
@@ -992,16 +959,16 @@
             <b id="settlementInfo">Enter amount to calculate</b>
           </div>
 
-          <!-- ДЕТАЛИ -->
+          <!-- DETAILS -->
           <div id="detailPanel"></div>
 
-          <!-- КНОПКА КОНВЕРТАЦИИ -->
+          <!-- CONVERT BUTTON -->
           <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
             <span class="btn-glow"></span>
             💱 Convert Now
           </button>
 
-          <!-- ИСТОРИЯ ОБМЕНОВ -->
+          <!-- HISTORY -->
           <div class="history-section">
             <div class="history-header">
               <h4>
@@ -1019,9 +986,7 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       ФИЧИ
-       ============================================================ -->
+  <!-- FEATURES -->
   <div style="background:var(--bg-secondary); border-top:1px solid rgba(255,179,71,0.02); border-bottom:1px solid rgba(255,179,71,0.02);">
     <div class="container"><div class="section" id="features">
       <div class="badge">✨ PREMIUM FEATURES</div>
@@ -1038,9 +1003,7 @@
     </div></div>
   </div>
 
-  <!-- ============================================================
-       FAQ
-       ============================================================ -->
+  <!-- FAQ -->
   <div class="container" id="faq">
     <div class="section">
       <div style="text-align:center; margin-bottom:48px;">
@@ -1052,9 +1015,7 @@
     </div>
   </div>
 
-  <!-- ============================================================
-       CTA
-       ============================================================ -->
+  <!-- CTA -->
   <div style="background:linear-gradient(135deg, #0A0618 0%, #1B1425 100%); border-top:1px solid rgba(255,179,71,0.02); text-align:center; padding:80px 24px;">
     <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">
       Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
@@ -1066,9 +1027,7 @@
   </div>
 </main>
 
-<!-- ============================================================
-     ПОДВАЛ
-     ============================================================ -->
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1098,14 +1057,10 @@
   </div>
 </footer>
 
-<!-- ============================================================
-     ТОСТ
-     ============================================================ -->
+<!-- TOAST -->
 <div id="globalToast" class="toast"></div>
 
-<!-- ============================================================
-     СКРИПТЫ
-     ============================================================ -->
+<!-- SCRIPTS -->
 <script>
 // ============================================================
 // BHARAT EXCHANGE - USDT ↔ INR CONVERTER
@@ -1116,7 +1071,7 @@ const FEE = 0.002;
 let currentPair = 'USDT_INR';
 
 // ============================================================
-// ПЕРЕКЛЮЧЕНИЕ ПАРЫ - ЧЕРЕЗ DATA-АТРИБУТЫ, БЕЗ ONCLICK!
+// SWITCH PAIR - NO onclick! Using data-attributes
 // ============================================================
 document.querySelectorAll('.preset').forEach(btn => {
   btn.addEventListener('click', function(e) {
@@ -1179,7 +1134,7 @@ function switchPair(from, to) {
 }
 
 // ============================================================
-// ИСТОРИЯ ОБМЕНОВ
+// GENERATE HISTORY
 // ============================================================
 function generateHistory() {
   const historyList = document.getElementById('historyList');
@@ -1461,8 +1416,8 @@ document.getElementById('settlementInfo').textContent = 'Enter amount to calcula
 generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
-console.log('🎬 Video background on full screen: ./video/videobg.mp4');
-console.log('🔘 Presets use data-attributes, no onclick!');
+console.log('🎬 Video background: ./video/videobg.mp4 (full screen)');
+console.log('🔘 Presets use data-attributes, NO onclick!');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
