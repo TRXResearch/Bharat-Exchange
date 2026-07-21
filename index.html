@@ -379,7 +379,7 @@
       padding: 0 8px;
     }
 
-    /* PRESETS - NO onclick, ONLY data-attributes */
+    /* PRESETS - ONLY onclick, NO data-attributes */
     .presets {
       display: flex;
       gap: 8px;
@@ -910,10 +910,10 @@
             </div>
           </div>
 
-          <!-- PRESETS - NO onclick! Only data-attributes -->
+          <!-- PRESETS - ONLY onclick, NO script! -->
           <div class="presets">
-            <button class="preset active xsudlmqvbag x2wl7trk" data-from="USDT" data-to="INR">USDT→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" data-from="INR" data-to="USDT">INR→USDT</button>
+            <button class="preset active xsudlmqvbag x2wl7trk" onclick="switchPair('USDT','INR')">USDT→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" onclick="switchPair('INR','USDT')">INR→USDT</button>
           </div>
 
           <!-- AMOUNT FROM -->
@@ -1071,23 +1071,15 @@ const FEE = 0.002;
 let currentPair = 'USDT_INR';
 
 // ============================================================
-// SWITCH PAIR - NO onclick! Using data-attributes
+// SWITCH PAIR - ONLY onclick, NO addEventListener!
 // ============================================================
-document.querySelectorAll('.preset').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    const from = this.dataset.from;
-    const to = this.dataset.to;
-    switchPair(from, to);
-  });
-});
-
 function switchPair(from, to) {
   currentPair = from + '_' + to;
   
   document.querySelectorAll('.preset').forEach(p => {
     p.classList.remove('active');
-    if ((p.dataset.from === from && p.dataset.to === to)) {
+    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
+        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
       p.classList.add('active');
     }
   });
@@ -1417,7 +1409,7 @@ generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
 console.log('🎬 Video background: ./video/videobg.mp4 (full screen)');
-console.log('🔘 Presets use data-attributes, NO onclick!');
+console.log('🔘 Presets use ONLY onclick, NO addEventListener!');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
