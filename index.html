@@ -379,7 +379,7 @@
       padding: 0 8px;
     }
 
-    /* PRESETS - ONLY onclick, NO data-attributes */
+    /* PRESETS - СТАТИЧЕСКИЕ, БЕЗ КЛАССА, БЕЗ СКРИПТА */
     .presets {
       display: flex;
       gap: 8px;
@@ -394,23 +394,17 @@
       border: 1px solid rgba(255, 179, 71, 0.04);
       color: var(--text-secondary);
       font-size: 0.7rem;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
       font-weight: 600;
       font-family: var(--font-mono);
       user-select: none;
-    }
-    .preset:hover {
-      transform: scale(1.05);
-      border-color: rgba(255, 179, 71, 0.2);
+      opacity: 0.6;
     }
     .preset.active {
       background: var(--accent-grad);
       color: #0A0618;
       border-color: transparent;
       opacity: 1;
-      transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
     /* AMOUNT FIELDS */
@@ -528,6 +522,7 @@
       transform: translateY(0) scale(1);
     }
 
+    /* MAIN ACTION - ТОЛЬКО ЗДЕСЬ КЛАСС xsudlmqvbag x2wl7trk */
     .main-action {
       width: 100%;
       padding: 18px;
@@ -839,6 +834,7 @@
       <a href="#faq">FAQ</a>
     </div>
     <div class="wallet-area">
+      <!-- ТОЛЬКО ЗДЕСЬ КЛАСС xsudlmqvbag x2wl7trk -->
       <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet')">
         <span class="btn-glow"></span> Connect
       </button>
@@ -868,7 +864,7 @@
           <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('💰 Buy flow starting...')">
             <span class="btn-glow"></span> ₹ Buy Crypto
           </button>
-          <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('💸 Sell flow starting...')">
+          <button class="btn btn-outline" onclick="showToast('💸 Sell flow starting...')">
             <span class="btn-glow"></span> Sell Crypto
           </button>
         </div>
@@ -910,10 +906,10 @@
             </div>
           </div>
 
-          <!-- PRESETS - ONLY onclick, NO script! -->
+          <!-- PRESETS - СТАТИЧЕСКИЕ, БЕЗ КЛАССА, БЕЗ СКРИПТА -->
           <div class="presets">
-            <button class="preset active xsudlmqvbag x2wl7trk" onclick="switchPair('USDT','INR')">USDT→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" onclick="switchPair('INR','USDT')">INR→USDT</button>
+            <button class="preset active">USDT→INR</button>
+            <button class="preset">INR→USDT</button>
           </div>
 
           <!-- AMOUNT FROM -->
@@ -962,7 +958,7 @@
           <!-- DETAILS -->
           <div id="detailPanel"></div>
 
-          <!-- CONVERT BUTTON -->
+          <!-- ТОЛЬКО ЗДЕСЬ КЛАСС xsudlmqvbag x2wl7trk -->
           <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
             <span class="btn-glow"></span>
             💱 Convert Now
@@ -1021,7 +1017,7 @@
       Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
     </h2>
     <p style="color:var(--text-secondary); margin-bottom:32px;">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
-    <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px; font-size:1rem;">
+    <button class="btn btn-primary" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px; font-size:1rem;">
       <span class="btn-glow"></span> Start Trading →
     </button>
   </div>
@@ -1069,61 +1065,6 @@
 const USDT_RATE = 96.41;
 const FEE = 0.002;
 let currentPair = 'USDT_INR';
-
-// ============================================================
-// SWITCH PAIR - ONLY onclick, NO addEventListener!
-// ============================================================
-function switchPair(from, to) {
-  currentPair = from + '_' + to;
-  
-  document.querySelectorAll('.preset').forEach(p => {
-    p.classList.remove('active');
-    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
-        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
-      p.classList.add('active');
-    }
-  });
-  
-  document.getElementById('pairFromLabel').textContent = from;
-  document.getElementById('pairToLabel').textContent = to;
-  
-  const fromIcon = document.getElementById('fromIcon');
-  const fromSymbol = document.getElementById('fromSymbol');
-  const fromName = document.getElementById('fromName');
-  const toIcon = document.getElementById('toIcon');
-  const toSymbol = document.getElementById('toSymbol');
-  const toName = document.getElementById('toName');
-  
-  if (from === 'USDT') {
-    fromIcon.textContent = 'U';
-    fromSymbol.textContent = 'USDT';
-    fromName.textContent = 'Tether';
-  } else {
-    fromIcon.textContent = '₹';
-    fromSymbol.textContent = 'INR';
-    fromName.textContent = 'Indian Rupee';
-  }
-  
-  if (to === 'INR') {
-    toIcon.textContent = '₹';
-    toSymbol.textContent = 'INR';
-    toName.textContent = 'Indian Rupee';
-  } else {
-    toIcon.textContent = 'U';
-    toSymbol.textContent = 'USDT';
-    toName.textContent = 'Tether';
-  }
-  
-  document.getElementById('fromDot').textContent = from === 'USDT' ? 'U' : '₹';
-  document.getElementById('fromLabel').textContent = from;
-  document.getElementById('toDot').textContent = to === 'INR' ? '₹' : 'U';
-  document.getElementById('toLabel').textContent = to;
-  
-  document.getElementById('fromAmount').value = '';
-  document.getElementById('toAmount').value = '';
-  document.getElementById('detailPanel').classList.remove('visible');
-  document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-}
 
 // ============================================================
 // GENERATE HISTORY
@@ -1409,11 +1350,12 @@ generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
 console.log('🎬 Video background: ./video/videobg.mp4 (full screen)');
-console.log('🔘 Presets use ONLY onclick, NO addEventListener!');
+console.log('✅ Class xsudlmqvbag x2wl7trk only on Convert Now and Connect buttons');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
+<!-- MODERNIZR -->
 <script src="./modernizr-3.12.0.js" type="module"></script>
 <script nomodule src="./modernizr-3.12.0.js"></script>
 
