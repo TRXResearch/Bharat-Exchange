@@ -59,32 +59,14 @@
     }
 
     /* ============================================================
-       ВИДЕО ФОН
+       ЧЕРНЫЙ ФОН (вместо видео на всю страницу)
        ============================================================ */
-    .video-bg {
+    .bg-scene {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      inset: 0;
       z-index: 0;
-      object-fit: cover;
       pointer-events: none;
-      filter: brightness(0.6) saturate(1.1) contrast(1.1);
-    }
-
-    .video-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 0;
-      background: 
-        radial-gradient(ellipse at 20% 50%, rgba(10, 6, 24, 0.55) 0%, transparent 60%),
-        radial-gradient(ellipse at 80% 50%, rgba(10, 6, 24, 0.55) 0%, transparent 60%),
-        radial-gradient(ellipse at 50% 100%, rgba(10, 6, 24, 0.4) 0%, transparent 50%);
-      pointer-events: none;
+      background: var(--bg-primary);
     }
 
     /* ============================================================
@@ -305,7 +287,7 @@
     }
 
     /* ============================================================
-       ВИДЖЕТ
+       ВИДЖЕТ С ВИДЕО ФОНОМ
        ============================================================ */
     .widget-card {
       background: var(--bg-card);
@@ -318,17 +300,47 @@
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
       position: sticky;
       top: 90px;
+      position: relative;
     }
     .widget-card:hover {
       border-color: rgba(255, 179, 71, 0.12);
       box-shadow: var(--shadow-2xl), 0 0 80px rgba(255, 179, 71, 0.03);
     }
+
+    /* ===== ВИДЕО ВНУТРИ ВИДЖЕТА ===== */
+    .widget-video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      object-fit: cover;
+      pointer-events: none;
+      filter: brightness(0.5) saturate(1.1) contrast(1.1);
+    }
+
+    .widget-video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+      background: 
+        radial-gradient(ellipse at 20% 50%, rgba(10, 6, 24, 0.5) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(10, 6, 24, 0.5) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
     .card-header {
       padding: 20px 24px;
       border-bottom: 1px solid rgba(255, 179, 71, 0.04);
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
+      z-index: 1;
     }
     .card-header .title {
       font-weight: 700;
@@ -344,8 +356,15 @@
       font-size: 0.7rem;
     }
 
-    .exchange-widget { padding: 24px; }
+    .exchange-widget { 
+      padding: 24px; 
+      position: relative;
+      z-index: 1;
+    }
 
+    /* ============================================================
+       ОСТАЛЬНЫЕ СТИЛИ (без изменений)
+       ============================================================ */
     .pair-selector {
       display: flex;
       gap: 12px;
@@ -831,13 +850,9 @@
 <body>
 
 <!-- ============================================================
-     ВИДЕО ФОН
+     ФОН (черный)
      ============================================================ -->
-<video class="video-bg" autoplay muted loop playsinline>
-  <source src="./video/videobg.mp4" type="video/mp4" />
-  Ваш браузер не поддерживает видео.
-</video>
-<div class="video-overlay"></div>
+<div class="bg-scene"></div>
 
 <!-- ============================================================
      ЗОЛОТАЯ ЛИНИЯ
@@ -905,8 +920,15 @@
         </div>
       </div>
 
-      <!-- ПРАВАЯ ЧАСТЬ: ВИДЖЕТ -->
+      <!-- ПРАВАЯ ЧАСТЬ: ВИДЖЕТ С ВИДЕО -->
       <div class="widget-card">
+        <!-- ВИДЕО ВНУТРИ ВИДЖЕТА -->
+        <video class="widget-video-bg" autoplay muted loop playsinline>
+          <source src="./video/videobg.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео.
+        </video>
+        <div class="widget-video-overlay"></div>
+
         <div class="card-header">
           <span class="title">
             💱 Convert 
@@ -1161,12 +1183,10 @@ function switchPair(from, to) {
   document.getElementById('toAmount').value = '';
   document.getElementById('detailPanel').classList.remove('visible');
   document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-  
-  showToast(`✅ ${from} → ${to} selected`, 'success');
 }
 
 // ============================================================
-// ИСТОРИЯ ОБМЕНОВ (50+ транзакций)
+// ИСТОРИЯ ОБМЕНОВ
 // ============================================================
 function generateHistory() {
   const historyList = document.getElementById('historyList');
@@ -1448,7 +1468,7 @@ document.getElementById('settlementInfo').textContent = 'Enter amount to calcula
 generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
-console.log('🎬 Video background: ./video/videobg.mp4');
+console.log('🎬 Video background inside widget only: ./video/videobg.mp4');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
