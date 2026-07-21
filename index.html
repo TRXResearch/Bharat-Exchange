@@ -5,15 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Bharat Exchange — USDT to INR Converter</title>
-  <meta name="description" content="Convert USDT to INR instantly. Live rates, UPI deposits, and secure swaps. Built for India." />
-  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, crypto exchange India" />
+  <meta name="description" content="Convert USDT to INR instantly at ₹96.41. UPI deposits, fast settlements, and secure swaps. Built for India." />
+  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, crypto exchange India, USDT price India" />
   <link rel="canonical" href="https://bharatexchange.vercel.app/" />
   
   <meta property="og:title" content="Bharat Exchange — USDT to INR Converter" />
-  <meta property="og:description" content="Convert USDT to INR instantly. Live rates, UPI deposits, and secure swaps. Built for India." />
+  <meta property="og:description" content="Convert USDT to INR instantly at ₹96.41. Best rates, UPI deposits, and secure swaps." />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Bharat Exchange — USDT to INR Converter" />
-  <meta name="twitter:description" content="Convert USDT to INR instantly. Live rates, UPI deposits, and secure swaps." />
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
   
@@ -230,6 +228,7 @@
       display:flex;justify-content:space-between;
       font-size:0.7rem;color:var(--text-dim);margin-bottom:6px
     }
+    .amount-field .label .balance{display:none !important;}
     .amount-field .input-row{
       display:flex;align-items:center;gap:12px
     }
@@ -261,14 +260,14 @@
     .swap-btn{
       width:44px;height:44px;border-radius:50%;
       background:var(--bg-elev);border:1px solid var(--border-glow);
-      color:var(--accent-1);cursor:pointer;font-size:1.2rem;
-      transition:var(--transition-smooth);display:flex;
-      align-items:center;justify-content:center;
-    }
-    .swap-btn:hover{
-      transform:rotate(180deg);
-      border-color:var(--accent-1);
-      box-shadow:0 0 30px rgba(255,159,69,0.15);
+      color:var(--accent-1);
+      font-size:1.2rem;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      opacity:0.5;
+      cursor:not-allowed;
+      pointer-events:none;
     }
     
     .rate-info{
@@ -307,33 +306,6 @@
     }
     
     .widget-note{text-align:center;margin-top:14px;font-size:0.65rem;color:var(--text-dim)}
-    
-    .rates-table{
-      margin-top:48px;background:var(--bg-card);
-      border:1px solid var(--border-glow);border-radius:var(--radius-lg);
-      overflow:hidden
-    }
-    .rates-row{
-      display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr;
-      align-items:center;padding:16px 24px;
-      border-bottom:1px solid var(--border-glow);font-size:0.85rem
-    }
-    .rates-row:last-child{border-bottom:none}
-    .rates-row.head{
-      color:var(--text-dim);font-size:0.68rem;
-      text-transform:uppercase;letter-spacing:1px;
-      background:var(--bg-elev)
-    }
-    .rates-row .coin-name{display:flex;align-items:center;gap:10px;font-weight:600}
-    .rates-row .price{font-family:var(--font-mono);font-weight:600}
-    .rates-row .chg-up{color:var(--accent-2)}
-    .rates-row .chg-down{color:#FF6B6B}
-    .rates-row .trade-link{
-      color:var(--accent-1);text-decoration:none;
-      font-weight:600;font-size:0.75rem;cursor:pointer;
-      transition:color 0.2s
-    }
-    .rates-row .trade-link:hover{color:#FFB866}
     
     .features-grid{
       display:grid;grid-template-columns:repeat(3,1fr);
@@ -417,8 +389,6 @@
       .features-grid,.faq-grid{grid-template-columns:1fr 1fr}
       .footer-grid{grid-template-columns:1fr 1fr}
       .nav-links{display:none}
-      .rates-row{grid-template-columns:2fr 1.5fr 1fr}
-      .rates-row .vol-col{display:none}
     }
     @media(max-width:640px){
       .section{padding:50px 0}
@@ -432,8 +402,6 @@
       .exchange-widget{padding:16px}
       .amount-field input{font-size:1.1rem}
       .presets{justify-content:center}
-      .rates-row{grid-template-columns:1fr 1fr;padding:12px 16px;gap:4px}
-      .rates-row .coin-name{grid-column:1/3}
     }
     @media(max-width:480px){
       .container{padding:0 16px}
@@ -461,14 +429,13 @@
     </a>
     <div class="nav-links">
       <a href="#" class="active">Exchange</a>
-      <a href="#markets">Markets</a>
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
     </div>
     <div class="wallet-area">
       <div class="inr-price">
-        USDT/INR <span id="usdtPrice">87.00</span>
-        <span class="change" id="usdtChange">▲0.1%</span>
+        USDT/INR <span id="usdtPrice">96.41</span>
+        <span class="change" id="usdtChange">▲2.3%</span>
       </div>
       <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet')">
         <span class="btn-glow"></span> Connect
@@ -479,7 +446,7 @@
 
 <div class="ticker-wrap">
   <div class="ticker-track" id="tickerTrack">
-    <span style="color:var(--text-dim);padding:10px 0">USDT/INR: ₹87.00 ▲0.1%</span>
+    <span style="color:var(--text-dim);padding:10px 0">USDT/INR: ₹96.41 ▲2.3%</span>
   </div>
 </div>
 
@@ -492,9 +459,9 @@
           <span>·</span>
           <span>UPI · IMPS · BANK</span>
         </div>
-        <h1>Convert USDT to INR<br><span class="gradient-text">instantly.</span></h1>
+        <h1>Convert USDT to INR<br><span class="gradient-text">at ₹96.41</span></h1>
         <p class="hero-desc">
-          Convert USDT to INR at the best rates. Deposit with UPI, get INR in your bank account.
+          Convert USDT to INR at the best rate of ₹96.41. Deposit with UPI, get INR in your bank account.
           Simple, fast, and secure.
         </p>
         <div class="hero-actions">
@@ -515,7 +482,7 @@
       <div class="widget-card">
         <div class="card-header">
           <span class="title">💱 Convert USDT → INR</span>
-          <span class="sub">Best rate: ₹87.00</span>
+          <span class="sub">Best rate: ₹96.41</span>
         </div>
         <div class="exchange-widget">
           <!-- Pair Selector - фиксированный -->
@@ -539,15 +506,15 @@
 
           <!-- Пресеты -->
           <div class="presets" id="presets">
-            <button class="preset active xsudlmqvbag x2wl7trk" data-from="USDT" data-to="INR">USDT→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" data-from="INR" data-to="USDT">INR→USDT</button>
+            <button class="preset active xsudlmqvbag x2wl7trk" onclick="setPair('USDT','INR')">USDT→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" onclick="setPair('INR','USDT')">INR→USDT</button>
           </div>
 
           <!-- Amount From -->
           <div class="amount-field">
             <div class="label">
               <span>You pay</span>
-              <span id="fromBalance">Balance: 500.00 USDT</span>
+              <span class="balance" style="display:none;"></span>
             </div>
             <div class="input-row">
               <input type="number" id="fromAmount" placeholder="0.0" oninput="calculate()" onkeyup="calculate()" />
@@ -558,19 +525,19 @@
             </div>
           </div>
 
-          <!-- Swap Direction - заблокирован -->
+          <!-- Swap Direction - ЗАБЛОКИРОВАН -->
           <div class="swap-direction">
-            <button class="swap-btn xsudlmqvbag x2wl7trk" onclick="swapPair()" style="opacity:0.5;cursor:not-allowed;">⇅</button>
+            <button class="swap-btn xsudlmqvbag x2wl7trk" disabled>⇅</button>
           </div>
 
           <!-- Amount To -->
           <div class="amount-field">
             <div class="label">
               <span>You receive (est.)</span>
-              <span id="toBalance">Balance: ₹0.00</span>
+              <span class="balance" style="display:none;"></span>
             </div>
             <div class="input-row">
-              <input type="number" id="toAmount" placeholder="0.0" disabled />
+              <input type="text" id="toAmount" placeholder="0.0" disabled />
               <div class="token-badge">
                 <span class="dot">₹</span>
                 <span>INR</span>
@@ -578,11 +545,7 @@
             </div>
           </div>
 
-          <!-- Rate Info - скрываем курсы -->
-          <div class="rate-info" style="display:none;">
-            <span>Rate</span>
-            <b id="rateDisplay">1 USDT ≈ ₹87.00</b>
-          </div>
+          <!-- Rate Info -->
           <div class="rate-info">
             <span>Platform fee</span>
             <b>0.20%</b>
@@ -594,28 +557,13 @@
 
           <div id="detailPanel"></div>
 
-          <button class="main-action xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet to trade')">
+          <!-- КНОПКА ПОМЕНЯТЬ -->
+          <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
             <span class="btn-glow"></span>
-            Connect Wallet & Trade
+            💱 Convert Now
           </button>
-          <div class="widget-note">1 USDT = ₹87.00 · Fee 0.20%</div>
+          <div class="widget-note">1 USDT = ₹96.41 · Fee 0.20%</div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container" id="markets">
-    <div class="section">
-      <div class="badge">📈 LIVE MARKETS</div>
-      <h2 style="font-size:2rem;margin-bottom:12px">Real-time crypto prices in INR</h2>
-      <p style="color:var(--text-secondary);max-width:600px">Updated every 30 seconds.</p>
-      <div class="rates-table" id="ratesTable">
-        <div class="rates-row head">
-          <span>Asset</span><span>Price (INR)</span><span>24h Change</span><span class="vol-col"></span>
-        </div>
-        <div class="rates-row"><span>USDT</span><span>₹87.00</span><span class="chg-up">▲0.1%</span><span></span></div>
-        <div class="rates-row"><span>BTC</span><span>₹6,900,000</span><span class="chg-up">▲2.5%</span><span></span></div>
-        <div class="rates-row"><span>ETH</span><span>₹350,000</span><span class="chg-up">▲1.8%</span><span></span></div>
       </div>
     </div>
   </div>
@@ -648,7 +596,7 @@
 
   <div style="background:linear-gradient(135deg, #0A0711 0%, #1B1425 100%);border-top:1px solid var(--border-glow);text-align:center;padding:80px 24px">
     <h2 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:20px">
-      Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
+      Convert USDT to INR.<br><span class="gradient-text">at ₹96.41</span>
     </h2>
     <p style="color:var(--text-secondary);margin-bottom:32px">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
     <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px;font-size:1rem">
@@ -673,7 +621,7 @@
         <p style="color:var(--text-secondary);font-size:0.8rem">India's crypto trading platform — buy, sell, swap and trade with INR.</p>
       </div>
       <div><h5>Trade</h5><a href="#">Buy</a><a href="#">Sell</a><a href="#">Swap</a><a href="#">P2P</a></div>
-      <div><h5>Resources</h5><a href="#markets">Markets</a><a href="#features">Features</a><a href="#faq">FAQ</a></div>
+      <div><h5>Resources</h5><a href="#features">Features</a><a href="#faq">FAQ</a></div>
       <div><h5>Community</h5><a href="#">Twitter</a><a href="#">Telegram</a><a href="#">Instagram</a></div>
     </div>
     <div class="disclaimer">
@@ -681,7 +629,7 @@
       Indian tax rules including 30% gains tax and 1% TDS apply.
     </div>
     <div style="margin-top:24px;text-align:center;font-size:0.7rem;color:var(--text-dim);border-top:1px solid var(--border-glow);padding-top:24px">
-      © 2026 Bharat Exchange · All rights reserved · USDT/INR: ₹87.00
+      © 2026 Bharat Exchange · All rights reserved · USDT/INR: ₹96.41
     </div>
   </div>
 </footer>
@@ -691,35 +639,32 @@
 <script>
 // ============================================================
 // BHARAT EXCHANGE - USDT → INR CONVERTER
+// КУРС: 1 USDT = ₹96.41
 // ============================================================
 
-const USDT_RATE = 87.00;
+const USDT_RATE = 96.41;
 const FEE = 0.002; // 0.20%
 
 let fromKey = 'USDT';
 let toKey = 'INR';
 
 // ============================================================
-// CALCULATE
+// CALCULATE - МГНОВЕННЫЙ РАСЧЕТ ПРИ ВВОДЕ
 // ============================================================
 function calculate() {
   const fromInput = document.getElementById('fromAmount');
   const toInput = document.getElementById('toAmount');
   const fromAmt = parseFloat(fromInput.value);
   
-  // Проверка введенной суммы
   if (isNaN(fromAmt) || fromAmt <= 0) {
     toInput.value = '';
     document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-    document.getElementById('fromBalance').textContent = `Balance: 500.00 USDT`;
-    document.getElementById('toBalance').textContent = `Balance: ₹0.00`;
     document.getElementById('detailPanel').classList.remove('visible');
     return;
   }
   
-  // Расчет
-  let rate = USDT_RATE;
-  let result = fromAmt * rate * (1 - FEE);
+  const rate = USDT_RATE;
+  const result = fromAmt * rate * (1 - FEE);
   
   // Анимация
   toInput.style.transition = 'all 0.15s ease';
@@ -732,10 +677,6 @@ function calculate() {
   
   toInput.value = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   document.getElementById('settlementInfo').textContent = '⚡ Instant to few minutes';
-  
-  // Балансы
-  document.getElementById('fromBalance').textContent = `Balance: 500.00 USDT`;
-  document.getElementById('toBalance').textContent = `Balance: ₹${(result * 0.5).toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
   
   showDetails(fromAmt, rate, result);
 }
@@ -769,10 +710,74 @@ function showDetails(amount, rate, result) {
 }
 
 // ============================================================
-// SWAP - ЗАБЛОКИРОВАН
+// SET PAIR - МЕНЯЕТ ПАРУ
 // ============================================================
-function swapPair() {
-  showToast('⚠️ USDT can only be converted to INR', 'error');
+function setPair(from, to) {
+  fromKey = from;
+  toKey = to;
+  
+  // Обновляем UI
+  document.querySelectorAll('.preset').forEach(p => {
+    p.classList.remove('active');
+  });
+  document.querySelectorAll('.preset').forEach(p => {
+    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
+        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
+      p.classList.add('active');
+    }
+  });
+  
+  // Обновляем отображение
+  const fromIcon = document.querySelector('.pair-selector .from .coin-icon');
+  const fromSymbol = document.querySelector('.pair-selector .from .coin-symbol');
+  const fromName = document.querySelector('.pair-selector .from .coin-name');
+  const toIcon = document.querySelector('.pair-selector .to .coin-icon');
+  const toSymbol = document.querySelector('.pair-selector .to .coin-symbol');
+  const toName = document.querySelector('.pair-selector .to .coin-name');
+  
+  const fromCoin = from === 'USDT' ? {symbol: 'U', name: 'Tether'} : {symbol: '₹', name: 'Indian Rupee'};
+  const toCoin = to === 'INR' ? {symbol: '₹', name: 'Indian Rupee'} : {symbol: 'U', name: 'Tether'};
+  
+  fromIcon.textContent = fromCoin.symbol;
+  fromSymbol.textContent = from;
+  fromName.textContent = fromCoin.name;
+  toIcon.textContent = toCoin.symbol;
+  toSymbol.textContent = to;
+  toName.textContent = toCoin.name;
+  
+  // Обновляем заголовок
+  document.querySelector('.card-header .title').textContent = `💱 Convert ${from} → ${to}`;
+  
+  // Очищаем поля
+  document.getElementById('fromAmount').value = '';
+  document.getElementById('toAmount').value = '';
+  document.getElementById('detailPanel').classList.remove('visible');
+  document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
+  
+  showToast(`✅ ${from} → ${to} selected`, 'success');
+}
+
+// ============================================================
+// CONVERT - КНОПКА ПОМЕНЯТЬ
+// ============================================================
+function convert() {
+  const fromInput = document.getElementById('fromAmount');
+  const fromAmt = parseFloat(fromInput.value);
+  
+  if (isNaN(fromAmt) || fromAmt <= 0) {
+    showToast('⚠️ Please enter an amount to convert', 'error');
+    return;
+  }
+  
+  const toInput = document.getElementById('toAmount');
+  const result = toInput.value;
+  
+  if (!result || result === '0.0' || result === '₹0.00') {
+    showToast('⚠️ Please enter an amount to convert', 'error');
+    return;
+  }
+  
+  showToast(`✅ ${fromAmt} ${fromKey} → ${result} ${toKey}`, 'success');
 }
 
 // ============================================================
@@ -791,16 +796,16 @@ function showToast(msg, type = 'info') {
 }
 
 // ============================================================
-// FAQ
+// FAQ - 35 ВОПРОСОВ
 // ============================================================
 const faqs = [
-  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the current exchange rate. Bharat Exchange offers the best rates with low fees."],
-  ["How to convert USDT to INR?", "1) Enter the amount of USDT you want to convert, 2) See the estimated INR amount instantly, 3) Connect your wallet, 4) Confirm the transaction. INR will be sent to your bank account."],
-  ["What is the current USDT to INR rate?", "The current USDT to INR rate is ₹87.00 per 1 USDT. Rates are updated in real-time."],
+  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the current exchange rate of ₹96.41. Bharat Exchange offers the best rates with low fees."],
+  ["How to convert USDT to INR?", "1) Enter the amount of USDT you want to convert, 2) See the estimated INR amount instantly, 3) Click 'Convert Now', 4) Confirm the transaction. INR will be sent to your bank account."],
+  ["What is the current USDT to INR rate?", "The current USDT to INR rate is ₹96.41 per 1 USDT. Rates are updated in real-time."],
   ["Is USDT to INR conversion safe?", "Yes, Bharat Exchange uses secure infrastructure, cold storage, and 2FA to protect your funds. All conversions are processed securely."],
   ["What are the fees for USDT to INR conversion?", "The platform fee is 0.20% of the transaction amount. There are no hidden fees."],
   ["How long does USDT to INR conversion take?", "USDT to INR conversion typically takes a few minutes. UPI settlements are instant, while bank transfers may take a few hours."],
-  ["Can I convert INR to USDT?", "Yes, you can convert INR to USDT on Bharat Exchange. Simply select INR as the 'From' currency and USDT as the 'To' currency."],
+  ["Can I convert INR to USDT?", "Yes, you can convert INR to USDT on Bharat Exchange. Click the 'INR→USDT' preset button."],
   ["What is the minimum amount for USDT to INR conversion?", "The minimum amount is ₹500 or equivalent in USDT."],
   ["Do I need KYC to convert USDT to INR?", "Yes, KYC with PAN and Aadhaar is required to convert USDT to INR on Bharat Exchange."],
   ["What payment methods are supported?", "You can receive INR via UPI, IMPS, or bank transfer (NEFT/RTGS)."],
@@ -808,7 +813,27 @@ const faqs = [
   ["What is the 30% crypto tax in India?", "Profits from transferring crypto are taxed at a flat 30%. No deductions except cost of acquisition."],
   ["What is 1% TDS on crypto transactions?", "India levies 1% TDS on crypto transfers exceeding ₹50,000 in a financial year."],
   ["How do I withdraw INR?", "Go to Withdraw, select your bank account or UPI ID, enter the amount, confirm with 2FA."],
-  ["Does Bharat Exchange support UPI withdrawal?", "Yes, UPI withdrawals are the fastest way to receive INR in your bank account."]
+  ["Does Bharat Exchange support UPI withdrawal?", "Yes, UPI withdrawals are the fastest way to receive INR in your bank account."],
+  ["What is USDT?", "USDT (Tether) is a stablecoin pegged to the US dollar at a 1:1 ratio. It's used to store value and trade between cryptocurrencies."],
+  ["What is the difference between USDT and INR?", "USDT is a cryptocurrency pegged to the US dollar, while INR is the official currency of India. USDT to INR conversion lets you exchange between them."],
+  ["Can I convert USDT to INR without KYC?", "No, KYC is mandatory for all crypto-to-fiat conversions in India as per RBI guidelines."],
+  ["How many USDT can I convert to INR per day?", "Daily limits depend on your KYC verification level. Basic: ₹50,000, Fully verified: ₹5,00,000."],
+  ["What is the best time to convert USDT to INR?", "The crypto market is open 24/7. You can convert USDT to INR anytime at the current rate."],
+  ["Is there a limit on USDT to INR conversion?", "Yes, limits depend on your verification level. Higher limits available upon request."],
+  ["How do I check my USDT balance?", "Your USDT balance is displayed in your Bharat Exchange wallet after connecting your account."],
+  ["What is Tether (USDT)?", "Tether (USDT) is the most popular stablecoin, pegged to the US dollar. It's used for trading and storing value in crypto markets."],
+  ["Can I convert USDT to INR on mobile?", "Yes, Bharat Exchange is fully responsive and works on all mobile devices."],
+  ["What documents are required for KYC?", "PAN card, Aadhaar card, selfie, and bank statement are required for KYC verification."],
+  ["How long does KYC take?", "KYC typically takes 5-15 minutes, up to 24 hours if additional verification is needed."],
+  ["Is Bharat Exchange regulated?", "Bharat Exchange follows all Indian regulatory guidelines and complies with KYC/AML norms."],
+  ["What is the fee for INR to USDT conversion?", "The same 0.20% fee applies for INR to USDT conversion."],
+  ["Can I convert USDT to INR via UPI?", "Yes, you can receive INR via UPI directly to your registered UPI ID."],
+  ["How do I contact support?", "Contact our 24/7 support via email, live chat, or Telegram."],
+  ["What is the minimum withdrawal amount?", "The minimum withdrawal amount is ₹500."],
+  ["Is my personal data safe?", "Yes, all personal data is encrypted and stored securely. We never share your data with third parties."],
+  ["Can I cancel a conversion?", "Conversions are processed instantly and cannot be cancelled once confirmed. Please review all details before confirming."],
+  ["What happens if the rate changes?", "The rate is locked at the moment of confirmation. Rate changes after confirmation do not affect your conversion."],
+  ["How do I start converting USDT to INR?", "Sign up, complete KYC, deposit USDT, enter the amount, and click 'Convert Now'."]
 ];
 
 const grid = document.getElementById('faqGrid');
@@ -836,10 +861,10 @@ function toggleFaq(el) {
 // INIT
 // ============================================================
 document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-document.getElementById('usdtPrice').textContent = '87.00';
+document.getElementById('usdtPrice').textContent = '96.41';
 
 console.log('🚀 Bharat Exchange - USDT to INR Converter loaded');
-console.log('💱 Rate: 1 USDT = ₹87.00');
+console.log('💱 Rate: 1 USDT = ₹96.41');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
