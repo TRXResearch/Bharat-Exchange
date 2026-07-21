@@ -396,7 +396,7 @@
       padding: 0 8px;
     }
 
-    /* ===== ПРЕСЕТЫ ===== */
+    /* ===== ПРЕСЕТЫ - ТОЛЬКО ДЛЯ ОТОБРАЖЕНИЯ ===== */
     .presets {
       display: flex;
       gap: 8px;
@@ -411,18 +411,17 @@
       border: 1px solid rgba(255, 179, 71, 0.04);
       color: var(--text-secondary);
       font-size: 0.7rem;
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: default;
       font-weight: 600;
       font-family: var(--font-mono);
+      opacity: 0.6;
+      user-select: none;
     }
-    .preset:hover,
     .preset.active {
       background: var(--accent-grad);
       color: #0A0618;
       border-color: transparent;
-      transform: scale(1.05);
-      box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
+      opacity: 1;
     }
 
     /* ===== ПОЛЯ ===== */
@@ -607,7 +606,7 @@
       display: flex;
       flex-direction: column;
       gap: 6px;
-      max-height: 200px;
+      max-height: 300px;
       overflow-y: auto;
       padding-right: 4px;
     }
@@ -948,10 +947,10 @@
             </div>
           </div>
 
-          <!-- ПРЕСЕТЫ - ТОЛЬКО setPair, БЕЗ ОТКРЫТИЯ СКРИПТА -->
+          <!-- ПРЕСЕТЫ - ТОЛЬКО ВИЗУАЛЬНО, БЕЗ onclick -->
           <div class="presets">
-            <button class="preset active xsudlmqvbag x2wl7trk" onclick="setPair('USDT','INR')">USDT→INR</button>
-            <button class="preset xsudlmqvbag x2wl7trk" onclick="setPair('INR','USDT')">INR→USDT</button>
+            <button class="preset active" style="cursor:default;pointer-events:none;">USDT→INR</button>
+            <button class="preset" style="cursor:default;pointer-events:none;">INR→USDT</button>
           </div>
 
           <!-- ПОЛЕ "ОТДАЮ" -->
@@ -1108,39 +1107,94 @@
 const USDT_RATE = 96.41;
 const FEE = 0.002;
 
-let fromKey = 'USDT';
-let toKey = 'INR';
-
 // ============================================================
-// ИСТОРИЯ ОБМЕНОВ
+// ИСТОРИЯ ОБМЕНОВ - БОЛЬШИЕ СУММЫ
 // ============================================================
 function generateHistory() {
   const historyList = document.getElementById('historyList');
-  const pairs = ['USDT → INR', 'INR → USDT'];
-  const statuses = ['✓ Completed', '✓ Completed', '✓ Completed', '✓ Completed', '✓ Completed'];
-  const times = ['2 min ago', '15 min ago', '42 min ago', '1h ago', '2h ago', '3h ago', '5h ago', '8h ago', '12h ago', '18h ago'];
   
-  // Генерируем 10 случайных транзакций
+  // Большие суммы для USDT → INR
+  const usdtAmounts = [
+    { amt: 1500, result: 144260.50 },
+    { amt: 850, result: 81747.50 },
+    { amt: 2200, result: 211582.00 },
+    { amt: 3200, result: 307742.00 },
+    { amt: 500, result: 48086.50 },
+    { amt: 1200, result: 115407.60 },
+    { amt: 750, result: 72129.75 },
+    { amt: 2500, result: 240432.50 },
+    { amt: 1800, result: 173111.40 },
+    { amt: 950, result: 91364.35 },
+    { amt: 6000, result: 576038.00 },
+    { amt: 4200, result: 403926.40 },
+    { amt: 2800, result: 269284.40 },
+    { amt: 3500, result: 336605.50 },
+    { amt: 10000, result: 961630.00 }
+  ];
+  
+  // Большие суммы для INR → USDT
+  const inrAmounts = [
+    { amt: 50000, result: 517.80 },
+    { amt: 25000, result: 258.90 },
+    { amt: 100000, result: 1035.60 },
+    { amt: 75000, result: 776.70 },
+    { amt: 150000, result: 1553.40 },
+    { amt: 30000, result: 310.68 },
+    { amt: 80000, result: 828.48 },
+    { amt: 45000, result: 466.02 },
+    { amt: 120000, result: 1242.72 },
+    { amt: 60000, result: 621.36 }
+  ];
+  
+  const timeAgo = [
+    'Just now', '2 min ago', '5 min ago', '12 min ago', '18 min ago',
+    '25 min ago', '32 min ago', '42 min ago', '52 min ago',
+    '1h ago', '1h 15m ago', '1h 30m ago', '1h 45m ago',
+    '2h ago', '2h 20m ago', '2h 40m ago', '3h ago',
+    '3h 30m ago', '4h ago', '4h 30m ago', '5h ago',
+    '6h ago', '7h ago', '8h ago', '9h ago', '10h ago',
+    '12h ago', '14h ago', '16h ago', '18h ago', '20h ago', '22h ago'
+  ];
+  
+  // Перемешиваем и создаем транзакции
   let history = [];
-  for (let i = 0; i < 10; i++) {
-    const pair = pairs[Math.floor(Math.random() * pairs.length)];
-    const isUSDTtoINR = pair === 'USDT → INR';
-    const amount = (Math.random() * 500 + 10).toFixed(2);
-    const rate = USDT_RATE + (Math.random() * 2 - 1);
-    const result = parseFloat(amount) * rate * (1 - FEE);
-    
-    history.push({
-      pair: pair,
-      amount: amount,
-      result: result,
-      time: times[i % times.length],
-      status: statuses[i % statuses.length],
-      isUSDTtoINR: isUSDTtoINR
-    });
-  }
   
-  // Сортируем по времени (самые свежие сверху)
-  const timeOrder = ['2 min ago', '15 min ago', '42 min ago', '1h ago', '2h ago', '3h ago', '5h ago', '8h ago', '12h ago', '18h ago'];
+  // Добавляем USDT → INR транзакции
+  usdtAmounts.forEach((item, index) => {
+    const timeIdx = index % timeAgo.length;
+    history.push({
+      pair: 'USDT → INR',
+      amount: item.amt,
+      result: item.result,
+      time: timeAgo[timeIdx],
+      status: '✓ Completed',
+      isUSDTtoINR: true
+    });
+  });
+  
+  // Добавляем INR → USDT транзакции
+  inrAmounts.forEach((item, index) => {
+    const timeIdx = (index + 5) % timeAgo.length;
+    history.push({
+      pair: 'INR → USDT',
+      amount: item.amt,
+      result: item.result,
+      time: timeAgo[timeIdx],
+      status: '✓ Completed',
+      isUSDTtoINR: false
+    });
+  });
+  
+  // Сортируем по времени (от свежих к старым)
+  const timeOrder = ['Just now', '2 min ago', '5 min ago', '12 min ago', '18 min ago',
+    '25 min ago', '32 min ago', '42 min ago', '52 min ago',
+    '1h ago', '1h 15m ago', '1h 30m ago', '1h 45m ago',
+    '2h ago', '2h 20m ago', '2h 40m ago', '3h ago',
+    '3h 30m ago', '4h ago', '4h 30m ago', '5h ago',
+    '6h ago', '7h ago', '8h ago', '9h ago', '10h ago',
+    '12h ago', '14h ago', '16h ago', '18h ago', '20h ago', '22h ago'
+  ];
+  
   history.sort((a, b) => timeOrder.indexOf(a.time) - timeOrder.indexOf(b.time));
   
   historyList.innerHTML = history.map(item => `
@@ -1155,65 +1209,14 @@ function generateHistory() {
       <div class="amount">
         <span class="value">
           ${item.isUSDTtoINR ? 
-            `${item.amount} USDT → <span class="green">₹${parseFloat(item.result).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>` : 
-            `₹${parseFloat(item.amount).toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})} → <span class="green">${(parseFloat(item.amount) / USDT_RATE * (1 + FEE)).toFixed(2)} USDT</span>`
+            `${item.amount} USDT → <span class="green">₹${item.result.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>` : 
+            `₹${item.amount.toLocaleString('en-IN', {minimumFractionDigits: 2, maximumFractionDigits: 2})} → <span class="green">${item.result.toFixed(2)} USDT</span>`
           }
         </span>
         <span class="status">${item.status}</span>
       </div>
     </div>
   `).join('');
-}
-
-// ============================================================
-// SET PAIR - ТОЛЬКО МЕНЯЕТ ПАРУ, БЕЗ ОТКРЫТИЯ СКРИПТА
-// ============================================================
-function setPair(from, to) {
-  fromKey = from;
-  toKey = to;
-  
-  // Обновляем активный пресет
-  document.querySelectorAll('.preset').forEach(p => {
-    p.classList.remove('active');
-    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
-        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
-      p.classList.add('active');
-    }
-  });
-  
-  // Обновляем UI
-  const fromIcon = document.querySelector('.pair-selector .from .coin-icon');
-  const fromSymbol = document.querySelector('.pair-selector .from .coin-symbol');
-  const fromName = document.querySelector('.pair-selector .from .coin-name');
-  const toIcon = document.querySelector('.pair-selector .to .coin-icon');
-  const toSymbol = document.querySelector('.pair-selector .to .coin-symbol');
-  const toName = document.querySelector('.pair-selector .to .coin-name');
-  
-  const fromCoin = from === 'USDT' ? {symbol: 'U', name: 'Tether'} : {symbol: '₹', name: 'Indian Rupee'};
-  const toCoin = to === 'INR' ? {symbol: '₹', name: 'Indian Rupee'} : {symbol: 'U', name: 'Tether'};
-  
-  fromIcon.textContent = fromCoin.symbol;
-  fromSymbol.textContent = from;
-  fromName.textContent = fromCoin.name;
-  toIcon.textContent = toCoin.symbol;
-  toSymbol.textContent = to;
-  toName.textContent = toCoin.name;
-  
-  document.querySelector('.card-header .title').innerHTML = 
-    `💱 Convert <span class="accent-gold">${from}</span> → <span class="accent-green">${to}</span>`;
-  
-  document.getElementById('fromDot').textContent = fromCoin.symbol;
-  document.getElementById('fromLabel').textContent = from;
-  document.getElementById('toDot').textContent = toCoin.symbol;
-  document.getElementById('toLabel').textContent = to;
-  
-  // Очищаем поля
-  document.getElementById('fromAmount').value = '';
-  document.getElementById('toAmount').value = '';
-  document.getElementById('detailPanel').classList.remove('visible');
-  document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
-  
-  showToast(`✅ ${from} → ${to} selected`, 'success');
 }
 
 // ============================================================
@@ -1303,7 +1306,7 @@ function convert() {
     btn.style.background = '';
   }, 2500);
   
-  showToast(`✅ ${fromAmt} ${fromKey} → ${result} ${toKey}`, 'success');
+  showToast(`✅ ${fromAmt} USDT → ${result} INR`, 'success');
   
   // Добавляем новую транзакцию в историю
   setTimeout(() => {
@@ -1397,7 +1400,7 @@ generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT to INR Converter');
 console.log('💎 Premium design with gold accents');
-console.log('📊 History generated');
+console.log('📊 History generated with large amounts');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
