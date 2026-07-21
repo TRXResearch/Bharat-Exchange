@@ -49,7 +49,6 @@
       min-height: 100vh;
     }
 
-    /* VIDEO BACKGROUND - FULL SCREEN */
     .video-bg {
       position: fixed;
       top: 0;
@@ -61,7 +60,6 @@
       pointer-events: none;
       filter: brightness(0.5) saturate(1.1) contrast(1.1);
     }
-
     .video-overlay {
       position: fixed;
       top: 0;
@@ -76,7 +74,6 @@
       pointer-events: none;
     }
 
-    /* GOLD LINE */
     .gold-line {
       position: fixed;
       top: 0;
@@ -97,7 +94,6 @@
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
     .section { padding: 80px 0; }
 
-    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
@@ -197,7 +193,6 @@
     }
     .btn:hover .btn-glow { opacity: 1; }
 
-    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 540px;
@@ -287,7 +282,6 @@
       text-transform: uppercase;
     }
 
-    /* WIDGET */
     .widget-card {
       background: var(--bg-card);
       backdrop-filter: blur(24px);
@@ -370,7 +364,6 @@
       padding: 0 8px;
     }
 
-    /* PRESETS - ПЕРЕКЛЮЧАЮТ UI, БЕЗ СКРИПТА! */
     .presets {
       display: flex;
       gap: 8px;
@@ -404,7 +397,6 @@
       box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
-    /* AMOUNT FIELDS */
     .amount-field {
       background: var(--bg-elev);
       border: 2px solid rgba(255, 179, 71, 0.04);
@@ -548,7 +540,6 @@
       color: var(--text-dim);
     }
 
-    /* HISTORY */
     .history-section {
       margin-top: 24px;
       padding-top: 20px;
@@ -632,7 +623,6 @@
     .history-item .amount .value .green { color: var(--accent-green); }
     .history-item .amount .status { font-size: 0.55rem; color: var(--accent-green); font-weight: 600; display: block; }
 
-    /* FEATURES */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -656,7 +646,6 @@
     .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
     .feature p { color: var(--text-secondary); font-size: 0.85rem; }
 
-    /* FAQ */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -701,7 +690,6 @@
       padding-top: 12px;
     }
 
-    /* FOOTER */
     footer {
       background: var(--bg-secondary);
       border-top: 1px solid rgba(255, 179, 71, 0.02);
@@ -738,7 +726,6 @@
       border-top: 1px solid rgba(255, 179, 71, 0.02);
     }
 
-    /* TOAST */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -762,7 +749,6 @@
       transform: translateX(-50%) translateY(-10px);
     }
 
-    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .widget-card { position: static; }
@@ -802,14 +788,12 @@
 </head>
 <body>
 
-<!-- VIDEO BACKGROUND -->
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="./video/videobg.mp4" type="video/mp4" />
 </video>
 <div class="video-overlay"></div>
 <div class="gold-line"></div>
 
-<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
@@ -834,7 +818,6 @@
   </div>
 </nav>
 
-<!-- MAIN -->
 <main>
   <div class="container">
     <div class="hero">
@@ -858,7 +841,6 @@
         </div>
       </div>
 
-      <!-- WIDGET -->
       <div class="widget-card">
         <div class="card-header">
           <span class="title">💱 Convert <span class="accent-gold" id="pairFromLabel">USDT</span> → <span class="accent-green" id="pairToLabel">INR</span></span>
@@ -883,7 +865,6 @@
             </div>
           </div>
 
-          <!-- ПРЕСЕТЫ - ПЕРЕКЛЮЧАЮТ UI, БЕЗ СКРИПТА! -->
           <div class="presets">
             <button class="preset active" onclick="switchPairUI('USDT','INR')">USDT→INR</button>
             <button class="preset" onclick="switchPairUI('INR','USDT')">INR→USDT</button>
@@ -934,7 +915,6 @@
     </div>
   </div>
 
-  <!-- FEATURES -->
   <div style="background:var(--bg-secondary); border-top:1px solid rgba(255,179,71,0.02); border-bottom:1px solid rgba(255,179,71,0.02);">
     <div class="container"><div class="section" id="features">
       <div class="badge">✨ PREMIUM FEATURES</div>
@@ -951,7 +931,6 @@
     </div></div>
   </div>
 
-  <!-- FAQ -->
   <div class="container" id="faq">
     <div class="section">
       <div style="text-align:center; margin-bottom:48px;">
@@ -963,7 +942,6 @@
     </div>
   </div>
 
-  <!-- CTA -->
   <div style="background:linear-gradient(135deg, #0A0618 0%, #1B1425 100%); border-top:1px solid rgba(255,179,71,0.02); text-align:center; padding:80px 24px;">
     <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">Convert USDT to INR.<br><span class="gradient-text">Instantly.</span></h2>
     <p style="color:var(--text-secondary); margin-bottom:32px;">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
@@ -971,7 +949,6 @@
   </div>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1001,7 +978,6 @@
   </div>
 </footer>
 
-<!-- TOAST -->
 <div id="globalToast" class="toast"></div>
 
 <script>
@@ -1016,7 +992,7 @@ let toKey = 'INR';
 let currentPair = 'USDT_INR';
 
 // ============================================================
-// ПЕРЕКЛЮЧЕНИЕ ПАРЫ - ТОЛЬКО UI, БЕЗ СКРИПТА!
+// ПЕРЕКЛЮЧЕНИЕ ПАРЫ - ТОЛЬКО UI
 // ============================================================
 function switchPairUI(from, to) {
   fromKey = from;
@@ -1077,6 +1053,7 @@ function switchPairUI(from, to) {
 // ============================================================
 function generateHistory() {
   const historyList = document.getElementById('historyList');
+  
   const usdtAmounts = [
     { amt: 25.50, result: 2451.50 }, { amt: 12.75, result: 1225.75 },
     { amt: 50.00, result: 4808.60 }, { amt: 8.20, result: 788.20 },
@@ -1092,6 +1069,7 @@ function generateHistory() {
     { amt: 90.00, result: 8655.40 }, { amt: 180.00, result: 17311.00 },
     { amt: 42.42, result: 4080.42 }, { amt: 600.00, result: 57703.20 }
   ];
+  
   const inrAmounts = [
     { amt: 1500, result: 15.55 }, { amt: 5000, result: 51.85 },
     { amt: 2500, result: 25.93 }, { amt: 1000, result: 10.37 },
@@ -1107,6 +1085,7 @@ function generateHistory() {
     { amt: 4800, result: 49.78 }, { amt: 750, result: 7.77 },
     { amt: 11000, result: 114.07 }
   ];
+  
   const timeAgo = [
     'Just now', '1 min ago', '3 min ago', '5 min ago', '8 min ago',
     '12 min ago', '16 min ago', '20 min ago', '25 min ago', '30 min ago',
@@ -1120,20 +1099,25 @@ function generateHistory() {
     '16h ago', '17h ago', '18h ago', '19h ago', '20h ago',
     '21h ago', '22h ago', '23h ago'
   ];
+  
   let history = [];
   let timeIndex = 0;
+  
   usdtAmounts.forEach((item) => {
     const time = timeAgo[timeIndex % timeAgo.length];
     history.push({ pair: 'USDT → INR', amount: item.amt, result: item.result, time: time, status: '✓ Completed', isUSDTtoINR: true });
     timeIndex++;
   });
+  
   inrAmounts.forEach((item) => {
     const time = timeAgo[timeIndex % timeAgo.length];
     history.push({ pair: 'INR → USDT', amount: item.amt, result: item.result, time: time, status: '✓ Completed', isUSDTtoINR: false });
     timeIndex++;
   });
+  
   history.sort((a, b) => timeAgo.indexOf(a.time) - timeAgo.indexOf(b.time));
   history = history.slice(0, 52);
+  
   historyList.innerHTML = history.map(item => `
     <div class="history-item">
       <div class="info">
@@ -1157,7 +1141,7 @@ function generateHistory() {
 }
 
 // ============================================================
-// CALCULATE
+// CALCULATE - ПРАВИЛЬНЫЙ РАСЧЕТ ДЛЯ ОБЕИХ ПАР
 // ============================================================
 function calculate() {
   const fromInput = document.getElementById('fromAmount');
@@ -1171,7 +1155,23 @@ function calculate() {
     return;
   }
   
-  const result = fromAmt * USDT_RATE * (1 - FEE);
+  let result;
+  let resultText;
+  const fee = 0.002;
+  
+  if (fromKey === 'USDT' && toKey === 'INR') {
+    // USDT → INR
+    result = fromAmt * USDT_RATE * (1 - fee);
+    resultText = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  } else if (fromKey === 'INR' && toKey === 'USDT') {
+    // INR → USDT
+    result = fromAmt / USDT_RATE * (1 - fee);
+    resultText = result.toFixed(4) + ' USDT';
+  } else {
+    // fallback
+    result = fromAmt * USDT_RATE * (1 - fee);
+    resultText = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  }
   
   toInput.style.transition = 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
   toInput.style.transform = 'scale(1.03)';
@@ -1181,16 +1181,16 @@ function calculate() {
     setTimeout(() => { toInput.style.color = ''; }, 300);
   }, 200);
   
-  toInput.value = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  toInput.value = resultText;
   document.getElementById('settlementInfo').textContent = '⚡ Instant to few minutes';
   
-  showDetails(fromAmt, USDT_RATE, result);
+  showDetails(fromAmt, USDT_RATE, result, resultText);
 }
 
-function showDetails(amount, rate, result) {
+function showDetails(amount, rate, result, resultText) {
   const panel = document.getElementById('detailPanel');
   if (!panel) return;
-  const feeAmount = amount * rate * FEE;
+  const feeAmount = amount * rate * 0.002;
   
   panel.innerHTML = `
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
@@ -1204,11 +1204,11 @@ function showDetails(amount, rate, result) {
       </div>
       <div>
         <span style="color:var(--text-dim); font-size:0.65rem;">Fee (0.20%)</span><br>
-        <b style="color:#FF6B6B; font-size:1rem;">₹${feeAmount.toFixed(2)}</b>
+        <b style="color:#FF6B6B; font-size:1rem;">${fromKey === 'USDT' ? '₹' : ''}${feeAmount.toFixed(2)}</b>
       </div>
       <div>
         <span style="color:var(--text-dim); font-size:0.65rem;">You receive</span><br>
-        <b style="color:var(--accent-green); font-size:1.15rem;">₹${result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</b>
+        <b style="color:var(--accent-green); font-size:1.15rem;">${resultText}</b>
       </div>
     </div>
   `;
@@ -1334,6 +1334,7 @@ generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
 console.log('🔄 Presets switch UI without opening script!');
+console.log('✅ USDT→INR shows INR, INR→USDT shows USDT');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
