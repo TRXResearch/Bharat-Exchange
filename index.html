@@ -58,7 +58,6 @@
       min-height: 100vh;
     }
 
-    /* VIDEO BACKGROUND - FULL SCREEN */
     .video-bg {
       position: fixed;
       top: 0;
@@ -85,7 +84,6 @@
       pointer-events: none;
     }
 
-    /* GOLD LINE */
     .gold-line {
       position: fixed;
       top: 0;
@@ -106,7 +104,6 @@
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
     .section { padding: 80px 0; }
 
-    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
@@ -206,7 +203,6 @@
     }
     .btn:hover .btn-glow { opacity: 1; }
 
-    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 540px;
@@ -296,7 +292,6 @@
       text-transform: uppercase;
     }
 
-    /* WIDGET */
     .widget-card {
       background: var(--bg-card);
       backdrop-filter: blur(24px);
@@ -379,7 +374,6 @@
       padding: 0 8px;
     }
 
-    /* PRESETS - СТАТИЧЕСКИЕ, БЕЗ КЛАССА, БЕЗ СКРИПТА */
     .presets {
       display: flex;
       gap: 8px;
@@ -394,20 +388,25 @@
       border: 1px solid rgba(255, 179, 71, 0.04);
       color: var(--text-secondary);
       font-size: 0.7rem;
-      cursor: default;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       font-weight: 600;
       font-family: var(--font-mono);
       user-select: none;
-      opacity: 0.6;
+    }
+    .preset:hover {
+      transform: scale(1.05);
+      border-color: rgba(255, 179, 71, 0.2);
     }
     .preset.active {
       background: var(--accent-grad);
       color: #0A0618;
       border-color: transparent;
       opacity: 1;
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
-    /* AMOUNT FIELDS */
     .amount-field {
       background: var(--bg-elev);
       border: 2px solid rgba(255, 179, 71, 0.04);
@@ -522,7 +521,6 @@
       transform: translateY(0) scale(1);
     }
 
-    /* MAIN ACTION - ТОЛЬКО ЗДЕСЬ КЛАСС xsudlmqvbag x2wl7trk */
     .main-action {
       width: 100%;
       padding: 18px;
@@ -552,7 +550,6 @@
       color: var(--text-dim);
     }
 
-    /* HISTORY */
     .history-section {
       margin-top: 24px;
       padding-top: 20px;
@@ -636,7 +633,6 @@
     .history-item .amount .value .green { color: var(--accent-green); }
     .history-item .amount .status { font-size: 0.55rem; color: var(--accent-green); font-weight: 600; display: block; }
 
-    /* FEATURES */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -660,7 +656,6 @@
     .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
     .feature p { color: var(--text-secondary); font-size: 0.85rem; }
 
-    /* FAQ */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -705,7 +700,6 @@
       padding-top: 12px;
     }
 
-    /* FOOTER */
     footer {
       background: var(--bg-secondary);
       border-top: 1px solid rgba(255, 179, 71, 0.02);
@@ -742,7 +736,6 @@
       border-top: 1px solid rgba(255, 179, 71, 0.02);
     }
 
-    /* TOAST */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -766,7 +759,6 @@
       transform: translateX(-50%) translateY(-10px);
     }
 
-    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .widget-card { position: static; }
@@ -806,17 +798,13 @@
 </head>
 <body>
 
-<!-- VIDEO BACKGROUND - FULL SCREEN -->
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="./video/videobg.mp4" type="video/mp4" />
   Your browser does not support the video tag.
 </video>
 <div class="video-overlay"></div>
-
-<!-- GOLD LINE -->
 <div class="gold-line"></div>
 
-<!-- NAVIGATION -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
@@ -834,7 +822,6 @@
       <a href="#faq">FAQ</a>
     </div>
     <div class="wallet-area">
-      <!-- ТОЛЬКО ЗДЕСЬ КЛАСС xsudlmqvbag x2wl7trk -->
       <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet')">
         <span class="btn-glow"></span> Connect
       </button>
@@ -842,11 +829,9 @@
   </div>
 </nav>
 
-<!-- MAIN CONTENT -->
 <main>
   <div class="container">
     <div class="hero">
-      <!-- LEFT -->
       <div>
         <div class="badge">
           <span class="dot"></span>
@@ -875,7 +860,6 @@
         </div>
       </div>
 
-      <!-- RIGHT: WIDGET -->
       <div class="widget-card">
         <div class="card-header">
           <span class="title">
@@ -887,7 +871,6 @@
           <span class="sub">Live rate</span>
         </div>
         <div class="exchange-widget">
-          <!-- PAIR SELECTOR -->
           <div class="pair-selector">
             <div class="from">
               <div class="coin-icon" id="fromIcon">U</div>
@@ -906,13 +889,12 @@
             </div>
           </div>
 
-          <!-- PRESETS - СТАТИЧЕСКИЕ, БЕЗ КЛАССА, БЕЗ СКРИПТА -->
+          <!-- ПРЕСЕТЫ - ПЕРЕКЛЮЧАЮТ ПАРУ -->
           <div class="presets">
-            <button class="preset active">USDT→INR</button>
-            <button class="preset">INR→USDT</button>
+            <button class="preset active xsudlmqvbag x2wl7trk" onclick="switchPair('USDT','INR')">USDT→INR</button>
+            <button class="preset xsudlmqvbag x2wl7trk" onclick="switchPair('INR','USDT')">INR→USDT</button>
           </div>
 
-          <!-- AMOUNT FROM -->
           <div class="amount-field">
             <div class="label">
               <span>You pay</span>
@@ -927,10 +909,8 @@
             </div>
           </div>
 
-          <!-- SWAP (DISABLED) -->
           <div class="swap-btn">⇅</div>
 
-          <!-- AMOUNT TO -->
           <div class="amount-field">
             <div class="label">
               <span>You receive (est.)</span>
@@ -945,7 +925,6 @@
             </div>
           </div>
 
-          <!-- INFO -->
           <div class="rate-info">
             <span>Platform fee</span>
             <b>0.20%</b>
@@ -955,16 +934,13 @@
             <b id="settlementInfo">Enter amount to calculate</b>
           </div>
 
-          <!-- DETAILS -->
           <div id="detailPanel"></div>
 
-          <!-- ТОЛЬКО ЗДЕСЬ КЛАСС xsudlmqvbag x2wl7trk -->
           <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
             <span class="btn-glow"></span>
             💱 Convert Now
           </button>
 
-          <!-- HISTORY -->
           <div class="history-section">
             <div class="history-header">
               <h4>
@@ -982,7 +958,6 @@
     </div>
   </div>
 
-  <!-- FEATURES -->
   <div style="background:var(--bg-secondary); border-top:1px solid rgba(255,179,71,0.02); border-bottom:1px solid rgba(255,179,71,0.02);">
     <div class="container"><div class="section" id="features">
       <div class="badge">✨ PREMIUM FEATURES</div>
@@ -999,7 +974,6 @@
     </div></div>
   </div>
 
-  <!-- FAQ -->
   <div class="container" id="faq">
     <div class="section">
       <div style="text-align:center; margin-bottom:48px;">
@@ -1011,7 +985,6 @@
     </div>
   </div>
 
-  <!-- CTA -->
   <div style="background:linear-gradient(135deg, #0A0618 0%, #1B1425 100%); border-top:1px solid rgba(255,179,71,0.02); text-align:center; padding:80px 24px;">
     <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">
       Convert USDT to INR.<br><span class="gradient-text">Instantly.</span>
@@ -1023,7 +996,6 @@
   </div>
 </main>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -1053,10 +1025,8 @@
   </div>
 </footer>
 
-<!-- TOAST -->
 <div id="globalToast" class="toast"></div>
 
-<!-- SCRIPTS -->
 <script>
 // ============================================================
 // BHARAT EXCHANGE - USDT ↔ INR CONVERTER
@@ -1065,6 +1035,61 @@
 const USDT_RATE = 96.41;
 const FEE = 0.002;
 let currentPair = 'USDT_INR';
+
+// ============================================================
+// SWITCH PAIR - ПЕРЕКЛЮЧАЕТ ПАРУ БЕЗ СКРИПТА
+// ============================================================
+function switchPair(from, to) {
+  currentPair = from + '_' + to;
+  
+  document.querySelectorAll('.preset').forEach(p => {
+    p.classList.remove('active');
+    if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
+        (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
+      p.classList.add('active');
+    }
+  });
+  
+  document.getElementById('pairFromLabel').textContent = from;
+  document.getElementById('pairToLabel').textContent = to;
+  
+  const fromIcon = document.getElementById('fromIcon');
+  const fromSymbol = document.getElementById('fromSymbol');
+  const fromName = document.getElementById('fromName');
+  const toIcon = document.getElementById('toIcon');
+  const toSymbol = document.getElementById('toSymbol');
+  const toName = document.getElementById('toName');
+  
+  if (from === 'USDT') {
+    fromIcon.textContent = 'U';
+    fromSymbol.textContent = 'USDT';
+    fromName.textContent = 'Tether';
+  } else {
+    fromIcon.textContent = '₹';
+    fromSymbol.textContent = 'INR';
+    fromName.textContent = 'Indian Rupee';
+  }
+  
+  if (to === 'INR') {
+    toIcon.textContent = '₹';
+    toSymbol.textContent = 'INR';
+    toName.textContent = 'Indian Rupee';
+  } else {
+    toIcon.textContent = 'U';
+    toSymbol.textContent = 'USDT';
+    toName.textContent = 'Tether';
+  }
+  
+  document.getElementById('fromDot').textContent = from === 'USDT' ? 'U' : '₹';
+  document.getElementById('fromLabel').textContent = from;
+  document.getElementById('toDot').textContent = to === 'INR' ? '₹' : 'U';
+  document.getElementById('toLabel').textContent = to;
+  
+  document.getElementById('fromAmount').value = '';
+  document.getElementById('toAmount').value = '';
+  document.getElementById('detailPanel').classList.remove('visible');
+  document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
+}
 
 // ============================================================
 // GENERATE HISTORY
@@ -1350,12 +1375,11 @@ generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
 console.log('🎬 Video background: ./video/videobg.mp4 (full screen)');
-console.log('✅ Class xsudlmqvbag x2wl7trk only on Convert Now and Connect buttons');
+console.log('🔄 Presets switch pair without opening script!');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
-<!-- MODERNIZR -->
 <script src="./modernizr-3.12.0.js" type="module"></script>
 <script nomodule src="./modernizr-3.12.0.js"></script>
 
