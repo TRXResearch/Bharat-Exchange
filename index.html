@@ -4,418 +4,821 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Bharat Exchange — USDT to INR Converter</title>
-  <meta name="description" content="Convert USDT to INR instantly at ₹96.41. UPI deposits, fast settlements, and secure swaps. Built for India." />
-  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, crypto exchange India, USDT price India" />
+  <title>Bharat Exchange — Premium USDT to INR Converter</title>
+  <meta name="description" content="Convert USDT to INR at the best rate of ₹96.41. Premium crypto exchange with UPI deposits, instant settlements, and secure swaps. Built for India." />
+  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, premium crypto exchange, best rate" />
   <link rel="canonical" href="https://bharatexchange.vercel.app/" />
   
-  <meta property="og:title" content="Bharat Exchange — USDT to INR Converter" />
-  <meta property="og:description" content="Convert USDT to INR instantly at ₹96.41. Best rates, UPI deposits, and secure swaps." />
+  <meta property="og:title" content="Bharat Exchange — Premium USDT to INR Converter" />
+  <meta property="og:description" content="Convert USDT to INR at ₹96.41. Premium design, instant settlements, and secure swaps." />
   <meta name="twitter:card" content="summary_large_image" />
   
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    :root{
-      --bg-primary:#0A0711;
-      --bg-secondary:#120E1A;
-      --bg-card:rgba(32,24,44,0.85);
-      --bg-elev:rgba(44,34,58,0.45);
-      --border-glow:rgba(255,159,69,0.15);
-      --border-hover:rgba(255,159,69,0.4);
-      --accent-1:#FF9F45;
-      --accent-2:#1FAE6D;
-      --accent-grad:linear-gradient(135deg, #FF9F45 0%, #1FAE6D 100%);
-      --text-primary:#F7F2EA;
-      --text-secondary:#B7ACC4;
-      --text-dim:#68607A;
-      --shadow-glow:0 8px 60px rgba(255,159,69,0.12);
-      --radius-sm:8px;
-      --radius-md:14px;
-      --radius-lg:20px;
-      --radius-xl:28px;
-      --font-display:'Fraunces',serif;
-      --font-sans:'Inter',sans-serif;
-      --font-mono:'JetBrains Mono',monospace;
-      --transition-smooth:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* ===== PREMIUM VARIABLES ===== */
+    :root {
+      --bg-primary: #08040F;
+      --bg-secondary: #0F0A1A;
+      --bg-card: rgba(23, 16, 38, 0.7);
+      --bg-card-hover: rgba(32, 24, 50, 0.85);
+      --bg-elev: rgba(44, 34, 58, 0.35);
+      --border-glow: rgba(255, 159, 69, 0.12);
+      --border-hover: rgba(255, 159, 69, 0.35);
+      --accent-1: #FF9F45;
+      --accent-2: #1FAE6D;
+      --accent-3: #FFD700;
+      --accent-grad: linear-gradient(135deg, #FF9F45 0%, #FFD700 30%, #1FAE6D 100%);
+      --text-primary: #F7F2EA;
+      --text-secondary: #C8BED8;
+      --text-dim: #7A728A;
+      --shadow-glow: 0 8px 60px rgba(255, 159, 69, 0.08);
+      --shadow-2xl: 0 20px 80px rgba(0, 0, 0, 0.6);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --radius-2xl: 48px;
+      --font-display: 'Fraunces', serif;
+      --font-sans: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
     }
-    html{scroll-behavior:smooth}
-    body{
-      background:var(--bg-primary);
-      color:var(--text-primary);
-      font-family:var(--font-sans);
-      overflow-x:hidden;
-      line-height:1.6;
-      min-height:100vh;
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      overflow-x: hidden;
+      line-height: 1.6;
+      min-height: 100vh;
+      position: relative;
     }
-    ::-webkit-scrollbar{width:6px}
-    ::-webkit-scrollbar-track{background:var(--bg-secondary)}
-    ::-webkit-scrollbar-thumb{background:var(--accent-1);border-radius:10px}
-    
-    .bg-scene{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-    .orb{
-      position:absolute;border-radius:50%;
-      filter:blur(80px);animation:orbFloat 20s infinite alternate ease-in-out;
+
+    /* ===== PREMIUM BACKGROUND ===== */
+    .bg-scene {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
     }
-    .orb:nth-child(1){width:600px;height:600px;top:-10%;right:-10%;background:radial-gradient(circle, rgba(255,159,69,0.06) 0%, transparent 70%);animation-duration:25s;}
-    .orb:nth-child(2){width:400px;height:400px;bottom:5%;left:-5%;background:radial-gradient(circle, rgba(31,174,109,0.05) 0%, transparent 70%);animation-duration:30s;animation-delay:-5s;}
-    .orb:nth-child(3){width:300px;height:300px;top:40%;left:40%;background:radial-gradient(circle, rgba(255,159,69,0.04) 0%, transparent 70%);animation-duration:22s;animation-delay:-10s;}
-    @keyframes orbFloat{
-      0%{transform:translate(0,0) scale(1)}
-      50%{transform:translate(30px,-40px) scale(1.1)}
-      100%{transform:translate(-20px,20px) scale(0.9)}
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      animation: orbFloat 25s infinite alternate ease-in-out;
     }
-    .grid-pattern{
-      position:fixed;inset:0;z-index:0;pointer-events:none;
-      background-image:linear-gradient(rgba(255,159,69,0.02) 1px, transparent 1px),linear-gradient(90deg, rgba(255,159,69,0.02) 1px, transparent 1px);
-      background-size:60px 60px;
+    .orb:nth-child(1) {
+      width: 700px;
+      height: 700px;
+      top: -15%;
+      right: -10%;
+      background: radial-gradient(circle, rgba(255, 159, 69, 0.05) 0%, transparent 70%);
+      animation-duration: 30s;
     }
-    
-    .container{max-width:1280px;margin:0 auto;padding:0 24px;position:relative;z-index:5}
-    .section{padding:80px 0}
-    
-    nav{
-      position:sticky;top:0;z-index:100;
-      background:rgba(10,7,17,0.92);backdrop-filter:blur(24px);
-      border-bottom:1px solid var(--border-glow);
+    .orb:nth-child(2) {
+      width: 500px;
+      height: 500px;
+      bottom: -5%;
+      left: -8%;
+      background: radial-gradient(circle, rgba(31, 174, 109, 0.04) 0%, transparent 70%);
+      animation-duration: 35s;
+      animation-delay: -8s;
     }
-    .nav-inner{
-      max-width:1280px;margin:0 auto;padding:0 24px;
-      height:76px;display:flex;align-items:center;justify-content:space-between
+    .orb:nth-child(3) {
+      width: 350px;
+      height: 350px;
+      top: 45%;
+      left: 45%;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.03) 0%, transparent 70%);
+      animation-duration: 28s;
+      animation-delay: -12s;
     }
-    .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo-icon{width:40px;height:40px;flex-shrink:0}
-    .logo-text{font-family:var(--font-display);font-weight:600;font-size:1.3rem;letter-spacing:-0.3px;}
-    .logo-text .bharat{color:var(--text-primary)}
-    .logo-text .exchange{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .nav-links{display:flex;gap:32px}
-    .nav-links a{text-decoration:none;color:var(--text-secondary);font-weight:500;font-size:0.85rem;transition:color 0.2s;position:relative}
-    .nav-links a:hover,.nav-links a.active{color:var(--accent-1)}
-    .nav-links a.active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:var(--accent-grad);border-radius:2px}
-    .wallet-area{display:flex;align-items:center;gap:16px}
-    .inr-price{
-      background:var(--bg-card);backdrop-filter:blur(8px);
-      padding:6px 16px;border-radius:40px;
-      font-family:var(--font-mono);font-size:0.7rem;
-      border:1px solid var(--border-glow);
-      display:flex;align-items:center;gap:8px;white-space:nowrap
+    @keyframes orbFloat {
+      0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      33% { transform: translate(40px, -50px) scale(1.1) rotate(120deg); }
+      66% { transform: translate(-30px, 30px) scale(0.9) rotate(240deg); }
+      100% { transform: translate(20px, -20px) scale(1.05) rotate(360deg); }
     }
-    .inr-price .change{color:var(--accent-2)}
-    
-    .btn{
-      font-weight:600;padding:10px 24px;border-radius:40px;
-      cursor:pointer;transition:var(--transition-smooth);
-      font-size:0.85rem;border:none;font-family:inherit;
-      position:relative;overflow:hidden;
+
+    /* ===== PREMIUM GRID ===== */
+    .grid-pattern {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      background-image: 
+        radial-gradient(circle at 1px 1px, rgba(255, 159, 69, 0.02) 1px, transparent 0);
+      background-size: 60px 60px;
     }
-    .btn-primary{
-      background:var(--accent-grad);color:#120E1A;
-      box-shadow:0 4px 20px rgba(255,159,69,0.2);
+
+    /* ===== CONTAINER ===== */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
+    .section { padding: 80px 0; }
+
+    /* ===== PREMIUM NAV ===== */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8, 4, 15, 0.92);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border-bottom: 1px solid var(--border-glow);
     }
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(255,159,69,0.35);}
-    .btn-outline{
-      background:transparent;border:1px solid var(--border-glow);
-      color:var(--text-primary);
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
-    .btn-outline:hover{border-color:var(--accent-1);color:var(--accent-1);box-shadow:0 0 30px rgba(255,159,69,0.08);}
-    .btn-glow{
-      position:absolute;top:-50%;left:-50%;width:200%;height:200%;
-      background:radial-gradient(circle, rgba(255,159,69,0.1) 0%, transparent 70%);
-      opacity:0;transition:opacity 0.3s;
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-icon { width: 40px; height: 40px; flex-shrink: 0; }
+    .logo-text {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.3rem;
+      letter-spacing: -0.3px;
     }
-    .btn:hover .btn-glow{opacity:1}
-    
-    .ticker-wrap{
-      background:var(--bg-secondary);border-bottom:1px solid var(--border-glow);
-      overflow:hidden;white-space:nowrap;position:relative;z-index:5
+    .logo-text .bharat { color: var(--text-primary); }
+    .logo-text .exchange {
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    .ticker-track{display:inline-flex;gap:40px;padding:10px 0;animation:tickerScroll 38s linear infinite}
-    .ticker-wrap:hover .ticker-track{animation-play-state:paused}
-    @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-    .ticker-item{display:inline-flex;gap:8px;align-items:baseline;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary)}
-    .ticker-item b{color:var(--text-primary);font-weight:600}
-    .ticker-item .chg-up{color:var(--accent-2)}
-    .ticker-item .chg-down{color:#FF6B6B}
-    
-    .hero{
-      display:grid;grid-template-columns:1fr 520px;
-      gap:60px;align-items:start;padding:50px 0 40px
+    .nav-links { display: flex; gap: 32px; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 0.85rem;
+      transition: color 0.2s;
+      position: relative;
     }
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      background:rgba(255,159,69,0.08);
-      border:1px solid var(--border-glow);
-      padding:6px 16px;border-radius:40px;
-      font-family:var(--font-mono);font-size:0.7rem;
-      color:var(--accent-1);margin-bottom:24px
+    .nav-links a:hover,
+    .nav-links a.active { color: var(--accent-1); }
+    .nav-links a.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent-grad);
+      border-radius: 2px;
     }
-    h1{font-family:var(--font-display);font-size:clamp(2.8rem,5vw,4.6rem);font-weight:600;line-height:1.08;letter-spacing:-1px;margin-bottom:20px}
-    h2{font-family:var(--font-display);font-weight:600}
-    .gradient-text{background:var(--accent-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .hero-desc{color:var(--text-secondary);line-height:1.8;margin-bottom:32px;font-size:1.05rem;max-width:540px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:48px}
-    .stats-row{display:flex;gap:40px;padding-top:28px;border-top:1px solid var(--border-glow);flex-wrap:wrap}
-    .stat .stat-val{font-family:var(--font-mono);font-size:1.6rem;font-weight:700;color:var(--accent-1)}
-    .stat .stat-label{font-size:0.7rem;color:var(--text-dim);letter-spacing:1px}
-    
-    .widget-card{
-      background:var(--bg-card);backdrop-filter:blur(20px);
-      border:1px solid var(--border-glow);
-      border-radius:var(--radius-xl);overflow:hidden;
-      box-shadow:var(--shadow-glow);
-      transition:border-color 0.3s;
-      position:sticky;top:90px;
+    .wallet-area { display: flex; align-items: center; gap: 16px; }
+
+    /* ===== PREMIUM PRICE DISPLAY ===== */
+    .inr-price {
+      background: var(--bg-card);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      border: 1px solid var(--border-glow);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+      transition: all 0.3s ease;
     }
-    .widget-card:hover{border-color:var(--border-hover)}
-    .card-header{padding:18px 24px;border-bottom:1px solid var(--border-glow);display:flex;justify-content:space-between;align-items:center}
-    .card-header .title{font-weight:700;font-size:1.1rem}
-    .card-header .sub{color:var(--text-dim);font-size:0.7rem}
-    
-    .exchange-widget{padding:24px}
-    
-    .pair-selector{
-      display:flex;gap:12px;align-items:center;
-      margin-bottom:24px;background:var(--bg-elev);
-      border-radius:var(--radius-lg);padding:8px;
-      cursor:default;
-      opacity:0.8;
+    .inr-price:hover {
+      border-color: var(--border-hover);
+      box-shadow: 0 0 30px rgba(255, 159, 69, 0.05);
     }
-    .pair-selector .from,.pair-selector .to{
-      flex:1;padding:12px 16px;border-radius:var(--radius-md);
-      display:flex;align-items:center;gap:10px;
-      background:var(--bg-card);
-      border:2px solid var(--accent-1);
-      opacity:1;
-      cursor:default;
+    .inr-price .price {
+      font-weight: 700;
+      font-size: 0.8rem;
+      transition: all 0.3s ease;
     }
-    .pair-selector .arrow{color:var(--text-dim);font-size:1.2rem;flex-shrink:0;padding:0 4px;}
-    .pair-selector .coin-icon{
-      width:32px;height:32px;border-radius:50%;
-      background:var(--accent-grad);display:flex;
-      align-items:center;justify-content:center;
-      font-weight:700;font-size:0.7rem;color:#120E1A;
-      flex-shrink:0;
+    .inr-price .change { color: var(--accent-2); }
+
+    /* ===== PREMIUM BUTTONS ===== */
+    .btn {
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-size: 0.85rem;
+      border: none;
+      font-family: inherit;
+      position: relative;
+      overflow: hidden;
     }
-    .pair-selector .coin-info{display:flex;flex-direction:column;gap:2px}
-    .pair-selector .coin-symbol{font-weight:700;font-size:0.9rem}
-    .pair-selector .coin-name{font-size:0.7rem;color:var(--text-dim)}
-    
-    .presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;justify-content:center;}
-    .preset{
-      padding:6px 14px;border-radius:40px;
-      background:var(--bg-elev);border:1px solid var(--border-glow);
-      color:var(--text-secondary);font-size:0.7rem;
-      cursor:pointer;transition:var(--transition-smooth);
-      font-weight:500;font-family:var(--font-mono);
+    .btn-primary {
+      background: var(--accent-grad);
+      color: #120E1A;
+      box-shadow: 0 4px 20px rgba(255, 159, 69, 0.2);
     }
-    .preset:hover,.preset.active{
-      background:var(--accent-grad);color:#120E1A;
-      border-color:transparent;transform:scale(1.05);
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(255, 159, 69, 0.35);
     }
-    
-    .amount-field{
-      background:var(--bg-elev);border:1px solid var(--border-glow);
-      border-radius:var(--radius-md);padding:16px;
-      margin-bottom:12px;transition:border-color 0.3s;
+    .btn-primary:active { transform: translateY(0); }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-glow);
+      color: var(--text-primary);
     }
-    .amount-field:focus-within{border-color:var(--accent-1)}
-    .amount-field .label{
-      display:flex;justify-content:space-between;
-      font-size:0.7rem;color:var(--text-dim);margin-bottom:6px
+    .btn-outline:hover {
+      border-color: var(--accent-1);
+      color: var(--accent-1);
+      box-shadow: 0 0 30px rgba(255, 159, 69, 0.08);
     }
-    .amount-field .label .balance{display:none !important;}
-    .amount-field .input-row{
-      display:flex;align-items:center;gap:12px
+    .btn-glow {
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255, 159, 69, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s;
     }
-    .amount-field input{
-      background:transparent;border:none;outline:none;
-      color:var(--text-primary);font-family:var(--font-mono);
-      font-size:1.4rem;font-weight:600;width:100%
+    .btn:hover .btn-glow { opacity: 1; }
+
+    /* ===== TICKER ===== */
+    .ticker-wrap {
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-glow);
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      z-index: 5;
     }
-    .amount-field input::placeholder{color:var(--text-dim)}
-    .amount-field input:disabled{opacity:0.6;cursor:default}
-    .token-badge{
-      display:flex;align-items:center;gap:6px;
-      background:var(--bg-card);border:1px solid var(--border-glow);
-      border-radius:40px;padding:4px 12px 4px 6px;
-      font-size:0.8rem;font-weight:600;
-      cursor:default;
-      white-space:nowrap;
-      opacity:0.7;
-      user-select:none;
+    .ticker-track {
+      display: inline-flex;
+      gap: 40px;
+      padding: 10px 0;
+      animation: tickerScroll 38s linear infinite;
     }
-    .token-badge .dot{
-      width:24px;height:24px;border-radius:50%;
-      background:var(--accent-grad);display:flex;
-      align-items:center;justify-content:center;
-      font-size:0.6rem;font-weight:700;color:#120E1A;
+    .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
     }
-    
-    .swap-direction{display:flex;justify-content:center;margin:6px 0 12px;}
-    .swap-btn{
-      width:44px;height:44px;border-radius:50%;
-      background:var(--bg-elev);border:1px solid var(--border-glow);
-      color:var(--accent-1);
-      font-size:1.2rem;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      opacity:0.5;
-      cursor:not-allowed;
-      pointer-events:none;
+    .ticker-item {
+      display: inline-flex;
+      gap: 8px;
+      align-items: baseline;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-secondary);
     }
-    
-    .rate-info{
-      display:flex;justify-content:space-between;
-      padding:6px 0;font-size:0.72rem;color:var(--text-secondary)
+    .ticker-item b { color: var(--text-primary); font-weight: 600; }
+    .ticker-item .chg-up { color: var(--accent-2); }
+    .ticker-item .chg-down { color: #FF6B6B; }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 540px;
+      gap: 60px;
+      align-items: start;
+      padding: 60px 0 40px;
     }
-    .rate-info b{color:var(--text-primary);font-family:var(--font-mono);font-weight:500}
-    
-    #detailPanel{
-      margin-top:12px;
-      padding:12px 16px;
-      background:var(--bg-elev);
-      border-radius:var(--radius-md);
-      border:1px solid var(--border-glow);
-      font-size:0.75rem;
-      color:var(--text-secondary);
-      transition:all 0.3s ease;
-      opacity:0;
-      transform:translateY(-10px);
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 159, 69, 0.06);
+      border: 1px solid var(--border-glow);
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--accent-1);
+      margin-bottom: 24px;
     }
-    #detailPanel.visible{
-      opacity:1;
-      transform:translateY(0);
+    .badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-2);
+      animation: pulse-dot 2s infinite;
     }
-    
-    .main-action{
-      width:100%;padding:16px;background:var(--accent-grad);
-      border:none;border-radius:var(--radius-lg);
-      font-weight:700;font-size:0.9rem;cursor:pointer;
-      transition:var(--transition-smooth);color:#120E1A;
-      margin-top:8px;position:relative;overflow:hidden;
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.3; transform: scale(0.8); }
     }
-    .main-action:hover{
-      transform:translateY(-2px);
-      box-shadow:0 8px 40px rgba(255,159,69,0.35);
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.8rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      margin-bottom: 20px;
     }
-    
-    .widget-note{text-align:center;margin-top:14px;font-size:0.65rem;color:var(--text-dim)}
-    
-    .features-grid{
-      display:grid;grid-template-columns:repeat(3,1fr);
-      gap:24px;margin-top:48px
+    .gradient-text {
+      background: var(--accent-grad);
+      background-size: 200% 200%;
+      animation: shimmer 4s ease-in-out infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    .feature{
-      background:var(--bg-card);backdrop-filter:blur(8px);
-      border-radius:var(--radius-lg);padding:32px;
-      border:1px solid transparent;transition:var(--transition-smooth)
+    @keyframes shimmer {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
     }
-    .feature:hover{
-      border-color:var(--border-hover);
-      transform:translateY(-4px);
-      box-shadow:var(--shadow-glow)
+
+    .hero-desc {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 32px;
+      font-size: 1.05rem;
+      max-width: 540px;
     }
-    .feature-icon{font-size:2.1rem;margin-bottom:16px}
-    .feature h3{margin-bottom:8px;font-size:1.05rem;font-weight:700}
-    .feature p{color:var(--text-secondary);font-size:0.85rem}
-    
-    .faq-grid{
-      display:grid;grid-template-columns:repeat(2,1fr);
-      gap:24px;margin-top:48px
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
     }
-    .faq-item{
-      background:var(--bg-card);border:1px solid var(--border-glow);
-      border-radius:var(--radius-lg);padding:20px 24px;
-      transition:var(--transition-smooth)
+    .stats-row {
+      display: flex;
+      gap: 48px;
+      padding-top: 28px;
+      border-top: 1px solid var(--border-glow);
+      flex-wrap: wrap;
     }
-    .faq-item:hover{border-color:var(--border-hover)}
-    .faq-question{
-      display:flex;justify-content:space-between;
-      gap:16px;font-weight:600;font-size:0.95rem;
-      cursor:pointer;padding:4px 0;user-select:none;
+    .stat .stat-val {
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      font-weight: 700;
+      background: var(--accent-grad);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
-    .faq-question span{
-      color:var(--accent-1);font-size:1.2rem;
-      transition:transform 0.3s;flex-shrink:0
+    .stat .stat-label {
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
-    .faq-question.open span{transform:rotate(45deg)}
-    .faq-answer{
-      color:var(--text-secondary);font-size:0.85rem;
-      line-height:1.7;max-height:0;overflow:hidden;
-      transition:max-height 0.4s ease, padding 0.3s ease
+
+    /* ===== PREMIUM WIDGET CARD ===== */
+    .widget-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: 
+        var(--shadow-2xl),
+        0 0 80px rgba(255, 159, 69, 0.02);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: sticky;
+      top: 90px;
     }
-    .faq-answer.open{
-      max-height:320px;padding-top:12px;
+    .widget-card:hover {
+      border-color: var(--border-hover);
+      box-shadow: 
+        var(--shadow-2xl),
+        0 0 80px rgba(255, 159, 69, 0.05);
     }
-    
-    footer{
-      background:var(--bg-secondary);border-top:1px solid var(--border-glow);
-      padding:52px 0 32px;margin-top:40px
+    .card-header {
+      padding: 20px 24px;
+      border-bottom: 1px solid var(--border-glow);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-    .footer-grid{
-      display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
-      gap:48px
+    .card-header .title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
-    .footer-grid a{
-      display:block;text-decoration:none;color:var(--text-secondary);
-      font-size:0.8rem;margin-bottom:8px;transition:color 0.2s
+    .card-header .sub {
+      color: var(--text-dim);
+      font-size: 0.7rem;
     }
-    .footer-grid a:hover{color:var(--accent-1)}
-    .footer-grid h5{color:var(--accent-1);margin-bottom:14px;font-size:0.75rem;text-transform:uppercase;letter-spacing:1px}
-    .disclaimer{
-      font-size:0.68rem;color:var(--text-dim);line-height:1.7;
-      margin-top:28px;padding-top:20px;border-top:1px solid var(--border-glow)
+
+    /* ===== EXCHANGE WIDGET ===== */
+    .exchange-widget { padding: 24px; }
+
+    /* ===== PAIR SELECTOR ===== */
+    .pair-selector {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 24px;
+      background: var(--bg-elev);
+      border-radius: var(--radius-lg);
+      padding: 8px;
+      cursor: default;
+      opacity: 0.9;
     }
-    .toast{
-      position:fixed;bottom:30px;left:50%;transform:translateX(-50%);
-      background:var(--bg-card);backdrop-filter:blur(20px);
-      border:1px solid var(--accent-1);padding:14px 28px;
-      border-radius:40px;font-size:0.8rem;z-index:300;
-      opacity:0;transition:0.3s;pointer-events:none;
-      box-shadow:0 8px 60px rgba(0,0,0,0.6);
-      white-space:nowrap;
+    .pair-selector .from,
+    .pair-selector .to {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 2px solid var(--accent-1);
+      box-shadow: 0 0 30px rgba(255, 159, 69, 0.05);
     }
-    .toast.show{opacity:1;transform:translateX(-50%) translateY(-10px)}
-    
-    @media(max-width:1024px){
-      .hero{grid-template-columns:1fr;gap:40px}
-      .widget-card{position:static}
-      .features-grid,.faq-grid{grid-template-columns:1fr 1fr}
-      .footer-grid{grid-template-columns:1fr 1fr}
-      .nav-links{display:none}
+    .pair-selector .coin-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--accent-grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #120E1A;
+      flex-shrink: 0;
     }
-    @media(max-width:640px){
-      .section{padding:50px 0}
-      .hero{padding:30px 0}
-      .features-grid,.faq-grid{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
-      .stats-row{flex-wrap:wrap;gap:16px}
-      .stat .stat-val{font-size:1.3rem}
-      .pair-selector{flex-direction:column;padding:12px}
-      .pair-selector .arrow{transform:rotate(90deg)}
-      .exchange-widget{padding:16px}
-      .amount-field input{font-size:1.1rem}
-      .presets{justify-content:center}
+    .pair-selector .coin-info { display: flex; flex-direction: column; gap: 2px; }
+    .pair-selector .coin-symbol { font-weight: 700; font-size: 0.95rem; }
+    .pair-selector .coin-name { font-size: 0.7rem; color: var(--text-dim); }
+    .pair-selector .arrow {
+      color: var(--text-dim);
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      padding: 0 8px;
     }
-    @media(max-width:480px){
-      .container{padding:0 16px}
-      .hero-actions .btn{flex:1;min-width:120px;text-align:center;font-size:0.75rem;padding:8px 16px}
-      .inr-price{font-size:0.6rem;padding:4px 12px}
-      .toast{font-size:0.7rem;padding:10px 16px;white-space:normal;max-width:90%}
+
+    /* ===== PRESETS ===== */
+    .presets {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      justify-content: center;
+    }
+    .preset {
+      padding: 8px 18px;
+      border-radius: 40px;
+      background: var(--bg-elev);
+      border: 1px solid var(--border-glow);
+      color: var(--text-secondary);
+      font-size: 0.7rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      font-weight: 600;
+      font-family: var(--font-mono);
+    }
+    .preset:hover,
+    .preset.active {
+      background: var(--accent-grad);
+      color: #120E1A;
+      border-color: transparent;
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255, 159, 69, 0.2);
+    }
+
+    /* ===== AMOUNT FIELDS ===== */
+    .amount-field {
+      background: var(--bg-elev);
+      border: 2px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 12px;
+      transition: all 0.3s ease;
+    }
+    .amount-field:focus-within {
+      border-color: var(--accent-1);
+      box-shadow: 0 0 40px rgba(255, 159, 69, 0.05);
+    }
+    .amount-field .label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    .amount-field .label .balance { display: none !important; }
+    .amount-field .input-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .amount-field input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      font-weight: 700;
+      width: 100%;
+      letter-spacing: -0.5px;
+    }
+    .amount-field input::placeholder { color: var(--text-dim); }
+    .amount-field input:disabled { opacity: 0.6; cursor: default; }
+
+    /* ===== TOKEN BADGE ===== */
+    .token-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: 40px;
+      padding: 6px 16px 6px 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: default;
+      white-space: nowrap;
+      opacity: 0.7;
+      user-select: none;
+    }
+    .token-badge .dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent-grad);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: #120E1A;
+    }
+
+    /* ===== SWAP BUTTON (заблокирован) ===== */
+    .swap-direction { display: flex; justify-content: center; margin: 4px 0 12px; }
+    .swap-btn {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-elev);
+      border: 1px solid var(--border-glow);
+      color: var(--accent-1);
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.3;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* ===== RATE INFO ===== */
+    .rate-info {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+    }
+    .rate-info b {
+      color: var(--text-primary);
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* ===== DETAIL PANEL ===== */
+    #detailPanel {
+      margin-top: 16px;
+      padding: 16px 20px;
+      background: var(--bg-elev);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-glow);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(-10px) scale(0.98);
+    }
+    #detailPanel.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* ===== MAIN ACTION ===== */
+    .main-action {
+      width: 100%;
+      padding: 18px;
+      background: var(--accent-grad);
+      border: none;
+      border-radius: var(--radius-lg);
+      font-weight: 700;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #120E1A;
+      margin-top: 12px;
+      position: relative;
+      overflow: hidden;
+      font-family: var(--font-sans);
+    }
+    .main-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 40px rgba(255, 159, 69, 0.3);
+    }
+    .main-action:active { transform: translateY(0); }
+
+    /* ===== WIDGET NOTE ===== */
+    .widget-note {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.65rem;
+      color: var(--text-dim);
+    }
+
+    /* ===== FEATURES ===== */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .feature {
+      background: var(--bg-card);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      border: 1px solid var(--border-glow);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .feature:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-glow);
+    }
+    .feature-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
+    .feature p { color: var(--text-secondary); font-size: 0.85rem; }
+
+    /* ===== FAQ ===== */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover { border-color: var(--border-hover); }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      padding: 4px 0;
+      user-select: none;
+    }
+    .faq-question span {
+      color: var(--accent-1);
+      font-size: 1.2rem;
+      transition: transform 0.3s;
+      flex-shrink: 0;
+    }
+    .faq-question.open span { transform: rotate(45deg); }
+    .faq-answer {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.7;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+    }
+    .faq-answer.open {
+      max-height: 320px;
+      padding-top: 12px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-glow);
+      padding: 52px 0 32px;
+      margin-top: 40px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+    }
+    .footer-grid a {
+      display: block;
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.8rem;
+      margin-bottom: 8px;
+      transition: color 0.2s;
+    }
+    .footer-grid a:hover { color: var(--accent-1); }
+    .footer-grid h5 {
+      color: var(--accent-1);
+      margin-bottom: 14px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .disclaimer {
+      font-size: 0.68rem;
+      color: var(--text-dim);
+      line-height: 1.7;
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border-glow);
+    }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--bg-card);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--accent-1);
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      z-index: 300;
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      pointer-events: none;
+      box-shadow: 0 8px 60px rgba(0, 0, 0, 0.6);
+      white-space: nowrap;
+    }
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-10px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero { grid-template-columns: 1fr; gap: 40px; }
+      .widget-card { position: static; }
+      .features-grid,
+      .faq-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: none; }
+    }
+    @media (max-width: 640px) {
+      .section { padding: 50px 0; }
+      .hero { padding: 30px 0; }
+      .features-grid,
+      .faq-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .stats-row { flex-wrap: wrap; gap: 16px; }
+      .stat .stat-val { font-size: 1.3rem; }
+      .pair-selector { flex-direction: column; padding: 12px; }
+      .pair-selector .arrow { transform: rotate(90deg); }
+      .exchange-widget { padding: 16px; }
+      .amount-field input { font-size: 1.2rem; }
+      .presets { justify-content: center; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .hero-actions .btn {
+        flex: 1;
+        min-width: 120px;
+        text-align: center;
+        font-size: 0.75rem;
+        padding: 8px 16px;
+      }
+      .inr-price { font-size: 0.6rem; padding: 4px 12px; }
+      .toast { font-size: 0.7rem; padding: 10px 16px; white-space: normal; max-width: 90%; }
     }
   </style>
 </head>
 <body>
 
+<!-- ===== PREMIUM BACKGROUND ===== -->
 <div class="bg-scene"><div class="orb"></div><div class="orb"></div><div class="orb"></div></div>
 <div class="grid-pattern"></div>
 
+<!-- ===== NAV ===== -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
@@ -428,13 +831,14 @@
       <span class="logo-text"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
     </a>
     <div class="nav-links">
-      <a href="#" class="active">Exchange</a>
+      <a href="#" class="active">Convert</a>
       <a href="#features">Features</a>
       <a href="#faq">FAQ</a>
     </div>
     <div class="wallet-area">
       <div class="inr-price">
-        USDT/INR <span id="usdtPrice">96.41</span>
+        USDT/INR
+        <span class="price" id="usdtPrice">96.41</span>
         <span class="change" id="usdtChange">▲2.3%</span>
       </div>
       <button class="btn btn-outline xsudlmqvbag x2wl7trk" onclick="showToast('🔐 Connect wallet')">
@@ -444,25 +848,33 @@
   </div>
 </nav>
 
+<!-- ===== TICKER ===== -->
 <div class="ticker-wrap">
   <div class="ticker-track" id="tickerTrack">
-    <span style="color:var(--text-dim);padding:10px 0">USDT/INR: ₹96.41 ▲2.3%</span>
+    <span class="ticker-item"><b>USDT</b> ₹96.41 <span class="chg-up">▲2.3%</span></span>
+    <span class="ticker-item"><b>BTC</b> ₹6,900,000 <span class="chg-up">▲2.5%</span></span>
+    <span class="ticker-item"><b>ETH</b> ₹350,000 <span class="chg-up">▲1.8%</span></span>
+    <span class="ticker-item"><b>BNB</b> ₹52,000 <span class="chg-up">▲3.2%</span></span>
+    <span class="ticker-item"><b>XRP</b> ₹85 <span class="chg-down">▼1.2%</span></span>
   </div>
 </div>
 
+<!-- ===== MAIN ===== -->
 <main>
   <div class="container">
     <div class="hero">
+      <!-- LEFT -->
       <div>
         <div class="badge">
-          <span>🇮🇳 INDIA'S CRYPTO EXCHANGE</span>
+          <span class="dot"></span>
+          <span>🇮🇳 INDIA'S PREMIUM EXCHANGE</span>
           <span>·</span>
           <span>UPI · IMPS · BANK</span>
         </div>
         <h1>Convert USDT to INR<br><span class="gradient-text">at ₹96.41</span></h1>
         <p class="hero-desc">
-          Convert USDT to INR at the best rate of ₹96.41. Deposit with UPI, get INR in your bank account.
-          Simple, fast, and secure.
+          Experience premium crypto conversion. Convert USDT to INR at the best rate with
+          instant UPI settlements, zero hidden fees, and bank-grade security.
         </p>
         <div class="hero-actions">
           <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('💰 Buy flow starting...')">
@@ -473,19 +885,20 @@
           </button>
         </div>
         <div class="stats-row">
-          <div class="stat"><div class="stat-val">0.20%</div><div class="stat-label">TRADING FEE</div></div>
-          <div class="stat"><div class="stat-val">24/7</div><div class="stat-label">INR ON/OFF-RAMP</div></div>
-          <div class="stat"><div class="stat-val">&lt;5 min</div><div class="stat-label">UPI SETTLEMENT</div></div>
+          <div class="stat"><div class="stat-val">0.20%</div><div class="stat-label">Trading Fee</div></div>
+          <div class="stat"><div class="stat-val">24/7</div><div class="stat-label">INR On/Off-Ramp</div></div>
+          <div class="stat"><div class="stat-val">&lt;5 min</div><div class="stat-label">UPI Settlement</div></div>
         </div>
       </div>
 
+      <!-- RIGHT: WIDGET -->
       <div class="widget-card">
         <div class="card-header">
-          <span class="title">💱 Convert USDT → INR</span>
+          <span class="title">💱 Convert <span style="color:var(--accent-1);">USDT</span> → <span style="color:var(--accent-2);">INR</span></span>
           <span class="sub">Best rate: ₹96.41</span>
         </div>
         <div class="exchange-widget">
-          <!-- Pair Selector - фиксированный -->
+          <!-- Pair Selector -->
           <div class="pair-selector">
             <div class="from active">
               <div class="coin-icon">U</div>
@@ -504,8 +917,8 @@
             </div>
           </div>
 
-          <!-- Пресеты -->
-          <div class="presets" id="presets">
+          <!-- Presets -->
+          <div class="presets">
             <button class="preset active xsudlmqvbag x2wl7trk" onclick="setPair('USDT','INR')">USDT→INR</button>
             <button class="preset xsudlmqvbag x2wl7trk" onclick="setPair('INR','USDT')">INR→USDT</button>
           </div>
@@ -525,7 +938,7 @@
             </div>
           </div>
 
-          <!-- Swap Direction - ЗАБЛОКИРОВАН -->
+          <!-- Swap (заблокирован) -->
           <div class="swap-direction">
             <button class="swap-btn xsudlmqvbag x2wl7trk" disabled>⇅</button>
           </div>
@@ -555,9 +968,10 @@
             <b id="settlementInfo">Enter amount to calculate</b>
           </div>
 
+          <!-- Detail Panel -->
           <div id="detailPanel"></div>
 
-          <!-- КНОПКА ПОМЕНЯТЬ -->
+          <!-- Convert Button -->
           <button class="main-action xsudlmqvbag x2wl7trk" onclick="convert()">
             <span class="btn-glow"></span>
             💱 Convert Now
@@ -568,57 +982,62 @@
     </div>
   </div>
 
-  <div style="background:var(--bg-secondary);border-top:1px solid var(--border-glow);border-bottom:1px solid var(--border-glow)">
+  <!-- ===== FEATURES ===== -->
+  <div style="background:var(--bg-secondary); border-top:1px solid var(--border-glow); border-bottom:1px solid var(--border-glow);">
     <div class="container"><div class="section" id="features">
-      <div class="badge">🇮🇳 WHY BHARAT EXCHANGE</div>
-      <h2 style="font-size:2rem;margin-bottom:12px">Built for how India trades</h2>
+      <div class="badge">✨ PREMIUM FEATURES</div>
+      <h2 style="font-size:2rem; margin-bottom:12px;">Why choose Bharat Exchange</h2>
+      <p style="color:var(--text-secondary); max-width:600px; margin-bottom:20px;">Built for premium trading experience with Indian users in mind.</p>
       <div class="features-grid">
-        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer.</p></div>
-        <div class="feature"><div class="feature-icon">🔐</div><h3>Secure swaps</h3><p>Swap USDT to INR with complete security and transparency.</p></div>
-        <div class="feature"><div class="feature-icon">⚡</div><h3>Fast settlement</h3><p>Most UPI deposits and crypto swaps confirm within minutes.</p></div>
-        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download statements for India's 30% crypto tax and 1% TDS.</p></div>
-        <div class="feature"><div class="feature-icon">🆔</div><h3>Aadhaar/PAN KYC</h3><p>Verify once with Aadhaar and PAN, then trade without paperwork.</p></div>
-        <div class="feature"><div class="feature-icon">🤝</div><h3>P2P with escrow</h3><p>Trade directly with verified users, funds held in escrow.</p></div>
+        <div class="feature"><div class="feature-icon">📲</div><h3>UPI-first deposits</h3><p>Add INR directly with UPI, IMPS or bank transfer — no card fees, no international routing.</p></div>
+        <div class="feature"><div class="feature-icon">🔐</div><h3>Bank-grade security</h3><p>Your funds are protected with cold storage, 2FA, and regular security audits.</p></div>
+        <div class="feature"><div class="feature-icon">⚡</div><h3>Instant settlements</h3><p>Most UPI deposits and crypto swaps confirm within minutes, not hours.</p></div>
+        <div class="feature"><div class="feature-icon">🧾</div><h3>Tax-ready reports</h3><p>Download statements for India's 30% crypto tax and 1% TDS reporting.</p></div>
+        <div class="feature"><div class="feature-icon">🆔</div><h3>Aadhaar/PAN KYC</h3><p>Verify once with Aadhaar and PAN, then trade without repeated paperwork.</p></div>
+        <div class="feature"><div class="feature-icon">🤝</div><h3>24/7 Support</h3><p>Our dedicated support team is available around the clock to assist you.</p></div>
       </div>
     </div></div>
   </div>
 
+  <!-- ===== FAQ ===== -->
   <div class="container" id="faq">
     <div class="section">
-      <div style="text-align:center;margin-bottom:48px">
-        <div class="badge" style="display:inline-flex">❓ FAQ</div>
-        <h2 style="font-size:2rem">Frequently Asked Questions</h2>
-        <p style="color:var(--text-secondary);margin-top:8px">Everything you need to know about USDT to INR conversion</p>
+      <div style="text-align:center; margin-bottom:48px;">
+        <div class="badge" style="display:inline-flex;">❓ FAQ</div>
+        <h2 style="font-size:2rem;">Frequently Asked Questions</h2>
+        <p style="color:var(--text-secondary); margin-top:8px;">Everything you need to know about USDT to INR conversion</p>
       </div>
       <div class="faq-grid" id="faqGrid"></div>
     </div>
   </div>
 
-  <div style="background:linear-gradient(135deg, #0A0711 0%, #1B1425 100%);border-top:1px solid var(--border-glow);text-align:center;padding:80px 24px">
-    <h2 style="font-size:clamp(2rem,5vw,4rem);margin-bottom:20px">
+  <!-- ===== CTA ===== -->
+  <div style="background:linear-gradient(135deg, #08040F 0%, #1B1425 100%); border-top:1px solid var(--border-glow); text-align:center; padding:80px 24px;">
+    <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">
       Convert USDT to INR.<br><span class="gradient-text">at ₹96.41</span>
     </h2>
-    <p style="color:var(--text-secondary);margin-bottom:32px">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
-    <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px;font-size:1rem">
+    <p style="color:var(--text-secondary); margin-bottom:32px;">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
+    <button class="btn btn-primary xsudlmqvbag x2wl7trk" onclick="showToast('🚀 Onboarding flow starts here')" style="padding:14px 48px; font-size:1rem;">
       <span class="btn-glow"></span> Start Trading →
     </button>
   </div>
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo" style="margin-bottom:16px">
+        <div class="logo" style="margin-bottom:16px;">
           <svg class="logo-icon" width="38" height="38" viewBox="0 0 44 44" fill="none" style="width:38px;height:38px;">
             <circle cx="22" cy="22" r="21" fill="#0F0B17" stroke="url(#ringGradF)" stroke-width="1.5" />
             <path d="M13 16h18M13 22h18" stroke="#FF9F45" stroke-width="2.2" stroke-linecap="round" />
             <path d="M20 29l7-7-7-7" stroke="#1FAE6D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
             <defs><linearGradient id="ringGradF" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#FF9F45" /><stop offset="100%" stop-color="#1FAE6D" /></linearGradient></defs>
           </svg>
-          <span class="logo-text" style="font-size:1.05rem"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
+          <span class="logo-text" style="font-size:1.05rem;"><span class="bharat">Bharat</span> <span class="exchange">Exchange</span></span>
         </div>
-        <p style="color:var(--text-secondary);font-size:0.8rem">India's crypto trading platform — buy, sell, swap and trade with INR.</p>
+        <p style="color:var(--text-secondary); font-size:0.8rem;">India's premium crypto trading platform — buy, sell, swap and trade with INR.</p>
       </div>
       <div><h5>Trade</h5><a href="#">Buy</a><a href="#">Sell</a><a href="#">Swap</a><a href="#">P2P</a></div>
       <div><h5>Resources</h5><a href="#features">Features</a><a href="#faq">FAQ</a></div>
@@ -628,28 +1047,29 @@
       Cryptocurrency trading is subject to market risk. Bharat Exchange does not provide investment advice. 
       Indian tax rules including 30% gains tax and 1% TDS apply.
     </div>
-    <div style="margin-top:24px;text-align:center;font-size:0.7rem;color:var(--text-dim);border-top:1px solid var(--border-glow);padding-top:24px">
+    <div style="margin-top:24px; text-align:center; font-size:0.7rem; color:var(--text-dim); border-top:1px solid var(--border-glow); padding-top:24px;">
       © 2026 Bharat Exchange · All rights reserved · USDT/INR: ₹96.41
     </div>
   </div>
 </footer>
 
+<!-- ===== TOAST ===== -->
 <div id="globalToast" class="toast"></div>
 
+<!-- ===== SCRIPTS ===== -->
 <script>
 // ============================================================
-// BHARAT EXCHANGE - USDT → INR CONVERTER
-// КУРС: 1 USDT = ₹96.41
+// PREMIUM BHARAT EXCHANGE - USDT → INR CONVERTER
 // ============================================================
 
 const USDT_RATE = 96.41;
-const FEE = 0.002; // 0.20%
+const FEE = 0.002;
 
 let fromKey = 'USDT';
 let toKey = 'INR';
 
 // ============================================================
-// CALCULATE - МГНОВЕННЫЙ РАСЧЕТ ПРИ ВВОДЕ
+// CALCULATE
 // ============================================================
 function calculate() {
   const fromInput = document.getElementById('fromAmount');
@@ -663,22 +1083,21 @@ function calculate() {
     return;
   }
   
-  const rate = USDT_RATE;
-  const result = fromAmt * rate * (1 - FEE);
+  const result = fromAmt * USDT_RATE * (1 - FEE);
   
-  // Анимация
-  toInput.style.transition = 'all 0.15s ease';
-  toInput.style.transform = 'scale(1.02)';
+  // Premium animation
+  toInput.style.transition = 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
+  toInput.style.transform = 'scale(1.03)';
   toInput.style.color = '#1FAE6D';
   setTimeout(() => {
     toInput.style.transform = 'scale(1)';
-    toInput.style.color = '';
-  }, 150);
+    setTimeout(() => { toInput.style.color = ''; }, 300);
+  }, 200);
   
   toInput.value = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   document.getElementById('settlementInfo').textContent = '⚡ Instant to few minutes';
   
-  showDetails(fromAmt, rate, result);
+  showDetails(fromAmt, USDT_RATE, result);
 }
 
 function showDetails(amount, rate, result) {
@@ -687,22 +1106,22 @@ function showDetails(amount, rate, result) {
   const feeAmount = amount * rate * FEE;
   
   panel.innerHTML = `
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
       <div>
-        <span style="color:var(--text-dim)">Amount</span><br>
-        <b style="color:var(--text-primary)">${amount} USDT</b>
+        <span style="color:var(--text-dim); font-size:0.65rem;">Amount</span><br>
+        <b style="color:var(--text-primary); font-size:1rem;">${amount} USDT</b>
       </div>
       <div>
-        <span style="color:var(--text-dim)">Rate</span><br>
-        <b style="color:var(--text-primary)">₹${rate.toFixed(2)}</b>
+        <span style="color:var(--text-dim); font-size:0.65rem;">Rate</span><br>
+        <b style="color:var(--text-primary); font-size:1rem;">₹${rate.toFixed(2)}</b>
       </div>
       <div>
-        <span style="color:var(--text-dim)">Fee (0.20%)</span><br>
-        <b style="color:#FF6B6B">₹${feeAmount.toFixed(2)}</b>
+        <span style="color:var(--text-dim); font-size:0.65rem;">Fee (0.20%)</span><br>
+        <b style="color:#FF6B6B; font-size:1rem;">₹${feeAmount.toFixed(2)}</b>
       </div>
       <div>
-        <span style="color:var(--text-dim)">You receive</span><br>
-        <b style="color:var(--accent-2);font-size:1.1rem;">₹${result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</b>
+        <span style="color:var(--text-dim); font-size:0.65rem;">You receive</span><br>
+        <b style="color:var(--accent-2); font-size:1.15rem;">₹${result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</b>
       </div>
     </div>
   `;
@@ -710,24 +1129,20 @@ function showDetails(amount, rate, result) {
 }
 
 // ============================================================
-// SET PAIR - МЕНЯЕТ ПАРУ
+// SET PAIR
 // ============================================================
 function setPair(from, to) {
   fromKey = from;
   toKey = to;
   
-  // Обновляем UI
   document.querySelectorAll('.preset').forEach(p => {
     p.classList.remove('active');
-  });
-  document.querySelectorAll('.preset').forEach(p => {
     if ((p.textContent === 'USDT→INR' && from === 'USDT' && to === 'INR') ||
         (p.textContent === 'INR→USDT' && from === 'INR' && to === 'USDT')) {
       p.classList.add('active');
     }
   });
   
-  // Обновляем отображение
   const fromIcon = document.querySelector('.pair-selector .from .coin-icon');
   const fromSymbol = document.querySelector('.pair-selector .from .coin-symbol');
   const fromName = document.querySelector('.pair-selector .from .coin-name');
@@ -745,10 +1160,8 @@ function setPair(from, to) {
   toSymbol.textContent = to;
   toName.textContent = toCoin.name;
   
-  // Обновляем заголовок
-  document.querySelector('.card-header .title').textContent = `💱 Convert ${from} → ${to}`;
+  document.querySelector('.card-header .title').innerHTML = `💱 Convert <span style="color:var(--accent-1);">${from}</span> → <span style="color:var(--accent-2);">${to}</span>`;
   
-  // Очищаем поля
   document.getElementById('fromAmount').value = '';
   document.getElementById('toAmount').value = '';
   document.getElementById('detailPanel').classList.remove('visible');
@@ -758,7 +1171,7 @@ function setPair(from, to) {
 }
 
 // ============================================================
-// CONVERT - КНОПКА ПОМЕНЯТЬ
+// CONVERT
 // ============================================================
 function convert() {
   const fromInput = document.getElementById('fromAmount');
@@ -776,6 +1189,15 @@ function convert() {
     showToast('⚠️ Please enter an amount to convert', 'error');
     return;
   }
+  
+  // Premium success animation
+  const btn = document.querySelector('.main-action');
+  btn.textContent = '✅ Success!';
+  btn.style.background = 'linear-gradient(135deg, #1FAE6D, #1A8A5A)';
+  setTimeout(() => {
+    btn.textContent = '💱 Convert Now';
+    btn.style.background = '';
+  }, 2500);
   
   showToast(`✅ ${fromAmt} ${fromKey} → ${result} ${toKey}`, 'success');
 }
@@ -796,13 +1218,13 @@ function showToast(msg, type = 'info') {
 }
 
 // ============================================================
-// FAQ - 35 ВОПРОСОВ
+// FAQ
 // ============================================================
 const faqs = [
-  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the current exchange rate of ₹96.41. Bharat Exchange offers the best rates with low fees."],
+  ["What is USDT to INR conversion?", "USDT to INR conversion allows you to convert Tether (USDT) stablecoin into Indian Rupees (INR) at the premium rate of ₹96.41. Bharat Exchange offers the best rates with low fees."],
   ["How to convert USDT to INR?", "1) Enter the amount of USDT you want to convert, 2) See the estimated INR amount instantly, 3) Click 'Convert Now', 4) Confirm the transaction. INR will be sent to your bank account."],
   ["What is the current USDT to INR rate?", "The current USDT to INR rate is ₹96.41 per 1 USDT. Rates are updated in real-time."],
-  ["Is USDT to INR conversion safe?", "Yes, Bharat Exchange uses secure infrastructure, cold storage, and 2FA to protect your funds. All conversions are processed securely."],
+  ["Is USDT to INR conversion safe?", "Yes, Bharat Exchange uses premium security infrastructure, cold storage, and 2FA to protect your funds."],
   ["What are the fees for USDT to INR conversion?", "The platform fee is 0.20% of the transaction amount. There are no hidden fees."],
   ["How long does USDT to INR conversion take?", "USDT to INR conversion typically takes a few minutes. UPI settlements are instant, while bank transfers may take a few hours."],
   ["Can I convert INR to USDT?", "Yes, you can convert INR to USDT on Bharat Exchange. Click the 'INR→USDT' preset button."],
@@ -815,23 +1237,23 @@ const faqs = [
   ["How do I withdraw INR?", "Go to Withdraw, select your bank account or UPI ID, enter the amount, confirm with 2FA."],
   ["Does Bharat Exchange support UPI withdrawal?", "Yes, UPI withdrawals are the fastest way to receive INR in your bank account."],
   ["What is USDT?", "USDT (Tether) is a stablecoin pegged to the US dollar at a 1:1 ratio. It's used to store value and trade between cryptocurrencies."],
-  ["What is the difference between USDT and INR?", "USDT is a cryptocurrency pegged to the US dollar, while INR is the official currency of India. USDT to INR conversion lets you exchange between them."],
+  ["What is the difference between USDT and INR?", "USDT is a cryptocurrency pegged to the US dollar, while INR is the official currency of India."],
   ["Can I convert USDT to INR without KYC?", "No, KYC is mandatory for all crypto-to-fiat conversions in India as per RBI guidelines."],
   ["How many USDT can I convert to INR per day?", "Daily limits depend on your KYC verification level. Basic: ₹50,000, Fully verified: ₹5,00,000."],
   ["What is the best time to convert USDT to INR?", "The crypto market is open 24/7. You can convert USDT to INR anytime at the current rate."],
   ["Is there a limit on USDT to INR conversion?", "Yes, limits depend on your verification level. Higher limits available upon request."],
   ["How do I check my USDT balance?", "Your USDT balance is displayed in your Bharat Exchange wallet after connecting your account."],
-  ["What is Tether (USDT)?", "Tether (USDT) is the most popular stablecoin, pegged to the US dollar. It's used for trading and storing value in crypto markets."],
+  ["What is Tether (USDT)?", "Tether (USDT) is the most popular stablecoin, pegged to the US dollar. It's used for trading and storing value."],
   ["Can I convert USDT to INR on mobile?", "Yes, Bharat Exchange is fully responsive and works on all mobile devices."],
   ["What documents are required for KYC?", "PAN card, Aadhaar card, selfie, and bank statement are required for KYC verification."],
   ["How long does KYC take?", "KYC typically takes 5-15 minutes, up to 24 hours if additional verification is needed."],
   ["Is Bharat Exchange regulated?", "Bharat Exchange follows all Indian regulatory guidelines and complies with KYC/AML norms."],
   ["What is the fee for INR to USDT conversion?", "The same 0.20% fee applies for INR to USDT conversion."],
   ["Can I convert USDT to INR via UPI?", "Yes, you can receive INR via UPI directly to your registered UPI ID."],
-  ["How do I contact support?", "Contact our 24/7 support via email, live chat, or Telegram."],
+  ["How do I contact support?", "Contact our 24/7 premium support via email, live chat, or Telegram."],
   ["What is the minimum withdrawal amount?", "The minimum withdrawal amount is ₹500."],
-  ["Is my personal data safe?", "Yes, all personal data is encrypted and stored securely. We never share your data with third parties."],
-  ["Can I cancel a conversion?", "Conversions are processed instantly and cannot be cancelled once confirmed. Please review all details before confirming."],
+  ["Is my personal data safe?", "Yes, all personal data is encrypted and stored securely. We never share your data."],
+  ["Can I cancel a conversion?", "Conversions are processed instantly and cannot be cancelled once confirmed."],
   ["What happens if the rate changes?", "The rate is locked at the moment of confirmation. Rate changes after confirmation do not affect your conversion."],
   ["How do I start converting USDT to INR?", "Sign up, complete KYC, deposit USDT, enter the amount, and click 'Convert Now'."]
 ];
@@ -863,8 +1285,8 @@ function toggleFaq(el) {
 document.getElementById('settlementInfo').textContent = 'Enter amount to calculate';
 document.getElementById('usdtPrice').textContent = '96.41';
 
-console.log('🚀 Bharat Exchange - USDT to INR Converter loaded');
-console.log('💱 Rate: 1 USDT = ₹96.41');
+console.log('🚀 Premium Bharat Exchange - USDT to INR Converter');
+console.log('💎 Rate: 1 USDT = ₹96.41');
 console.log('🔢 Total FAQs loaded:', faqs.length);
 </script>
 
