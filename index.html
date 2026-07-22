@@ -3,8 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bharat Exchange — USDT to INR</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23120E1A'/%3E%3Ctext x='50' y='68' font-family='Arial' font-size='52' font-weight='bold' text-anchor='middle' fill='%23FF9F45'%3EB%3C/text%3E%3C/svg%3E" />
+  
+  <!-- ===== SEO ===== -->
+  <title>Bharat Exchange — USDT to INR Converter</title>
+  <meta name="description" content="Convert USDT to INR instantly. Best rate, UPI deposits, instant settlements. Built for India." />
+  <meta name="keywords" content="USDT INR, USDT to INR, convert USDT to INR, Bharat Exchange, crypto exchange India" />
+  <link rel="canonical" href="https://bharatexchange.vercel.app/" />
+  
+  <!-- ===== FAVICON ===== -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+  
+  <!-- ===== OPEN GRAPH (для соцсетей) ===== -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://bharatexchange.vercel.app/"/>
+  <meta property="og:title" content="Bharat Exchange — USDT to INR Converter"/>
+  <meta property="og:description" content="Convert USDT to INR instantly. Best rate, UPI deposits, instant settlements. Built for India."/>
+  <meta property="og:image" content="https://bharatexchange.vercel.app/BharatExchange.png"/>
+  <meta property="og:site_name" content="Bharat Exchange"/>
+  
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Bharat Exchange — USDT to INR Converter"/>
+  <meta name="twitter:description" content="Convert USDT to INR instantly. Best rate, UPI deposits, instant settlements. Built for India."/>
+  <meta name="twitter:image" content="https://bharatexchange.vercel.app/BharatExchange.png"/>
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,6 +74,7 @@
       min-height: 100vh;
     }
 
+    /* VIDEO BACKGROUND - FULL SCREEN */
     .video-bg {
       position: fixed;
       top: 0;
@@ -60,6 +86,7 @@
       pointer-events: none;
       filter: brightness(0.5) saturate(1.1) contrast(1.1);
     }
+
     .video-overlay {
       position: fixed;
       top: 0;
@@ -74,6 +101,7 @@
       pointer-events: none;
     }
 
+    /* GOLD LINE */
     .gold-line {
       position: fixed;
       top: 0;
@@ -94,6 +122,7 @@
     .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 5; }
     .section { padding: 80px 0; }
 
+    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
@@ -193,6 +222,7 @@
     }
     .btn:hover .btn-glow { opacity: 1; }
 
+    /* HERO */
     .hero {
       display: grid;
       grid-template-columns: 1fr 540px;
@@ -282,6 +312,7 @@
       text-transform: uppercase;
     }
 
+    /* WIDGET */
     .widget-card {
       background: var(--bg-card);
       backdrop-filter: blur(24px);
@@ -364,6 +395,7 @@
       padding: 0 8px;
     }
 
+    /* PRESETS */
     .presets {
       display: flex;
       gap: 8px;
@@ -397,6 +429,7 @@
       box-shadow: 0 4px 20px rgba(255, 179, 71, 0.15);
     }
 
+    /* AMOUNT FIELDS */
     .amount-field {
       background: var(--bg-elev);
       border: 2px solid rgba(255, 179, 71, 0.04);
@@ -540,6 +573,7 @@
       color: var(--text-dim);
     }
 
+    /* HISTORY */
     .history-section {
       margin-top: 24px;
       padding-top: 20px;
@@ -623,6 +657,7 @@
     .history-item .amount .value .green { color: var(--accent-green); }
     .history-item .amount .status { font-size: 0.55rem; color: var(--accent-green); font-weight: 600; display: block; }
 
+    /* FEATURES */
     .features-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -646,6 +681,7 @@
     .feature h3 { margin-bottom: 8px; font-size: 1.05rem; font-weight: 700; }
     .feature p { color: var(--text-secondary); font-size: 0.85rem; }
 
+    /* FAQ */
     .faq-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -690,6 +726,7 @@
       padding-top: 12px;
     }
 
+    /* FOOTER */
     footer {
       background: var(--bg-secondary);
       border-top: 1px solid rgba(255, 179, 71, 0.02);
@@ -726,6 +763,7 @@
       border-top: 1px solid rgba(255, 179, 71, 0.02);
     }
 
+    /* TOAST */
     .toast {
       position: fixed;
       bottom: 30px;
@@ -749,6 +787,7 @@
       transform: translateX(-50%) translateY(-10px);
     }
 
+    /* RESPONSIVE */
     @media (max-width: 1024px) {
       .hero { grid-template-columns: 1fr; gap: 40px; }
       .widget-card { position: static; }
@@ -788,12 +827,14 @@
 </head>
 <body>
 
+<!-- VIDEO BACKGROUND -->
 <video class="video-bg" autoplay muted loop playsinline>
   <source src="./video/videobg.mp4" type="video/mp4" />
 </video>
 <div class="video-overlay"></div>
 <div class="gold-line"></div>
 
+<!-- NAV -->
 <nav>
   <div class="nav-inner">
     <a href="#" class="logo">
@@ -818,6 +859,7 @@
   </div>
 </nav>
 
+<!-- MAIN -->
 <main>
   <div class="container">
     <div class="hero">
@@ -841,6 +883,7 @@
         </div>
       </div>
 
+      <!-- WIDGET -->
       <div class="widget-card">
         <div class="card-header">
           <span class="title">💱 Convert <span class="accent-gold" id="pairFromLabel">USDT</span> → <span class="accent-green" id="pairToLabel">INR</span></span>
@@ -865,6 +908,7 @@
             </div>
           </div>
 
+          <!-- PRESETS - ПЕРЕКЛЮЧАЮТ UI -->
           <div class="presets">
             <button class="preset active" onclick="switchPairUI('USDT','INR')">USDT→INR</button>
             <button class="preset" onclick="switchPairUI('INR','USDT')">INR→USDT</button>
@@ -915,6 +959,7 @@
     </div>
   </div>
 
+  <!-- FEATURES -->
   <div style="background:var(--bg-secondary); border-top:1px solid rgba(255,179,71,0.02); border-bottom:1px solid rgba(255,179,71,0.02);">
     <div class="container"><div class="section" id="features">
       <div class="badge">✨ PREMIUM FEATURES</div>
@@ -931,6 +976,7 @@
     </div></div>
   </div>
 
+  <!-- FAQ -->
   <div class="container" id="faq">
     <div class="section">
       <div style="text-align:center; margin-bottom:48px;">
@@ -942,6 +988,7 @@
     </div>
   </div>
 
+  <!-- CTA -->
   <div style="background:linear-gradient(135deg, #0A0618 0%, #1B1425 100%); border-top:1px solid rgba(255,179,71,0.02); text-align:center; padding:80px 24px;">
     <h2 style="font-size:clamp(2rem,5vw,4rem); margin-bottom:20px;">Convert USDT to INR.<br><span class="gradient-text">Instantly.</span></h2>
     <p style="color:var(--text-secondary); margin-bottom:32px;">Start trading in minutes with UPI, IMPS, or bank transfer.</p>
@@ -949,6 +996,7 @@
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-grid">
@@ -978,6 +1026,7 @@
   </div>
 </footer>
 
+<!-- TOAST -->
 <div id="globalToast" class="toast"></div>
 
 <script>
@@ -1168,7 +1217,6 @@ function calculate() {
     result = fromAmt / USDT_RATE * (1 - fee);
     resultText = result.toFixed(4) + ' USDT';
   } else {
-    // fallback
     result = fromAmt * USDT_RATE * (1 - fee);
     resultText = '₹' + result.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
@@ -1333,7 +1381,6 @@ document.getElementById('settlementInfo').textContent = 'Enter amount to calcula
 generateHistory();
 
 console.log('🚀 Bharat Exchange - USDT ↔ INR Converter');
-console.log('🔄 Presets switch UI without opening script!');
 console.log('✅ USDT→INR shows INR, INR→USDT shows USDT');
 console.log('📊 50+ history items generated');
 console.log('🔢 Total FAQs loaded:', faqs.length);
